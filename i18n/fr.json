@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix <jack@countervandalism.net>"
+		]
+	},
+	"imagerating-add-button": "ajouter",
+	"imagerating-add-categories-title": "ajouter categoriés (séparées par des virgules)",
+	"imagerating-category": "Images de $1",
+	"imagerating-community-score": "note de la communauté : <b>$1</b> ({{PLURAL:$2|une note|$2 notes}})",
+	"imagerating-edit-summary": "ajouter une categorié",
+	"imagerating-featured-heading": "Image recommandée",
+	"imagerating-popular-heading-param": "Images populaires sur $1",
+	"imagerating-new-heading-param": "Nouvelles images sur $1",
+	"imagerating-best-heading-param": "Les meilleures images sur $1",
+	"imagerating-popular-heading": "Images populaires",
+	"imagerating-new-heading": "Nouvelles images",
+	"imagerating-best-heading": "Les meilleures images",
+	"imagerating-menu-title": "Ménu",
+	"imagerating-submitted-by": "Soumis par",
+	"imagerating-ratetitle": "Notér et catégoriser des images",
+	"imagerating-categorytitle": "Categoriés",
+	"imagerating-upload-images": "Téléverser des images",
+	"imagerating-prev-link": "précédent",
+	"imagerating-next-link": "suivant",
+	"action-rateimage": "catégoriser et notér des images",
+	"right-rateimage": "Catégoriser et notér des images"
+}

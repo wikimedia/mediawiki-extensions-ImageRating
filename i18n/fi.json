@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix <jack@countervandalism.net>"
+		]
+	},
+	"imagerating-add-button": "lisää",
+	"imagerating-desc": "Mahdollistaa [[Special:ImageRating|kuvien luokittelun ja arvostelemisen]]",
+	"imagerating-category": "Kuvat {{GRAMMAR:elative|$1}}",
+	"imagerating-popular-heading": "Suositut kuvat",
+	"imagerating-new-heading": "Uudet kuvat",
+	"imagerating-best-heading": "Parhaimmat kuvat",
+	"imagerating-popular-heading-param": "Suositut kuvat {{GRAMMAR:elative|$1}}",
+	"imagerating-new-heading-param": "Uudet kuvat {{GRAMMAR:elative|$1}}",
+	"imagerating-best-heading-param": "Parhaimmat kuvat {{GRAMMAR:elative|$1}}",
+	"imagerating-menu-title": "Valikko",
+	"imagerating-submitted-by": "Lähettänyt",
+	"imagerating-featured-heading": "Suositeltu kuva",
+	"imagerating-ratetitle": "Arvostele ja luokittele kuvia",
+	"imagerating-categorytitle": "Luokat",
+	"imagerating-add-categories-title": "lisää luokkia (erottele pilkuin)",
+	"imagerating-upload-images": "Tallenna kuvia",
+	"imagerating-prev-link": "edell.",
+	"imagerating-next-link": "seur.",
+	"imagerating-community-score": "yhteisön antama pistemäärä: <b>$1</b> ({{PLURAL:$2|yksi arvio|$2 arvioa}})",
+	"imagerating-edit-summary": "luokka lisätty",
+	"action-rateimage": "luokitella ja arvostella kuvia",
+	"right-rateimage": "Luokitella ja arvostella kuvia"
+}

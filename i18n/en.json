@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aaron Wright <aaron.wright@gmail.com>",
+			"David Pean <david.pean@gmail.com>",
+			"Jack Phoenix <jack@countervandalism.net>"
+		]
+	},
+	"apihelp-imagerating-description": "ImageRating API module -- allows adding categories to a page when given a page ID",
+	"apihelp-imagerating-param-categories": "URL-encoded, comma-separated list (string) of categories to add to the page",
+	"apihelp-imagerating-param-pageId": "Internal identifier of the page to edit",
+	"apihelp-imagerating-example-1": "Adds the categories \"Cute cats\", \"Lolcats\" and \"Internet memes\" to the page that has the internal ID 66.",
+	"imagerating-add-button": "add",
+	"imagerating-add-categories-title": "add categories (comma separated)",
+	"imagerating-category": "$1 Images",
+	"imagerating-community-score": "community score: <b>$1</b> ({{PLURAL:$2|one rating|$2 ratings}})",
+	"imagerating-desc": "Allows users to [[Special:ImageRating|categorize and rate images]]",
+	"imagerating-edit-summary": "add category",
+	"imagerating-empty": "Nothing to do here.",
+	"imagerating-featured-heading": "Featured Image",
+	"imagerating-popular-heading": "Popular Images",
+	"imagerating-popular-heading-param": "Popular $1 Images",
+	"imagerating-new-heading-param": "New $1 Images",
+	"imagerating-best-heading-param": "Best $1 Images",
+	"imagerating-new-heading": "New Images",
+	"imagerating-best-heading": "Best Images",
+	"imagerating-menu-title": "Menu",
+	"imagerating-submitted-by": "Submitted By",
+	"imagerating-ratetitle": "Rate and Categorize Images",
+	"imagerating-categorytitle": "Categories",
+	"imagerating-upload-images": "Upload Images",
+	"imagerating-prev-link": "prev",
+	"imagerating-next-link": "next",
+	"action-rateimage": "categorize and rate images",
+	"right-rateimage": "Categorize and rate images"
+}
