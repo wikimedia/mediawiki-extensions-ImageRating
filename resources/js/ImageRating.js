@@ -22,7 +22,7 @@ window.ImageRating = {
 				ImageRating.posted = 0;
 
 				if ( data.imagerating.result === 'busy' ) {
-					setTimeout( 'ImageRating.addCategory(' + page + ')', 1000 );
+					setTimeout( 'ImageRating.addCategory(' + page + ')', 200 );
 					return 0;
 				}
 
