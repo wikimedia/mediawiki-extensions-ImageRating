@@ -1,6 +1,6 @@
 {
 	"name": "ImageRating",
-	"version": "2.2",
+	"version": "2.3.0",
 	"author": [
 		"Aaron Wright",
 		"David Pean",
@@ -16,15 +16,15 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"ImageRatingAlias": "ImageRating.alias.php"
+		"ImageRatingAlias": "includes/ImageRating.alias.php"
 	},
 	"APIModules": {
 		"imagerating": "ApiImageRating"
 	},
 	"AutoloadClasses": {
-		"ApiImageRating": "ApiImageRating.php",
-		"FeaturedImage": "FeaturedImage.class.php",
-		"ImageRating": "ImageRating.body.php"
+		"ApiImageRating": "includes/api/ApiImageRating.php",
+		"FeaturedImage": "includes/FeaturedImage.class.php",
+		"ImageRating": "includes/specials/SpecialImageRating.php"
 	},
 	"SpecialPages": {
 		"ImageRating": "ImageRating"
