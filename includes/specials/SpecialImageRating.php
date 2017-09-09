@@ -104,7 +104,7 @@ class ImageRating extends SpecialPage {
 		}
 
 		// Database calls
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		if ( $category ) {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
@@ -270,7 +270,7 @@ class ImageRating extends SpecialPage {
 			// Only check images that are less than 30 days old
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res_top = $dbr->select(
 				array( 'Vote', 'image', 'page' ) + $tables,
 				array(
