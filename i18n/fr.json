@@ -1,28 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jack Phoenix <jack@countervandalism.net>"
+			"Jack Phoenix <jack@countervandalism.net>",
+			"Wladek92"
 		]
 	},
 	"imagerating-add-button": "ajouter",
-	"imagerating-add-categories-title": "ajouter categoriés (séparées par des virgules)",
+	"imagerating-add-categories-title": "ajouter des categories (séparées par des virgules)",
 	"imagerating-category": "Images de $1",
 	"imagerating-community-score": "note de la communauté : <b>$1</b> ({{PLURAL:$2|une note|$2 notes}})",
-	"imagerating-edit-summary": "ajouter une categorié",
+	"imagerating-edit-summary": "ajouter une categorie",
 	"imagerating-featured-heading": "Image recommandée",
+	"imagerating-popular-heading": "Images populaires",
 	"imagerating-popular-heading-param": "Images populaires sur $1",
 	"imagerating-new-heading-param": "Nouvelles images sur $1",
 	"imagerating-best-heading-param": "Les meilleures images sur $1",
-	"imagerating-popular-heading": "Images populaires",
 	"imagerating-new-heading": "Nouvelles images",
 	"imagerating-best-heading": "Les meilleures images",
-	"imagerating-menu-title": "Ménu",
+	"imagerating-menu-title": "Menu",
 	"imagerating-submitted-by": "Soumis par",
-	"imagerating-ratetitle": "Notér et catégoriser des images",
-	"imagerating-categorytitle": "Categoriés",
+	"imagerating-ratetitle": "Noter et catégoriser des images",
+	"imagerating-categorytitle": "Catégories",
 	"imagerating-upload-images": "Téléverser des images",
 	"imagerating-prev-link": "précédent",
 	"imagerating-next-link": "suivant",
-	"action-rateimage": "catégoriser et notér des images",
-	"right-rateimage": "Catégoriser et notér des images"
+	"action-rateimage": "catégoriser et noter des images",
+	"right-rateimage": "Catégoriser et noter des images"
 }

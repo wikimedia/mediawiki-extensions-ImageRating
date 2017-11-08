@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"apihelp-imagerating-description": "ImageRating API模块——允许在提供页面ID的情况下添加分类至页面",
+	"apihelp-imagerating-summary": "ImageRating API模块——允许在提供页面ID的情况下添加分类至页面",
+	"apihelp-imagerating-param-categories": "要添加到页面的URL编码，逗号分隔的分类列表（字符串）",
+	"apihelp-imagerating-param-pageId": "要编辑页面的内部标识符",
+	"apihelp-imagerating-example-1": "添加分类“Cute cats”、“Lolcats”和“Internet memes”至内部ID为66的页面。",
+	"imagerating-add-button": "添加",
+	"imagerating-add-categories-title": "添加分类（逗号分隔）",
+	"imagerating-category": "$1张图片",
+	"imagerating-community-score": "社群分数：<b>$1</b>（{{PLURAL:$2|$2个评级}}）",
+	"imagerating-desc": "允许用户[[Special:ImageRating|分类并评级图片]]",
+	"imagerating-edit-summary": "添加分类",
+	"imagerating-empty": "这里没有要做的事。",
+	"imagerating-featured-heading": "特色图片",
+	"imagerating-popular-heading": "受欢迎的图片",
+	"imagerating-popular-heading-param": "受欢迎的$1张图片",
+	"imagerating-new-heading-param": "新的$1张图片",
+	"imagerating-best-heading-param": "最佳$1张图片",
+	"imagerating-new-heading": "新图片",
+	"imagerating-best-heading": "最佳图片",
+	"imagerating-menu-title": "菜单",
+	"imagerating-submitted-by": "提交者",
+	"imagerating-ratetitle": "评级并分类图片",
+	"imagerating-categorytitle": "分类",
+	"imagerating-upload-images": "上传图片",
+	"imagerating-prev-link": "上一张",
+	"imagerating-next-link": "下一张",
+	"action-rateimage": "分类并评级图片",
+	"right-rateimage": "分类并评级图片"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"imagerating-add-button": "hinzufügen",
+	"imagerating-add-categories-title": "Kategorien hinzufügen (durch Kommas getrennt)",
+	"imagerating-category": "$1 Bilder",
+	"imagerating-community-score": "Score der Gemeinschaft: <b>$1</b> ({{PLURAL:$2|eine Bewertung|$2 Bewertungen}})",
+	"imagerating-desc": "Erlaubt Benutzern die [[Special:ImageRating|Kategorisierung und Bewertung von Bildern]]",
+	"imagerating-edit-summary": "Kategorie hinzufügen",
+	"imagerating-empty": "Hier gibt es nichts zu tun.",
+	"imagerating-featured-heading": "Vorgestelltes Bild",
+	"imagerating-popular-heading": "Beliebte Bilder",
+	"imagerating-popular-heading-param": "Die beliebten $1 Bilder",
+	"imagerating-new-heading-param": "Die neuen $1 Bilder",
+	"imagerating-best-heading-param": "Die besten $1 Bilder",
+	"imagerating-new-heading": "Neue Bilder",
+	"imagerating-best-heading": "Beste Bilder",
+	"imagerating-menu-title": "Menü",
+	"imagerating-submitted-by": "Hochgeladen von",
+	"imagerating-ratetitle": "Bilder bewerten und kategorisieren",
+	"imagerating-categorytitle": "Kategorien",
+	"imagerating-upload-images": "Bilder hochladen",
+	"imagerating-prev-link": "vorherige",
+	"imagerating-next-link": "nächste",
+	"action-rateimage": "Bilder zu kategorisieren und zu bewerten",
+	"right-rateimage": "Bilder kategorisieren und bewerten"
+}
