@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"imagerating-add-button": "추가",
+	"imagerating-edit-summary": "분류 추가",
+	"imagerating-new-heading": "새 그림",
+	"imagerating-best-heading": "최고의 그림",
+	"imagerating-menu-title": "메뉴",
+	"imagerating-submitted-by": "제출자",
+	"imagerating-categorytitle": "분류",
+	"imagerating-upload-images": "그림 올리기",
+	"imagerating-prev-link": "이전",
+	"imagerating-next-link": "다음"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"imagerating-add-button": "engadir",
+	"imagerating-add-categories-title": "engadir categorías (separadas por comas)",
+	"imagerating-category": "Imaxes de $1",
+	"imagerating-community-score": "clasificación da comunidade: <b>$1</b> ({{PLURAL:$2|unha clasificación|$2 clasificacións}})",
+	"imagerating-desc": "Permite que os usuarios [[Special:ImageRating|categoricen e clasifiquen as imaxes]]",
+	"imagerating-edit-summary": "engadir categoría",
+	"imagerating-empty": "Non hai nada que facer aquí.",
+	"imagerating-featured-heading": "Imaxe destacada",
+	"imagerating-popular-heading": "Imaxes populares",
+	"imagerating-popular-heading-param": "Imaxes populares de $1",
+	"imagerating-new-heading-param": "Imaxes novas de $1",
+	"imagerating-best-heading-param": "Mellores imaxes de $1",
+	"imagerating-new-heading": "Novas imaxes",
+	"imagerating-best-heading": "Mellores imaxes",
+	"imagerating-menu-title": "Menú",
+	"imagerating-submitted-by": "Enviada por",
+	"imagerating-ratetitle": "Clasificar e categorizar imaxes",
+	"imagerating-categorytitle": "Categorías",
+	"imagerating-upload-images": "Subir imaxes",
+	"imagerating-prev-link": "ant",
+	"imagerating-next-link": "seg",
+	"action-rateimage": "categorizar e clasificar imaxes",
+	"right-rateimage": "Categorizar e clasificar imaxes"
+}

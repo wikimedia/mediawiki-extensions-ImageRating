@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"apihelp-imagerating-description": "Модул „Оценка на слики“ -- овозможува ставање на категории во страница кога ќе се укаже нејзина назнака",
+	"apihelp-imagerating-summary": "Модул „Оценка на слики“ -- овозможува ставање на категории во страница кога ќе се укаже нејзина назнака",
+	"apihelp-imagerating-param-categories": "Список на категории за ставање во страницата. Ставките се одделени со запирки (низа), а списокот е URL-кодиран",
+	"apihelp-imagerating-param-pageId": "Внатрешна назнака на страницата за уредување",
+	"apihelp-imagerating-example-1": "Додај ги категориите „Cute cats“, „Lolcats“ и „Internet memes“ во страницата која има внатрешна назнака 66.",
+	"imagerating-add-button": "додај",
+	"imagerating-add-categories-title": "додај категории (одделени со запирки)",
+	"imagerating-category": "Слики од $1",
+	"imagerating-community-score": "мислење на заедницата: <b>$1</b> ({{PLURAL:$2|една оцена|$2 оцени}})",
+	"imagerating-desc": "Им овозможува на корисниците да [[Special:ImageRating|категоризираат и оценуваат слики]]",
+	"imagerating-edit-summary": "додај категорија",
+	"imagerating-empty": "Тука нема што да се прави.",
+	"imagerating-featured-heading": "Избрана слика",
+	"imagerating-popular-heading": "Популарни слики",
+	"imagerating-popular-heading-param": "$1 популарни слики",
+	"imagerating-new-heading-param": "$1 нови слики",
+	"imagerating-best-heading-param": "$1 најдобри слики",
+	"imagerating-new-heading": "Нови слики",
+	"imagerating-best-heading": "Најдобри слики",
+	"imagerating-menu-title": "Мени",
+	"imagerating-submitted-by": "Поднел",
+	"imagerating-ratetitle": "Оценка и категоризација на слики",
+	"imagerating-categorytitle": "Категории",
+	"imagerating-upload-images": "Подигни слики",
+	"imagerating-prev-link": "прет",
+	"imagerating-next-link": "след",
+	"action-rateimage": "категоризација и оценка на слики",
+	"right-rateimage": "Категоризација и оценка на слики"
+}

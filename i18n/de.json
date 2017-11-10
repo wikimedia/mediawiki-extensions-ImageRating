@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Danielbeerbonn"
 		]
 	},
 	"imagerating-add-button": "hinzufügen",
@@ -14,7 +15,7 @@
 	"imagerating-featured-heading": "Vorgestelltes Bild",
 	"imagerating-popular-heading": "Beliebte Bilder",
 	"imagerating-popular-heading-param": "Die beliebten $1 Bilder",
-	"imagerating-new-heading-param": "Die neuen $1 Bilder",
+	"imagerating-new-heading-param": "Die neuesten $1 Bilder",
 	"imagerating-best-heading-param": "Die besten $1 Bilder",
 	"imagerating-new-heading": "Neue Bilder",
 	"imagerating-best-heading": "Beste Bilder",

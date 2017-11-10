@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"imagerating-add-button": "derbäisetzen",
+	"imagerating-category": "Biller zum Thema $1",
+	"imagerating-empty": "Hei gëtt et näischt ze maachen.",
+	"imagerating-popular-heading": "Beléift Biller",
+	"imagerating-popular-heading-param": "Beléift $1 Biller",
+	"imagerating-new-heading-param": "Nei Biller zum Thema $1",
+	"imagerating-best-heading-param": "Déi bescht Biller zum Thema $1",
+	"imagerating-new-heading": "Nei Biller",
+	"imagerating-best-heading": "Bescht Biller",
+	"imagerating-menu-title": "Menü",
+	"imagerating-ratetitle": "Biller bewäerten a kategoriséieren",
+	"imagerating-categorytitle": "Kategorien",
+	"imagerating-upload-images": "Biller eroplueden",
+	"imagerating-prev-link": "vireg",
+	"imagerating-next-link": "nächst",
+	"action-rateimage": "Biller ze kategoriséieren an ze bewäerten",
+	"right-rateimage": "Biller kategoriséieren a bewäerten"
+}

@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"apihelp-imagerating-description": "Módulo ImageRating (classificação de imagens) da API -- permite adicionar categorias a uma página dado um identificador de página",
+	"apihelp-imagerating-summary": "Módulo ImageRating (classificação de imagens) da API -- permite adicionar categorias a uma página dado um identificador de página",
+	"apihelp-imagerating-param-categories": "Lista (texto) de categorias para adicionar à página, separadas por vírgulas, codificada para uso nos URL",
+	"apihelp-imagerating-param-pageId": "identificador interno da página a ser editada",
+	"apihelp-imagerating-example-1": "Adiciona as categorias \"Cute cats\", \"Lolcats\" e \"Internet memes\" à página que tem o identificador interno 66.",
+	"imagerating-add-button": "adicionar",
+	"imagerating-add-categories-title": "adicionar categorias (separadas por vírgulas)",
+	"imagerating-category": "Imagens de $1",
+	"imagerating-community-score": "classificação da comunidade: <b>$1</b> ({{PLURAL:$2|uma classificação|$2 classificações}})",
+	"imagerating-desc": "Permite que os utilizadores [[Special:ImageRating|categorizem e classifiquem imagens]]",
+	"imagerating-edit-summary": "adicionar categoria",
+	"imagerating-empty": "Nada para fazer aqui.",
+	"imagerating-featured-heading": "Imagem em destaque",
+	"imagerating-popular-heading": "Imagens populares",
+	"imagerating-popular-heading-param": "Imagens populares de $1",
+	"imagerating-new-heading-param": "Imagens novas de $1",
+	"imagerating-best-heading-param": "Melhores imagens de $1",
+	"imagerating-new-heading": "Imagens novas",
+	"imagerating-best-heading": "Melhores imagens",
+	"imagerating-menu-title": "Menu",
+	"imagerating-submitted-by": "Enviada por",
+	"imagerating-ratetitle": "Classificar e categorizar imagens",
+	"imagerating-categorytitle": "Categorias",
+	"imagerating-upload-images": "Carregar imagens",
+	"imagerating-prev-link": "ant",
+	"imagerating-next-link": "seg",
+	"action-rateimage": "categorizar e classificar imagens",
+	"right-rateimage": "Categorizar e classificar imagens"
+}

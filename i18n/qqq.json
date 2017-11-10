@@ -1,5 +1,9 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
 	"apihelp-imagerating-description": "{{doc-apihelp-description|imagerating}}",
 	"apihelp-imagerating-summary": "{{doc-apihelp-summary|imagerating}}",
 	"apihelp-imagerating-param-categories": "{{doc-apihelp-param|imagerating|categories}}",
@@ -19,13 +23,13 @@
 	"imagerating-best-heading-param": "A page title",
 	"imagerating-new-heading": "A page title",
 	"imagerating-best-heading": "A page title",
-	"imagerating-menu-title": "A header message",
+	"imagerating-menu-title": "A header message\n{{Identical|Menu}}",
 	"imagerating-submitted-by": "A hint message",
 	"imagerating-ratetitle": "A description message",
-	"imagerating-categorytitle": "A header message",
+	"imagerating-categorytitle": "A header message\n{{Identical|Category}}",
 	"imagerating-upload-images": "A link text",
-	"imagerating-prev-link": "A navigation text",
-	"imagerating-next-link": "A navigation text",
+	"imagerating-prev-link": "A navigation text\n{{Identical|Prev}}",
+	"imagerating-next-link": "A navigation text\n{{Identical|Next}}",
 	"action-rateimage": "{{doc-action|rateimage}}",
 	"right-rateimage": "{{doc-right|rateimage}}"
 }

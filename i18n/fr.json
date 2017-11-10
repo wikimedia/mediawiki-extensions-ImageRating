@@ -5,11 +5,15 @@
 			"Wladek92"
 		]
 	},
+	"apihelp-imagerating-param-categories": "Liste des catégories (chaîne) à ajouter à la page, séparées par des virgules, et encodées au format URL",
+	"apihelp-imagerating-param-pageId": "Identificateur interne de la page à modifier",
 	"imagerating-add-button": "ajouter",
 	"imagerating-add-categories-title": "ajouter des categories (séparées par des virgules)",
 	"imagerating-category": "Images de $1",
 	"imagerating-community-score": "note de la communauté : <b>$1</b> ({{PLURAL:$2|une note|$2 notes}})",
+	"imagerating-desc": "Autorise les utilisateurs à [[Special:ImageRating|catégoriser  et noter les images]]",
 	"imagerating-edit-summary": "ajouter une categorie",
+	"imagerating-empty": "Rien à faire ici.",
 	"imagerating-featured-heading": "Image recommandée",
 	"imagerating-popular-heading": "Images populaires",
 	"imagerating-popular-heading-param": "Images populaires sur $1",
