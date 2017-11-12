@@ -3,7 +3,7 @@
 		"authors": [
 			"Aaron Wright <aaron.wright@gmail.com>",
 			"David Pean <david.pean@gmail.com>",
-			"Jack Phoenix <jack@countervandalism.net>"
+			"Jack Phoenix"
 		]
 	},
 	"apihelp-imagerating-description": "ImageRating API module -- allows adding categories to a page when given a page ID",
