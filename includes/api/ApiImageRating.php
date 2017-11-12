@@ -4,8 +4,6 @@
  *
  * @file
  * @ingroup API
- * @author Jack Phoenix <jack@countervandalism.net>
- * @date 14 January 2017
  * @see https://www.mediawiki.org/wiki/API:Extensions#ApiSampleApiExtension.php
  */
 class ApiImageRating extends ApiBase {
