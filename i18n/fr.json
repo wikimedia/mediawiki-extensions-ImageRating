@@ -2,11 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Jack Phoenix",
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
+	"apihelp-imagerating-description": "Module d’API ImageRating -- permet d’ajouter des catégories à une page à partir de son ID",
+	"apihelp-imagerating-summary": "Module d’API ImageRating -- permet d’ajouter des catégories à une page d’après son ID",
 	"apihelp-imagerating-param-categories": "Liste des catégories (chaîne) à ajouter à la page, séparées par des virgules, et encodées au format URL",
 	"apihelp-imagerating-param-pageId": "Identificateur interne de la page à modifier",
+	"apihelp-imagerating-example-1": "Ajoute la catégorie « Chats mignons », « Chats rigolos » et « Mèmes internet » à la page d’ID interne 66.",
 	"imagerating-add-button": "ajouter",
 	"imagerating-add-categories-title": "ajouter des categories (séparées par des virgules)",
 	"imagerating-category": "Images de $1",
