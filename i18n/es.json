@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"imagerating-add-button": "añadir",
+	"imagerating-edit-summary": "añadir categoría",
+	"imagerating-popular-heading": "Imágenes populares",
+	"imagerating-new-heading": "Imágenes nuevas",
+	"imagerating-best-heading": "Mejores imágenes",
+	"imagerating-menu-title": "Menú",
+	"imagerating-prev-link": "ant."
+}
