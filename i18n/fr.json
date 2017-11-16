@@ -3,20 +3,21 @@
 		"authors": [
 			"Jack Phoenix",
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
-	"apihelp-imagerating-description": "Module d’API ImageRating -- permet d’ajouter des catégories à une page à partir de son ID",
+	"apihelp-imagerating-description": "Module d’API ImageRating -- permet d’ajouter des catégories à une page d’après son ID",
 	"apihelp-imagerating-summary": "Module d’API ImageRating -- permet d’ajouter des catégories à une page d’après son ID",
 	"apihelp-imagerating-param-categories": "Liste des catégories (chaîne) à ajouter à la page, séparées par des virgules, et encodées au format URL",
 	"apihelp-imagerating-param-pageId": "Identificateur interne de la page à modifier",
 	"apihelp-imagerating-example-1": "Ajoute la catégorie « Chats mignons », « Chats rigolos » et « Mèmes internet » à la page d’ID interne 66.",
 	"imagerating-add-button": "ajouter",
-	"imagerating-add-categories-title": "ajouter des categories (séparées par des virgules)",
+	"imagerating-add-categories-title": "ajouter des catégories (séparées par des virgules)",
 	"imagerating-category": "Images de $1",
 	"imagerating-community-score": "note de la communauté : <b>$1</b> ({{PLURAL:$2|une note|$2 notes}})",
-	"imagerating-desc": "Autorise les utilisateurs à [[Special:ImageRating|catégoriser  et noter les images]]",
-	"imagerating-edit-summary": "ajouter une categorie",
+	"imagerating-desc": "Autorise les utilisateurs à [[Special:ImageRating|catégoriser et noter les images]]",
+	"imagerating-edit-summary": "ajouter une catégorie",
 	"imagerating-empty": "Rien à faire ici.",
 	"imagerating-featured-heading": "Image recommandée",
 	"imagerating-popular-heading": "Images populaires",
