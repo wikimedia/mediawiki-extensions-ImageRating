@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Wirbel78"
 		]
 	},
-	"imagerating-add-button": "добавить"
+	"imagerating-add-button": "добавить",
+	"imagerating-menu-title": "Меню",
+	"imagerating-categorytitle": "Категории",
+	"imagerating-prev-link": "пред.",
+	"imagerating-next-link": "след."
 }
