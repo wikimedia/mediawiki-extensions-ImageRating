@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-imagerating-description": "Module API de ImageRating-perment d'ajouter des catégories a unepage lors page ID donnée",
+	"apihelp-imagerating-summary": "Μονάδα ΑΡΙ ImageRating-επιτρέπει την προσθήκη κατηγοριών σε μια σελίδα όταν παρασχεθεί ID σελίδας",
 	"apihelp-imagerating-param-categories": "URL κωδικοποιημένος, λίστα χωρισμένη με κόμμα (σειρά)κατηγοριών για να προσθέσετε στην σελίδα",
 	"apihelp-imagerating-param-pageId": "Εσωτερικός δείκτης αναγνώρισης της σελίδας προς έκδοση",
 	"apihelp-imagerating-example-1": "Προσθέστε τις κατηγορίες \"Cute cats\", \"Lolcats\" and \"Internet memes\" στη σελίδα που έχει εσωτερικό ID 66.",
