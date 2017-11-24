@@ -5,10 +5,16 @@
 		]
 	},
 	"imagerating-add-button": "añadir",
+	"imagerating-category": "Imágenes de $1",
 	"imagerating-edit-summary": "añadir categoría",
+	"imagerating-featured-heading": "Imagen en destaque",
 	"imagerating-popular-heading": "Imágenes populares",
 	"imagerating-new-heading": "Imágenes nuevas",
 	"imagerating-best-heading": "Mejores imágenes",
 	"imagerating-menu-title": "Menú",
-	"imagerating-prev-link": "ant."
+	"imagerating-submitted-by": "Enviada por",
+	"imagerating-categorytitle": "Categorías",
+	"imagerating-upload-images": "Cargar imágenes",
+	"imagerating-prev-link": "ant.",
+	"imagerating-next-link": "siguiente"
 }
