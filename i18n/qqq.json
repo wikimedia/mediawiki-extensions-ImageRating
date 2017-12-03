@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Liuxinyu970226"
 		]
 	},
 	"apihelp-imagerating-description": "{{doc-apihelp-description|imagerating}}",
@@ -9,9 +10,9 @@
 	"apihelp-imagerating-param-categories": "{{doc-apihelp-param|imagerating|categories}}",
 	"apihelp-imagerating-param-pageId": "{{doc-apihelp-param|imagerating|pageId}}",
 	"apihelp-imagerating-example-1": "{{doc-apihelp-example|imagerating}}",
-	"imagerating-add-button": "A button text",
+	"imagerating-add-button": "A button text\n{{Identical|Add}}",
 	"imagerating-add-categories-title": "A label message",
-	"imagerating-category": "A category name",
+	"imagerating-category": "A category name\n{{Identical|Image}}",
 	"imagerating-community-score": "A score message",
 	"imagerating-desc": "{{desc|name=ImageRating|url=https://www.mediawiki.org/wiki/Extension:ImageRating}}",
 	"imagerating-edit-summary": "An edit summary",
