@@ -26,7 +26,7 @@ class FeaturedImage {
 		$width = intval( $width );
 
 		// Set up memcached
-		$key = wfMemcKey( 'image', 'featured', $width );
+		$key = $wgMemc->makeKey( 'image', 'featured', $width );
 		$data = $wgMemc->get( $key );
 		$cache_expires = ( 60 * 30 );
 

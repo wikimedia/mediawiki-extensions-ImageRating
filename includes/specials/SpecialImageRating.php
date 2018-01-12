@@ -259,7 +259,7 @@ class ImageRating extends SpecialPage {
 		/*
 		// set up memcached
 		$width = 250;
-		$key = wfMemcKey( 'image', 'featured', "category:{$category}:width:{$width}" );
+		$key = $wgMemc->makeKey( 'image', 'featured', "category:{$category}:width:{$width}" );
 		$data = $wgMemc->get( $key );
 		$cache_expires = ( 60 * 30 );
 
@@ -353,7 +353,7 @@ class ImageRating extends SpecialPage {
 
 		$output .= '<h2>' . $this->msg( 'imagerating-ratetitle' )->plain() . '</h2>';
 
-		$key = wfMemcKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}" );
+		$key = $wgMemc->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}" );
 		$data = $wgMemc->get( $key );
 		if ( $data && $page == 0 ) {
 			$imageList = $data;
