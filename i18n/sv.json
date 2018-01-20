@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"apihelp-imagerating-description": "ImageRating API-modul -- gör det möjligt att lägga till kategorier på en sida med ett sid-ID",
+	"apihelp-imagerating-summary": "ImageRating API-modul -- gör det möjligt att lägga till kategorier på en sida med ett sid-ID",
+	"apihelp-imagerating-param-categories": "URL-avkodad, kommaseparerad lista (sträng) över kategorier att lägga till på sidan",
+	"apihelp-imagerating-param-pageId": "Intern identifierare för sidan att redigera",
+	"apihelp-imagerating-example-1": "Lägger till kategorierna \"Cute cats\", \"Lolcats\" och \"Internet memes\" på sidan som har internt ID 66.",
+	"imagerating-add-button": "lägg till",
+	"imagerating-add-categories-title": "lägg till kategorier (kommaseparerade)",
+	"imagerating-category": "$1 bilder",
+	"imagerating-community-score": "gemenskapspoäng: <b>$1</b> ({{PLURAL:$2|ett betyg|$2 betyg}})",
+	"imagerating-desc": "Låter användare [[Special:ImageRating|kategorisera och betygsätta bilder]]",
+	"imagerating-edit-summary": "lägg till kategori",
+	"imagerating-empty": "Ingenting att göra här.",
+	"imagerating-featured-heading": "Utvald bild",
+	"imagerating-popular-heading": "Populära bilder",
+	"imagerating-popular-heading-param": "Populära $1 bilder",
+	"imagerating-new-heading-param": "Nya $1 bilder",
+	"imagerating-best-heading-param": "Bästa $1 bilder",
+	"imagerating-new-heading": "Nya bilder",
+	"imagerating-best-heading": "Bästa bilder",
+	"imagerating-menu-title": "Meny",
+	"imagerating-submitted-by": "Inskickad av",
+	"imagerating-ratetitle": "Betygsätt och kategorisera bilder",
+	"imagerating-categorytitle": "Kategorier",
+	"imagerating-upload-images": "Ladda upp bilder",
+	"imagerating-prev-link": "föreg",
+	"imagerating-next-link": "nästa",
+	"action-rateimage": "kategorisera och betygsätt bilder",
+	"right-rateimage": "Kategorisera och betygsätt bilder"
+}
