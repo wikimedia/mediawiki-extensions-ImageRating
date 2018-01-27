@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"imagerating-add-button": "dodaj",
+	"imagerating-add-categories-title": "dodaj kategorie (oddzielone przecinkami)",
+	"imagerating-edit-summary": "dodaj kategorię",
+	"imagerating-menu-title": "Menu",
+	"imagerating-categorytitle": "Kategorie",
+	"imagerating-prev-link": "poprz.",
+	"imagerating-next-link": "nast."
+}
