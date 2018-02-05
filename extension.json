@@ -40,8 +40,7 @@
 	},
 	"ResourceModules": {
 		"ext.imagerating.css": {
-			"styles": "resources/css/ImageRating.css",
-			"position": "top"
+			"styles": "resources/css/ImageRating.css"
 		},
 		"ext.imagerating.js": {
 			"scripts": "resources/js/ImageRating.js",
