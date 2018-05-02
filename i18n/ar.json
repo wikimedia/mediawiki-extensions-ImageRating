@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"apihelp-imagerating-description": "وحدة API تقييم الصور: تسمح بإضافة تصنيفات إلى صفحة عند إعطاء معرف الصفحة",
+	"apihelp-imagerating-summary": "وحدة API تقييم الصور: تسمح بإضافة تصنيفات إلى صفحة عند إعطاء معرف الصفحة",
+	"apihelp-imagerating-param-categories": "ترميز مسارات، قائمة مفصولة بفواصل (سلسلة) بتصنيفات لإضافتها إلى الصفحة",
+	"apihelp-imagerating-param-pageId": "معرف داخلي للصفحة لتحريرها",
+	"apihelp-imagerating-example-1": "يضيف تصنيفات \"القط اللطيف\" و\"لولكات\" و\"ميمات الإنترنت\" إلى الصفحة التي تحتوي على معرف 66 داخلي.",
+	"imagerating-add-button": "إضافة",
+	"imagerating-add-categories-title": "إضافة تصنيفات (مفصولة بفواصل)",
+	"imagerating-category": "صور $1",
+	"imagerating-community-score": "نتيجة المجتمع: <b>$1</b> ({{PLURAL:$2|تقييم واحد|$2 تقييمات}})",
+	"imagerating-desc": "يسمح للمستخدمين [[Special:ImageRating|بتصنيف الصور وتقييمها]]",
+	"imagerating-edit-summary": "أضف تصنيفا",
+	"imagerating-empty": "لا شيء لتفعله هنا.",
+	"imagerating-featured-heading": "صورة مختارة",
+	"imagerating-popular-heading": "صور شعبية",
+	"imagerating-popular-heading-param": "$1 صور شعبية",
+	"imagerating-new-heading-param": "$1 صور جديدة",
+	"imagerating-best-heading-param": "أفضل $1 صور",
+	"imagerating-new-heading": "صور جديدة",
+	"imagerating-best-heading": "أفضل الصور",
+	"imagerating-menu-title": "القائمة",
+	"imagerating-submitted-by": "مقدمة من قبل",
+	"imagerating-ratetitle": "تقييم وتصنيف الصور",
+	"imagerating-categorytitle": "التصنيفات",
+	"imagerating-upload-images": "رفع الصور",
+	"imagerating-prev-link": "سا",
+	"imagerating-next-link": "اللاحق",
+	"action-rateimage": "تصنيف وتقييم الصور",
+	"right-rateimage": "تصنيف وتقييم الصور"
+}
