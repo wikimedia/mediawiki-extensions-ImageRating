@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"apihelp-imagerating-description": "ResimDeğerlendirme API modülü -- bir sayfanın ID'si verildiğinde bir sayfaya kategori eklemeye izin verir",
+	"apihelp-imagerating-summary": "ResimDeğerlendirme API modülü -- bir sayfanın ID'si verildiğinde bir sayfaya kategori eklemeye izin verir",
+	"apihelp-imagerating-param-categories": "URL olarak kodlanmış, sayfaya eklenecek kategorilerin virgülle ayrılmış listesi (dize)",
+	"apihelp-imagerating-param-pageId": "Düzenlenecek sayfanın iç tanıtıcısı",
+	"apihelp-imagerating-example-1": "Iç ID'si 66 olan sayfaya \"Sevimli kediler\", \"Lolcats\" ve \"İnternet meme'leri\" kategorilerini ekler.",
+	"imagerating-add-button": "ekle",
+	"imagerating-add-categories-title": "kategori ekle (virgülle ayrılmış olarak)",
+	"imagerating-category": "$1 Resimleri",
+	"imagerating-community-score": "topluluk puanı: <b>$1</b> ({{PLURAL:$2|bir değerlendirme|$2 değerlendirme}})",
+	"imagerating-desc": "Kullanıcıların  [[Special:ImageRating|resimleri sınıflandırmasına ve derecelendirmesine]] izin verir",
+	"imagerating-edit-summary": "kategori ekle",
+	"imagerating-empty": "Burada yapacak bir şey yok.",
+	"imagerating-featured-heading": "Seçkin Resimler",
+	"imagerating-popular-heading": "Popüler Resimler",
+	"imagerating-popular-heading-param": "Popüler $1 Resimleri",
+	"imagerating-new-heading-param": "Yeni $1 Resimleri",
+	"imagerating-best-heading-param": "En İyi $1 Resimleri",
+	"imagerating-new-heading": "Yeni Resimler",
+	"imagerating-best-heading": "En İyi Resimler",
+	"imagerating-menu-title": "Menü",
+	"imagerating-submitted-by": "Gönderen:",
+	"imagerating-ratetitle": "Resimleri Değerlendir ve Kategorize Et",
+	"imagerating-categorytitle": "Kategoriler",
+	"imagerating-upload-images": "Resim Yükle",
+	"imagerating-prev-link": "önceki",
+	"imagerating-next-link": "sonraki",
+	"action-rateimage": "resimleri sınıflandırın ve değerlendirin",
+	"right-rateimage": "Resimleri sınıflandırın ve değerlendirin"
+}
