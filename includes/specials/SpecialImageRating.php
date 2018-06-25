@@ -77,7 +77,7 @@ class ImageRating extends SpecialPage {
 		// they're on this page, but by default the voteny user right is given
 		// only to 'user', not '*' so it might be that '*' has 'rateimage' right
 		// but not 'voteny'. Possible, just unlikely and not ideal.
-		$modules = array( 'ext.imagerating.js' );
+		$modules = [ 'ext.imagerating.js' ];
 		if ( $user->isAllowed( 'voteny' ) ) {
 			$modules[] = 'ext.voteNY.scripts';
 		}
@@ -88,7 +88,7 @@ class ImageRating extends SpecialPage {
 		$type = $request->getVal( 'type', ( $par ? $par : 'new' ) );
 		$category = $request->getVal( 'category' );
 
-		$tables = $where = $options = $joinConds = array();
+		$tables = $where = $options = $joinConds = [];
 
 		// SQL limit based on page
 		$perPage = 5;
@@ -110,33 +110,33 @@ class ImageRating extends SpecialPage {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
 			$ctgKey = $lang->uc( $ctgTitle->getDBkey() );
 			$tables[] = 'categorylinks';
-			$joinConds[] = array( 'categorylinks' => array( 'INNER JOIN', 'cl_from = page_id' ) );
+			$joinConds[] = [ 'categorylinks' => [ 'INNER JOIN', 'cl_from = page_id' ] ];
 			$where['UPPER(cl_to)'] = $ctgKey;
 		}
 
 		switch ( $type ) {
 			case 'best':
 				$res = $dbr->select(
-					array( 'page', 'Vote' ) + $tables,
-					array(
+					[ 'page', 'Vote' ] + $tables,
+					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
 						"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
-					),
-					array( 'page_namespace' => NS_FILE, 'page_id = vote_page_id' ) + $where,
+					],
+					[ 'page_namespace' => NS_FILE, 'page_id = vote_page_id' ] + $where,
 					__METHOD__,
-					array(
+					[
 						'ORDER BY' => 'vote_avg DESC, vote_count DESC'
-					) + $options,
+					] + $options,
 					$joinConds
 				);
 				$res_count = $dbr->select(
-					array( 'page', 'Vote' ) + $tables,
-					array( 'COUNT(*) AS total_ratings' ),
-					array( 'page_namespace' => NS_FILE ) + $where,
+					[ 'page', 'Vote' ] + $tables,
+					[ 'COUNT(*) AS total_ratings' ],
+					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
 					$options,
-					array( 'Vote' => array( 'INNER JOIN', 'page_id = vote_page_id' ) ) + $joinConds
+					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
 				$row_count = $dbr->fetchObject( $res_count );
 				$total = $row_count->total_ratings;
@@ -149,29 +149,29 @@ class ImageRating extends SpecialPage {
 
 			case 'popular':
 				$res = $dbr->select(
-					array( 'page', 'Vote' ) + $tables,
-					array(
+					[ 'page', 'Vote' ] + $tables,
+					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
 						"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
-					),
-					array( 'page_namespace' => NS_FILE ) + $where,
+					],
+					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
-					array(
+					[
 						'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
 						'HAVING' => 'vote_count > 1' // can't be in the WHERE clause
-					) + $options,
-					array( 'Vote' => array( 'INNER JOIN', 'page_id = vote_page_id' ) ) + $joinConds
+					] + $options,
+					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
 				$res_count = $dbr->select(
-					array( 'page', 'Vote' ) + $tables,
-					array( 'COUNT(*) AS total_ratings' ),
-					array( 'page_namespace' => NS_FILE ) + $where,
+					[ 'page', 'Vote' ] + $tables,
+					[ 'COUNT(*) AS total_ratings' ],
+					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
 					$options,
-					array(
-						'Vote' => array( 'INNER JOIN', 'page_id = vote_page_id' )
-					) + $joinConds
+					[
+						'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ]
+					] + $joinConds
 				);
 				$row_count = $dbr->fetchObject( $res_count );
 				$total = $row_count->total_ratings;
@@ -185,21 +185,21 @@ class ImageRating extends SpecialPage {
 			case 'new':
 			default:
 				$res = $dbr->select(
-					array( 'page', 'Vote' ) + $tables,
-					array( 'page_id', 'page_title', 'COUNT(vote_value)', 'AVG(vote_value) AS vote_avg' ),
-					array( 'page_namespace' => NS_FILE, 'vote_page_id = page_id' ) + $where,
+					[ 'page', 'Vote' ] + $tables,
+					[ 'page_id', 'page_title', 'COUNT(vote_value)', 'AVG(vote_value) AS vote_avg' ],
+					[ 'page_namespace' => NS_FILE, 'vote_page_id = page_id' ] + $where,
 					__METHOD__,
-					array(
+					[
 						/*
 						[19:19:28]	<valhallasw>	ashley: the group by is needed for the avg because you need to tell mysql what the avg is over
 						[19:19:37]	<valhallasw>	it's the average(vote) over (page_id, page_title)
 						*/
 						'GROUP BY' => 'page_id, page_title',
 						'ORDER BY' => 'page_id DESC'
-					) + $options,
-					array(
-						'Vote' => array( 'LEFT JOIN', 'page_id = vote_page_id' )
-					) + $joinConds
+					] + $options,
+					[
+						'Vote' => [ 'LEFT JOIN', 'page_id = vote_page_id' ]
+					] + $joinConds
 				);
 				$total = SiteStats::images();
 				if ( isset( $category ) && $category ) {
@@ -217,17 +217,17 @@ class ImageRating extends SpecialPage {
 
 		// Build navigation
 		if ( isset( $category ) && $category ) {
-			$menu = array(
+			$menu = [
 				$this->msg( 'imagerating-new-heading-param', $category )->parse() => 'new',
 				$this->msg( 'imagerating-popular-heading-param', $category )->parse() => 'popular',
 				$this->msg( 'imagerating-best-heading-param', $category )->parse() => 'best'
-			);
+			];
 		} else {
-			$menu = array(
+			$menu = [
 				$this->msg( 'imagerating-new-heading' )->parse() => 'new',
 				$this->msg( 'imagerating-popular-heading' )->parse() => 'popular',
 				$this->msg( 'imagerating-best-heading' )->parse() => 'best'
-			);
+			];
 		}
 
 		$output = '<div class="image-rating-menu">
@@ -238,8 +238,8 @@ class ImageRating extends SpecialPage {
 				$output .= '<p>' . $linkRenderer->makeLink(
 					$pageTitle,
 					$title,
-					array(),
-					array( 'type' => $qs ) + ( ( $category ) ? array( 'category' => $category ) : array() )
+					[],
+					[ 'type' => $qs ] + ( ( $category ) ? [ 'category' => $category ] : [] )
 				) . '<p>';
 			} else {
 				$output .= "<p><b>{$title}</b></p>";
@@ -272,24 +272,24 @@ class ImageRating extends SpecialPage {
 
 			$dbr = wfGetDB( DB_REPLICA );
 			$res_top = $dbr->select(
-				array( 'Vote', 'image', 'page' ) + $tables,
-				array(
+				[ 'Vote', 'image', 'page' ] + $tables,
+				[
 					'page_id', 'page_title', 'img_user', 'img_user_text',
 					'AVG(vote_value) AS vote_avg',
 					"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
-				),
-				array(
+				],
+				[
 					'page_id = vote_page_id',
 					'img_name = page_title',
 					'page_namespace' => NS_FILE
 					"img_timestamp > {$time}"
-				) + $where,
+				] + $where,
 				__METHOD__,
-				array(
+				[
 					'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
 					'LIMIT' => 1,
 					'OFFSET' => 0
-				),
+				],
 				$joinConds
 			);
 
@@ -299,10 +299,10 @@ class ImageRating extends SpecialPage {
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
 				$render_top_image = wfFindFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
-					$thumb_top_image = $render_top_image->transform( array(
+					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,
 						'height' => 0
-					) );
+					] );
 
 					$featured_image['image_name'] = $row->page_title;
 					$featured_image['image_url'] = $image_title->getFullURL();
@@ -360,13 +360,13 @@ class ImageRating extends SpecialPage {
 			wfDebugLog( 'ImageRating', 'Cache hit for image rating list' );
 		} else {
 			wfDebugLog( 'ImageRating', 'Cache miss for image rating list' );
-			$imageList = array();
+			$imageList = [];
 			foreach ( $res as $row ) {
-				$imageList[] = array(
+				$imageList[] = [
 					'page_id' => $row->page_id,
 					'page_title' => $row->page_title,
 					'vote_avg' => $lang->formatNum( $row->vote_avg )
-				);
+				];
 			}
 			// Cache the first page for a minute in memcached
 			if ( $page == 1 ) {
@@ -390,10 +390,10 @@ class ImageRating extends SpecialPage {
 				$render_image = wfFindFile( $image_path );
 				$thumb_image = false;
 				if ( is_object( $render_image ) ) {
-					$thumb_image = $render_image->transform( array(
+					$thumb_image = $render_image->transform( [
 						'width' => 120,
 						'height' => 120
-					) );
+					] );
 				}
 				$thumbnail = '';
 				if ( is_object( $thumb_image ) ) {
@@ -426,8 +426,8 @@ class ImageRating extends SpecialPage {
 
 				$res_category = $dbr->select(
 					'categorylinks',
-					array( 'cl_to', 'cl_sortkey', 'cl_from' ),
-					array( 'cl_from' => $image_id ),
+					[ 'cl_to', 'cl_sortkey', 'cl_from' ],
+					[ 'cl_from' => $image_id ],
 					__METHOD__
 				);
 				$category_total = $dbr->numRows( $res_category );
@@ -481,14 +481,14 @@ class ImageRating extends SpecialPage {
 		// Build the pagination links
 		if ( $renderPagination ) {
 			$numOfPages = $total / $perPage;
-			$prevLink = array(
+			$prevLink = [
 				'page' => ( $page - 1 ),
 				'type' => $type
-			) + ( ( $category ) ? array( 'category' => $category ) : array() );
-			$nextLink = array(
+			] + ( ( $category ) ? [ 'category' => $category ] : [] );
+			$nextLink = [
 				'page' => ( $page + 1 ),
 				'type' => $type
-			) + ( ( $category ) ? array( 'category' => $category ) : array() );
+			] + ( ( $category ) ? [ 'category' => $category ] : [] );
 
 			if ( $numOfPages > 1 ) {
 				$output .= '<div class="rate-image-navigation">';
@@ -496,7 +496,7 @@ class ImageRating extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$pageTitle,
 						$this->msg( 'imagerating-prev-link' )->plain(),
-						array(),
+						[],
 						$prevLink
 					) . ' ';
 				}
@@ -518,11 +518,11 @@ class ImageRating extends SpecialPage {
 						$output .= $linkRenderer->makeLink(
 							$pageTitle,
 							$i,
-							array(),
-							array(
+							[],
+							[
 								'page' => $i,
 								'type' => $type
-							) + ( ( $category ) ? array( 'category' => $category ) : array() )
+							] + ( ( $category ) ? [ 'category' => $category ] : [] )
 						) . ' ';
 					}
 				}
@@ -531,7 +531,7 @@ class ImageRating extends SpecialPage {
 					$output .= ' ' . $linkRenderer->makeLink(
 						$pageTitle,
 						$this->msg( 'imagerating-next-link' )->plain(),
-						array(),
+						[],
 						$nextLink
 					);
 				}

@@ -3,7 +3,7 @@
 class FeaturedImage {
 
 	public static function registerHook( &$parser ) {
-		$parser->setHook( 'featuredimage', array( 'FeaturedImage', 'renderFeaturedImage' ) );
+		$parser->setHook( 'featuredimage', [ 'FeaturedImage', 'renderFeaturedImage' ] );
 		return true;
 	}
 
@@ -14,7 +14,7 @@ class FeaturedImage {
 		if ( $wgUser->isAllowed( 'voteny' ) ) {
 			$parser->getOutput()->addModules( 'ext.voteNY.scripts' );
 		}
-		$parser->getOutput()->addModuleStyles( array( 'ext.imagerating.css', 'ext.voteNY.styles' ) );
+		$parser->getOutput()->addModuleStyles( [ 'ext.imagerating.css', 'ext.voteNY.styles' ] );
 
 		$width = 250;
 		// Get width property passed from hook
@@ -40,26 +40,26 @@ class FeaturedImage {
 
 			$dbr = wfGetDB( DB_MASTER );
 			$res_top = $dbr->select(
-				array( 'page', 'image', 'Vote' ),
-				array(
+				[ 'page', 'image', 'Vote' ],
+				[
 					'page_id', 'page_title', 'img_user', 'img_user_text',
 					'AVG(vote_value) AS vote_avg',
 					"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
-				),
-				array(
+				],
+				[
 					'page_id = vote_page_id',
 					'page_namespace' => NS_FILE,
 					"img_timestamp > {$time}"
-				),
+				],
 				__METHOD__,
-				array(
+				[
 					'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
 					'LIMIT' => 1,
 					'OFFSET' => 0
-				)
+				]
 			);
 
-			$featured_image = array();
+			$featured_image = [];
 
 			if ( $dbr->numRows( $res_top ) > 0 ) {
 				$row = $dbr->fetchObject( $res_top );
@@ -67,10 +67,10 @@ class FeaturedImage {
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
 				$render_top_image = wfFindFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
-					$thumb_top_image = $render_top_image->transform( array(
+					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,
 						'height' => 0
-					) );
+					] );
 
 					$featured_image['image_name'] = $row->page_title;
 					$featured_image['image_url'] = $image_title->getFullURL();

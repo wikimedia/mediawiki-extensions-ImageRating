@@ -69,7 +69,7 @@ class ApiImageRating extends ApiBase {
 
 		// Top level
 		$this->getResult()->addValue( null, $this->getModuleName(),
-			array( 'result' => self::addImageCategory( $pageId, $params['categories'] ) )
+			[ 'result' => self::addImageCategory( $pageId, $params['categories'] ) ]
 		);
 
 		return true;
@@ -136,24 +136,24 @@ class ApiImageRating extends ApiBase {
 	 * @return array
 	 */
 	public function getAllowedParams() {
-		return array(
-			'pageId' => array(
+		return [
+			'pageId' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'categories' => array(
+			],
+			'categories' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => true
-			)
-		);
+			]
+		];
 	}
 
 	/**
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {
-		return array(
+		return [
 			'action=imagerating&pageId=66&categories=Cute%20cats,Lolcats,Internet%20memes' => 'apihelp-imagerating-example-1'
-		);
+		];
 	}
 }
