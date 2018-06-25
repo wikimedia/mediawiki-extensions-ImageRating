@@ -89,19 +89,16 @@ class ApiImageRating extends ApiBase {
 
 		// Construct page title object
 		$imagePage = Title::newFromID( $pageId );
-		$article = new Article( $imagePage );
+		$wp = WikiPage::factory( $imagePage );
 
 		// Check if it's been edited in last 2 seconds: want to delay the edit
-		$timeSinceEdited = wfTimestamp( TS_MW, 0 ) - $article->getTimestamp();
+		$timeSinceEdited = wfTimestamp( TS_MW, 0 ) - $wp->getTimestamp();
 		if ( $timeSinceEdited <= 2 ) {
 			return 'busy';
 		}
 
 		// Get current page text
-		// @todo Article#getContent() is deprecated since MW 1.21, should use
-		// WikiPage#getContent() instead (because Article#getContentObject() is
-		// protected)
-		$pageText = $article->getContent();
+		$pageText = ContentHandler::getContentText( $wp->getContent() );
 
 		// Append new categories
 		$categoriesArray = explode( ',', $categories );
@@ -119,7 +116,7 @@ class ApiImageRating extends ApiBase {
 
 		// Make page edit
 		$content = ContentHandler::makeContent( $newText, $imagePage );
-		$article->doEditContent( $content, wfMessage( 'imagerating-edit-summary' )->inContentLanguage()->text() );
+		$wp->doEditContent( $content, wfMessage( 'imagerating-edit-summary' )->inContentLanguage()->text() );
 
 		return 'ok';
 	}
