@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"BadDog"
 		]
 	},
-	"imagerating-categorytitle": "Категорије"
+	"imagerating-categorytitle": "Категорије",
+	"action-rateimage": "категоризујете и оцењујете слике"
 }
