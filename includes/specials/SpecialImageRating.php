@@ -231,13 +231,13 @@ class ImageRating extends SpecialPage {
 		}
 
 		$output = '<div class="image-rating-menu">
-			<h2>' . $this->msg( 'imagerating-menu-title' )->plain() . '</h2>';
+			<h2>' . $this->msg( 'imagerating-menu-title' )->escaped() . '</h2>';
 
 		foreach ( $menu as $title => $qs ) {
 			if ( $type != $qs ) {
 				$output .= '<p>' . $linkRenderer->makeLink(
 					$pageTitle,
-					$title,
+					new HtmlArmor( $title ),
 					[],
 					[ 'type' => $qs ] + ( ( $category ) ? [ 'category' => $category ] : [] )
 				) . '<p>';
@@ -351,7 +351,7 @@ class ImageRating extends SpecialPage {
 		}
 		*/
 
-		$output .= '<h2>' . $this->msg( 'imagerating-ratetitle' )->plain() . '</h2>';
+		$output .= '<h2>' . $this->msg( 'imagerating-ratetitle' )->escaped() . '</h2>';
 
 		$key = $wgMemc->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}" );
 		$data = $wgMemc->get( $key );
@@ -432,7 +432,7 @@ class ImageRating extends SpecialPage {
 				);
 				$category_total = $dbr->numRows( $res_category );
 				$output .= "<div id=\"image-categories-container-{$image_id}\" class=\"image-categories-container\">
-					<h2>" . $this->msg( 'imagerating-categorytitle' )->plain() . '</h2>';
+					<h2>" . $this->msg( 'imagerating-categorytitle' )->escaped() . '</h2>';
 
 				$per_row = 3;
 				$category_x = 1;
@@ -462,9 +462,9 @@ class ImageRating extends SpecialPage {
 
 				$output .= "<div class=\"visualClear\" id=\"image-categories-container-end-{$image_id}\"></div>
 					<div class=\"image-categories-add\">" .
-						$this->msg( 'imagerating-add-categories-title' )->plain() . "<br />
+						$this->msg( 'imagerating-add-categories-title' )->escaped() . "<br />
 						<input type=\"text\" size=\"22\" id=\"category-{$image_id}\" />
-						<input type=\"button\" value=\"" . $this->msg( 'imagerating-add-button' )->plain() . '" class="site-button" />
+						<input type=\"button\" value=\"" . $this->msg( 'imagerating-add-button' )->escaped() . '" class="site-button" />
 					</div>
 				</div>';
 
