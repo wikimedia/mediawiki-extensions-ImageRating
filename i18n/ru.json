@@ -2,12 +2,36 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Wirbel78"
+			"Wirbel78",
+			"Vlad5250"
 		]
 	},
+	"apihelp-imagerating-description": "Модуль «Оценка изображений» -- позволяет добавлять категории к странице при указании её ID",
+	"apihelp-imagerating-summary": "Модуль «Оценка изображений» -- позволяет добавлять категории к странице при указании её ID",
+	"apihelp-imagerating-param-categories": "Список категорий для добавления в страницу. Записи разделены запятыми (строка), а список URL-кодирован",
+	"apihelp-imagerating-param-pageId": "Внутренний идентификатор страницы для правки",
+	"apihelp-imagerating-example-1": "Добавить категории «Cute cats», «Lolcats» и «Internet memes» к странице с внутренним ID 66.",
 	"imagerating-add-button": "добавить",
+	"imagerating-add-categories-title": "добавить категории (через запятую)",
+	"imagerating-category": "Изображения из $1",
+	"imagerating-community-score": "мнение сообщества: <b>$1</b> ({{PLURAL:$2|одна оценка|$2 оценки|$2 оценок}})",
+	"imagerating-desc": "Позволяет пользователям [[Special:ImageRating|категоризовать и оценивать изображения]]",
+	"imagerating-edit-summary": "добавить категорию",
+	"imagerating-empty": "Здесь нечего делать.",
+	"imagerating-featured-heading": "Избранное изображение",
+	"imagerating-popular-heading": "Популярные изображения",
+	"imagerating-popular-heading-param": "$1 популярные изображения",
+	"imagerating-new-heading-param": "$1 новые изображения",
+	"imagerating-best-heading-param": "$1 лучшие изображения",
+	"imagerating-new-heading": "Новые изображения",
+	"imagerating-best-heading": "Лучшие изображения",
 	"imagerating-menu-title": "Меню",
+	"imagerating-submitted-by": "Добавлен участником",
+	"imagerating-ratetitle": "Оценка и категоризация изображений",
 	"imagerating-categorytitle": "Категории",
+	"imagerating-upload-images": "Загрузить изображения",
 	"imagerating-prev-link": "пред.",
-	"imagerating-next-link": "след."
+	"imagerating-next-link": "след.",
+	"action-rateimage": "категоризация и оценка изображений",
+	"right-rateimage": "Категоризация и оценка изображений"
 }
