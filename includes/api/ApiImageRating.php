@@ -15,7 +15,7 @@ class ApiImageRating extends ApiBase {
 		$user = $this->getUser();
 		// Ensure that we're allowed to do this
 		if ( !$user->isAllowed( 'rateimage' ) ) {
-			$this->dieUsageMsg( 'noedit' );
+			$this->dieWithError( 'apierror-noedit', 'noedit' );
 		}
 
 		// Get the request parameters
@@ -24,47 +24,21 @@ class ApiImageRating extends ApiBase {
 		$pageId = $params['pageId'];
 		// Ensure that the pageId parameter is present and that it really is numeric
 		if ( !$pageId || $pageId === null || !is_numeric( $pageId ) ) {
-			$this->dieUsageMsg( 'missingparam' );
+			$this->dieWithError( [ 'apierror-missingparam', 'pageId' ], 'missingparam' );
 		}
 
 		// Need at least one category to add...
 		if ( !$params['categories'] || $params['categories'] === null || empty( $params['categories'] ) ) {
-			$this->dieUsageMsg( 'missingparam' );
+			$this->dieWithError( [ 'apierror-missingparam', 'categories' ], 'missingparam' );
 		}
 
 		// Delicious <copypasta> from /includes/api/ApiEditPage.php
 		$titleObj = Title::newFromId( $pageId );
 		// Now let's check whether we're even allowed to do this
-		$errors = $titleObj->getUserPermissionsErrors( 'edit', $user );
-		if ( !$titleObj->exists() ) {
-			$errors = array_merge( $errors, $titleObj->getUserPermissionsErrors( 'create', $user ) );
-		}
-		if ( count( $errors ) ) {
-			if ( is_array( $errors[0] ) ) {
-				switch ( $errors[0][0] ) {
-					case 'blockedtext':
-						$this->dieUsage(
-							'You have been blocked from editing',
-							'blocked',
-							0,
-							[ 'blockinfo' => ApiQueryUserInfo::getBlockInfo( $user->getBlock() ) ]
-						);
-						break;
-					case 'autoblockedtext':
-						$this->dieUsage(
-							'Your IP address has been blocked automatically, because it was used by a blocked user',
-							'autoblocked',
-							0,
-							[ 'blockinfo' => ApiQueryUserInfo::getBlockInfo( $user->getBlock() ) ]
-						);
-						break;
-					default:
-						$this->dieUsageMsg( $errors[0] );
-				}
-			} else {
-				$this->dieUsageMsg( $errors[0] );
-			}
-		}
+		$this->checkTitleUserPermissions(
+			$titleObj,
+			$titleObj->exists() ? 'edit' : [ 'edit', 'create' ]
+		);
 		// End delicious </copypasta>
 
 		// Top level
@@ -83,8 +57,6 @@ class ApiImageRating extends ApiBase {
 	 * @return string 'ok' if everything went well, 'busy' if the article has been edited in the last 2 seconds and we didn't edit it
 	 */
 	public static function addImageCategory( $pageId, $categories ) {
-		global $wgContLang;
-
 		$categories = urldecode( $categories );
 
 		// Construct page title object
@@ -103,9 +75,10 @@ class ApiImageRating extends ApiBase {
 		// Append new categories
 		$categoriesArray = explode( ',', $categories );
 		$categoryText = '';
+		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
 		foreach ( $categoriesArray as $category ) {
 			$category = trim( $category );
-			$namespace = $wgContLang->getNsText( NS_CATEGORY );
+			$namespace = $contLang->getNsText( NS_CATEGORY );
 			$ctg = wfMessage( 'imagerating-category', $category )->inContentLanguage()->parse();
 			$tag = "[[{$namespace}:{$ctg}]]";
 			if ( strpos( $pageText, $tag ) === false ) {
