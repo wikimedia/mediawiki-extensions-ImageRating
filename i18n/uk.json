@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"apihelp-imagerating-description": "Модуль API «ImageRating» — дає змогу додавати категорії до сторінки, коли вказано її ідентифікатор",
+	"apihelp-imagerating-summary": "Модуль API «ImageRating» — дає змогу додавати категорії до сторінки, коли вказано її ідентифікатор",
+	"apihelp-imagerating-param-categories": "URL-кодований список категорій (у формі рядка тексту, з розділенням через кому) для додавання до сторінки",
+	"apihelp-imagerating-param-pageId": "Внутрішній ідентифікатор сторінки, яку треба відредагувати",
+	"apihelp-imagerating-example-1": "Додає категорії «Cute cats», «Lolcats» та «Internet memes» до сторінки із внутрішнім ідентифікатором 66.",
+	"imagerating-add-button": "додати",
+	"imagerating-add-categories-title": "додати категорії (через кому)",
+	"imagerating-category": "$1: зображення",
+	"imagerating-community-score": "оцінка спільноти: <b>$1</b> ({{PLURAL:$2|$2 оцінка|$2 оцінки|$2 оцінок}})",
+	"imagerating-desc": "Дає користувачам змогу [[Special:ImageRating|категоризувати й оцінювати зображення]]",
+	"imagerating-edit-summary": "додати категорію",
+	"imagerating-empty": "Тут нічого робити.",
+	"imagerating-featured-heading": "Вибране зображення",
+	"imagerating-popular-heading": "Популярні зображення",
+	"imagerating-popular-heading-param": "$1: популярні зображення",
+	"imagerating-new-heading-param": "$1: нові зображення",
+	"imagerating-best-heading-param": "$1:найкращі зображення",
+	"imagerating-new-heading": "Нові зображення",
+	"imagerating-best-heading": "Найкращі зображення",
+	"imagerating-menu-title": "Меню",
+	"imagerating-submitted-by": "Завантажено",
+	"imagerating-ratetitle": "Оцінка й категоризація зображень",
+	"imagerating-categorytitle": "Категорії",
+	"imagerating-upload-images": "Завантажити зображення",
+	"imagerating-prev-link": "попер.",
+	"imagerating-next-link": "наст.",
+	"action-rateimage": "категоризацію та оцінку зображень",
+	"right-rateimage": "категоризація й оцінка зображень"
+}
