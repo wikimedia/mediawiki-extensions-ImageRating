@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"apihelp-imagerating-description": "Module API ImageRating -- permette de aggiungere categorije a 'na pàgene quanne jè date 'nu ID de pàgene",
+	"apihelp-imagerating-summary": "Module API ImageRating -- permette de aggiungere categorije a 'na pàgene quanne jè date 'nu ID de pàgene",
+	"apihelp-imagerating-param-categories": "URl codifecate, elenghe (stringhe) separate da 'a virgole de categorije da aggiungere a 'a pàgene",
+	"apihelp-imagerating-param-pageId": "Idendificatore inderne d'a pàgene da cangià",
+	"apihelp-imagerating-example-1": "Aggiunge le categorije \"Cute cats\", \"Lolcats\" e \"Internet memes\" a 'a pàgene ca ave 'nu ID 'nderne 66.",
+	"imagerating-add-button": "aggiunge",
+	"imagerating-add-categories-title": "Aggiunge le categorije (separate da le virgole)",
+	"imagerating-category": "$1 Immaggine",
+	"imagerating-community-score": "pundegge d'a comunitate: <b>$1</b> ({{PLURAL:$2|'nu|$2}} vote)",
+	"imagerating-desc": "Abbilite le utinde a [[Special:ImageRating|categorizzà e vutà le immaggine]]",
+	"imagerating-edit-summary": "aggiunge 'na categorije",
+	"imagerating-empty": "Ninde da fà aqquà.",
+	"imagerating-featured-heading": "Immaggine dettagliate",
+	"imagerating-popular-heading": "Immaggine popolare",
+	"imagerating-popular-heading-param": "$1 immaggine popolare",
+	"imagerating-new-heading-param": "$1 immaggine nove",
+	"imagerating-best-heading-param": "$1 immaggine migliore",
+	"imagerating-new-heading": "Immaggine nove",
+	"imagerating-best-heading": "Immaggine migliore",
+	"imagerating-menu-title": "Menù",
+	"imagerating-submitted-by": "Confermate da",
+	"imagerating-ratetitle": "Vote e categorizze le immaggine",
+	"imagerating-categorytitle": "Categorije",
+	"imagerating-upload-images": "Careche le immaggine",
+	"imagerating-prev-link": "precedende",
+	"imagerating-next-link": "prosseme",
+	"action-rateimage": "categorizze e vote le immaggine",
+	"right-rateimage": "Categorizze e vote le immaggine"
+}
