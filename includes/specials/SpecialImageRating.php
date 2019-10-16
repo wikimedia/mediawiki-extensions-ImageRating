@@ -64,8 +64,8 @@ class ImageRating extends SpecialPage {
 		}
 
 		// Show a message if the user is blocked
-		if ( $user->isBlocked() ) {
-			throw new UserBlockedError( $user->mBlock );
+		if ( $user->getBlock() ) {
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		// Set the page title etc. stuff
