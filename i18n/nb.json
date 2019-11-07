@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-imagerating-description": "API-modul for ImageRating – gjør det mulig å legge til kategorier til en side med en gitt side-ID",
+	"apihelp-imagerating-summary": "API-modul for ImageRating – gjør det mulig å legge til kategorier til en side med en gitt side-ID",
+	"apihelp-imagerating-param-categories": "URL-kodet, kommaseparert liste (streng) av kategorier som skal legges til siden",
+	"apihelp-imagerating-param-pageId": "Intern identifikator for siden som skal redigeres",
+	"apihelp-imagerating-example-1": "Legger til kategoriene «Cute cats», «Lolcats» og «Internet memes» til siden med den interne ID-en 66.",
+	"imagerating-add-button": "legg til",
+	"imagerating-add-categories-title": "legg til kategorier (kommaseparert)",
+	"imagerating-category": "$1-bilder",
+	"imagerating-community-score": "felleskapspoeng: <b>$1</b> ({{PLURAL:$2|én vurdering|$2 vurderinger}})",
+	"imagerating-desc": "Lar brukere [[Special:ImageRating|kategorisere og vurdere bilder]]",
+	"imagerating-edit-summary": "legg til kategori",
+	"imagerating-empty": "Ingenting å gjøre her.",
+	"imagerating-featured-heading": "Utvalgt bilde",
+	"imagerating-popular-heading": "Populære bilder",
+	"imagerating-popular-heading-param": "Populære $1-bilder",
+	"imagerating-new-heading-param": "Nye $1-bilder",
+	"imagerating-best-heading-param": "De beste $1-bildene",
+	"imagerating-new-heading": "Nye bilder",
+	"imagerating-best-heading": "De beste bildene",
+	"imagerating-menu-title": "Meny",
+	"imagerating-submitted-by": "Sendt inn av",
+	"imagerating-ratetitle": "Vurder og kategoriser bilder",
+	"imagerating-categorytitle": "Kategorier",
+	"imagerating-upload-images": "Last opp bilder",
+	"imagerating-prev-link": "forrige",
+	"imagerating-next-link": "neste",
+	"action-rateimage": "kategorisere og vurdere bilder",
+	"right-rateimage": "Kategorisere og vurdere bilder"
+}
