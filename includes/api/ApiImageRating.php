@@ -9,7 +9,7 @@
 class ApiImageRating extends ApiBase {
 
 	/**
-	 * Main entry point.
+	 * @inheritDoc
 	 */
 	public function execute() {
 		$user = $this->getUser();
@@ -119,7 +119,7 @@ class ApiImageRating extends ApiBase {
 	}
 
 	/**
-	 * @see ApiBase::getExamplesMessages()
+	 * @inheritDoc
 	 */
 	protected function getExamplesMessages() {
 		return [

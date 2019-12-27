@@ -2,11 +2,27 @@
 
 class FeaturedImage {
 
+	/**
+	 * Register the <featuredimage> tag with the parser.
+	 *
+	 * @param Parser &$parser
+	 */
 	public static function registerHook( &$parser ) {
 		$parser->setHook( 'featuredimage', [ 'FeaturedImage', 'renderFeaturedImage' ] );
-		return true;
 	}
 
+	/**
+	 * Callback for the <featuredimage> tag, which renders the output and returns it.
+	 *
+	 * @param string $input User-supplied input; if defined, the desired image width will be
+	 *  extracted from this
+	 * @param array $args Arguments passed to the hook (e.g. <featuredimage width="250" />);
+	 *  "width" is the only supported argument and will be used if not supplied as $input
+	 *  (but supplying width as the $input instead of in $args is super legacy behavior and
+	 *  you shouldn't do that)
+	 * @param Parser $parser
+	 * @return string HTML
+	 */
 	public static function renderFeaturedImage( $input, $args, Parser $parser ) {
 		global $wgUser, $wgMemc;
 

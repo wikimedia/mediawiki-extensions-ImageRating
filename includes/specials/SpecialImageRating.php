@@ -21,7 +21,7 @@ class ImageRating extends SpecialPage {
 	 *
 	 * @return string
 	 */
-	function getGroupName() {
+	protected function getGroupName() {
 		return 'media';
 	}
 
@@ -31,11 +31,14 @@ class ImageRating extends SpecialPage {
 	 *
 	 * @return string
 	 */
-	function getDescription() {
+	public function getDescription() {
 		return $this->msg( 'imagerating-ratetitle' )->plain();
 	}
 
-	// @see https://phabricator.wikimedia.org/T123591
+	/**
+	 * @see https://phabricator.wikimedia.org/T123591
+	 * @return bool
+	 */
 	public function doesWrites() {
 		return true;
 	}
@@ -85,7 +88,7 @@ class ImageRating extends SpecialPage {
 
 		// Page
 		$page = $request->getInt( 'page', 1 );
-		$type = $request->getVal( 'type', ( $par ? $par : 'new' ) );
+		$type = $request->getVal( 'type', ( $par ?: 'new' ) );
 		$category = $request->getVal( 'category' );
 
 		$tables = $where = $options = $joinConds = [];
@@ -159,7 +162,8 @@ class ImageRating extends SpecialPage {
 					__METHOD__,
 					[
 						'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
-						'HAVING' => 'vote_count > 1' // can't be in the WHERE clause
+						// the HAVING condition can't be in the WHERE clause
+						'HAVING' => 'vote_count > 1'
 					] + $options,
 					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
@@ -452,8 +456,7 @@ class ImageRating extends SpecialPage {
 					if (
 						$category_x == $category_total ||
 						$category_x != 1 && $category_x % $per_row == 0
-					)
-					{
+					) {
 						$output .= '<div class="visualClear"></div>';
 					}
 
