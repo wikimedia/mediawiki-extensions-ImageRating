@@ -97,14 +97,12 @@ class ImageRating extends SpecialPage {
 		$perPage = 5;
 		$limit = $perPage;
 
-		if ( $limit > 0 ) {
-			$offset = 0;
-			if ( $page ) {
-				$offset = $page * $limit - ( $limit );
-			}
-			$options['LIMIT'] = $limit;
-			$options['OFFSET'] = $offset;
+		$offset = 0;
+		if ( $page ) {
+			$offset = $page * $limit - ( $limit );
 		}
+		$options['LIMIT'] = $limit;
+		$options['OFFSET'] = $offset;
 
 		// Database calls
 		$dbr = wfGetDB( DB_REPLICA );
@@ -113,14 +111,14 @@ class ImageRating extends SpecialPage {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
 			$ctgKey = $lang->uc( $ctgTitle->getDBkey() );
 			$tables[] = 'categorylinks';
-			$joinConds[] = [ 'categorylinks' => [ 'INNER JOIN', 'cl_from = page_id' ] ];
+			$joinConds['categorylinks'] = [ 'INNER JOIN', 'cl_from = page_id' ];
 			$where['UPPER(cl_to)'] = $ctgKey;
 		}
 
 		switch ( $type ) {
 			case 'best':
 				$res = $dbr->select(
-					[ 'page', 'Vote' ] + $tables,
+					array_merge( [ 'page', 'Vote' ], $tables ),
 					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
@@ -134,7 +132,7 @@ class ImageRating extends SpecialPage {
 					$joinConds
 				);
 				$res_count = $dbr->select(
-					[ 'page', 'Vote' ] + $tables,
+					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'COUNT(*) AS total_ratings' ],
 					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
@@ -152,7 +150,7 @@ class ImageRating extends SpecialPage {
 
 			case 'popular':
 				$res = $dbr->select(
-					[ 'page', 'Vote' ] + $tables,
+					array_merge( [ 'page', 'Vote' ], $tables ),
 					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
@@ -168,7 +166,7 @@ class ImageRating extends SpecialPage {
 					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
 				$res_count = $dbr->select(
-					[ 'page', 'Vote' ] + $tables,
+					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'COUNT(*) AS total_ratings' ],
 					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
@@ -189,7 +187,7 @@ class ImageRating extends SpecialPage {
 			case 'new':
 			default:
 				$res = $dbr->select(
-					[ 'page', 'Vote' ] + $tables,
+					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'page_id', 'page_title', 'COUNT(vote_value)', 'AVG(vote_value) AS vote_avg' ],
 					[ 'page_namespace' => NS_FILE, 'vote_page_id = page_id' ] + $where,
 					__METHOD__,
@@ -276,7 +274,7 @@ class ImageRating extends SpecialPage {
 
 			$dbr = wfGetDB( DB_REPLICA );
 			$res_top = $dbr->select(
-				[ 'Vote', 'image', 'page' ] + $tables,
+				array_merge( [ 'Vote', 'image', 'page' ], $tables ),
 				[
 					'page_id', 'page_title', 'img_user', 'img_user_text',
 					'AVG(vote_value) AS vote_avg',
@@ -357,7 +355,7 @@ class ImageRating extends SpecialPage {
 
 		$output .= '<h2>' . $this->msg( 'imagerating-ratetitle' )->escaped() . '</h2>';
 
-		$key = $wgMemc->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}" );
+		$key = $wgMemc->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}", 'v2' );
 		$data = $wgMemc->get( $key );
 		if ( $data && $page == 0 ) {
 			$imageList = $data;
@@ -369,7 +367,7 @@ class ImageRating extends SpecialPage {
 				$imageList[] = [
 					'page_id' => $row->page_id,
 					'page_title' => $row->page_title,
-					'vote_avg' => $lang->formatNum( $row->vote_avg )
+					'vote_avg' => $row->vote_avg
 				];
 			}
 			// Cache the first page for a minute in memcached
@@ -421,9 +419,9 @@ class ImageRating extends SpecialPage {
 					</div>
 
 					<div class="image-rating-bar">' .
-						$voteClass->displayStars( $image_id, $vote_avg, false ) .
+						$voteClass->displayStars( $image_id, (int)$vote_avg, 0 ) .
 						"<div class=\"image-rating-score\" id=\"rating_{$image_id}\">" .
-							$this->msg( 'imagerating-community-score', $vote_avg, $count )->parse() .
+							$this->msg( 'imagerating-community-score', $lang->formatNum( $vote_avg ), $count )->parse() .
 						'</div>
 					</div>
 				</div>';
@@ -520,7 +518,7 @@ class ImageRating extends SpecialPage {
 					} else {
 						$output .= $linkRenderer->makeLink(
 							$pageTitle,
-							$i,
+							"$i",
 							[],
 							[
 								'page' => $i,

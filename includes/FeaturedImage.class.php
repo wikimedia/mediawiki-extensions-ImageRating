@@ -90,9 +90,9 @@ class FeaturedImage {
 
 					$featured_image['image_name'] = $row->page_title;
 					$featured_image['image_url'] = $image_title->getFullURL();
-					$featured_image['page_id'] = $row->page_id;
+					$featured_image['page_id'] = (int)$row->page_id;
 					$featured_image['thumbnail'] = $thumb_top_image->toHtml();
-					$featured_image['user_id'] = $row->img_user;
+					$featured_image['user_id'] = (int)$row->img_user;
 					$featured_image['user_name'] = $row->img_user_text;
 				}
 			}
@@ -109,6 +109,9 @@ class FeaturedImage {
 			// undefined indexes and output HTML which is meaningless
 			return '';
 		}
+		// @codingStandardsIgnoreStart
+		'@phan-var array{image_name:string,image_url:string,page_id:int,thumbnail:string,user_id:int,user_name:string} $featured_image';
+		// @codingStandardsIgnoreEnd
 
 		$voteClassTop = new VoteStars( $featured_image['page_id'] );
 		$countTop = $voteClassTop->count();
@@ -143,7 +146,7 @@ class FeaturedImage {
 						$voteClassTop->displayStars(
 							$featured_image['page_id'],
 							$voteClassTop->getAverageVote(),
-							false
+							0
 						) .
 						"<div class=\"image-rating-score-main\" id=\"rating_{$featured_image['page_id']}\">" .
 							wfMessage( 'imagerating-community-score', $voteClassTop->getAverageVote(), $countTop )->parse() .

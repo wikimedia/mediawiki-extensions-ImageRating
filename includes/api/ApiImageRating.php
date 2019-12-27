@@ -43,6 +43,7 @@ class ApiImageRating extends ApiBase {
 
 		// Top level
 		$this->getResult()->addValue( null, $this->getModuleName(),
+			// @phan-suppress-next-line PhanTypeMismatchArgument T240141
 			[ 'result' => self::addImageCategory( $pageId, $params['categories'] ) ]
 		);
 
@@ -64,7 +65,7 @@ class ApiImageRating extends ApiBase {
 		$wp = WikiPage::factory( $imagePage );
 
 		// Check if it's been edited in last 2 seconds: want to delay the edit
-		$timeSinceEdited = wfTimestamp( TS_MW, 0 ) - $wp->getTimestamp();
+		$timeSinceEdited = (int)wfTimestamp( TS_MW, 0 ) - (int)$wp->getTimestamp();
 		if ( $timeSinceEdited <= 2 ) {
 			return 'busy';
 		}
