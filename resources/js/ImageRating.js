@@ -13,7 +13,7 @@ window.ImageRating = {
 			var category_text = document.getElementById( 'category-' + page ).value;
 			ImageRating.posted = 1;
 
-			( new mw.Api() ).postWithToken( 'edit', {
+			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'imagerating',
 				format: 'json',
 				pageId: page,
