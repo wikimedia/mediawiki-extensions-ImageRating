@@ -24,10 +24,10 @@ class FeaturedImage {
 	 * @return string HTML
 	 */
 	public static function renderFeaturedImage( $input, $args, Parser $parser ) {
-		global $wgUser, $wgMemc;
+		global $wgMemc;
 
 		// Add CSS & JS -- the JS is needed if allowing voting inline
-		if ( $wgUser->isAllowed( 'voteny' ) ) {
+		if ( $parser->getUser()->isAllowed( 'voteny' ) ) {
 			$parser->getOutput()->addModules( 'ext.voteNY.scripts' );
 		}
 		$parser->getOutput()->addModuleStyles( [ 'ext.imagerating.css', 'ext.voteNY.styles' ] );
