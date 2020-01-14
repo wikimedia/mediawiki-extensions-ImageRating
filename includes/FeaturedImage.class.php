@@ -58,7 +58,7 @@ class FeaturedImage {
 			$res_top = $dbr->select(
 				[ 'page', 'image', 'Vote' ],
 				[
-					'page_id', 'page_title', 'img_user', 'img_user_text',
+					'page_id', 'page_title', 'img_actor',
 					'AVG(vote_value) AS vote_avg',
 					"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
 				],
@@ -92,8 +92,7 @@ class FeaturedImage {
 					$featured_image['image_url'] = $image_title->getFullURL();
 					$featured_image['page_id'] = (int)$row->page_id;
 					$featured_image['thumbnail'] = $thumb_top_image->toHtml();
-					$featured_image['user_id'] = (int)$row->img_user;
-					$featured_image['user_name'] = $row->img_user_text;
+					$featured_image['actor'] = (int)$row->img_actor;
 				}
 			}
 
@@ -110,18 +109,23 @@ class FeaturedImage {
 			return '';
 		}
 		// @codingStandardsIgnoreStart
-		'@phan-var array{image_name:string,image_url:string,page_id:int,thumbnail:string,user_id:int,user_name:string} $featured_image';
+		'@phan-var array{image_name:string,image_url:string,page_id:int,thumbnail:string,actor:int} $featured_image';
 		// @codingStandardsIgnoreEnd
 
 		$voteClassTop = new VoteStars( $featured_image['page_id'] );
 		$countTop = $voteClassTop->count();
 
-		$user_title = Title::makeTitle( NS_USER, $featured_image['user_name'] );
-		$avatar = new wAvatar( $featured_image['user_id'], 'ml' );
+		$user = User::newFromActorId( $featured_image['actor'] );
+		if ( !$user || !$user instanceof User ) {
+			return '';
+		}
+
+		$avatar = new wAvatar( $user->getId(), 'ml' );
 
 		$safeImageURL = htmlspecialchars( $featured_image['image_url'] );
-		$safeUserURL = htmlspecialchars( $user_title->getFullURL() );
-		$safeUserName = htmlspecialchars( $featured_image['user_name'] );
+		$safeUserURL = htmlspecialchars( $user->getUserPage()->getFullURL() );
+		$safeUserName = htmlspecialchars( $user->getName() );
+
 		if ( !preg_match( '/<img/i', $featured_image['thumbnail'] ) ) {
 			// Probably a MediaTransformError or somesuch, which should be rendered
 			// as raw HTML without a link (<a><div>...</div></a> doesn't render that
@@ -131,6 +135,7 @@ class FeaturedImage {
 			// Normal case, which we should be hitting 99.9% of the time
 			$img = "<a href=\"{$safeImageURL}\">{$featured_image['thumbnail']}</a>";
 		}
+
 		$output = "<div class=\"featured-image-main\">
 				<div class=\"featured-image-container-main\">
 					{$img}
@@ -155,6 +160,7 @@ class FeaturedImage {
 				</div>
 				<div class="visualClear"></div>
 		</div>';
+
 		return $output;
 	}
 }

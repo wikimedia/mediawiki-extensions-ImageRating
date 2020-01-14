@@ -276,7 +276,7 @@ class ImageRating extends SpecialPage {
 			$res_top = $dbr->select(
 				array_merge( [ 'Vote', 'image', 'page' ], $tables ),
 				[
-					'page_id', 'page_title', 'img_user', 'img_user_text',
+					'page_id', 'page_title', 'img_actor',
 					'AVG(vote_value) AS vote_avg',
 					"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
 				],
@@ -310,8 +310,7 @@ class ImageRating extends SpecialPage {
 					$featured_image['image_url'] = $image_title->getFullURL();
 					$featured_image['page_id'] = $row->page_id;
 					$featured_image['thumbnail'] = $thumb_top_image->toHtml();
-					$featured_image['user_id'] = $row->img_user;
-					$featured_image['user_name'] = $row->img_user_text;
+					$featured_image['actor'] = (int)$row->img_actor;
 					$featured_image['vote_avg'] = $lang->formatNum( $row->vote_avg );
 				}
 			}
@@ -322,8 +321,14 @@ class ImageRating extends SpecialPage {
 		}
 
 		if ( $featured_image['page_id'] ) {
-			$user_title = Title::makeTitle( NS_USER, $featured_image['user_name'] );
-			$avatar = new wAvatar( $featured_image['user_id'], 'ml' );
+			$imageUser = User::newFromActorId( $featured_image['actor'] );
+			if ( !$imageUser || !$imageUser instanceof User ) {
+				return '';
+			}
+
+			$userPageURL = htmlspecialchars( $imageUser->getUserPage()->getFullURL(), ENT_QUOTES );
+			$safeUserName = htmlspecialchars( $imageUser->getName(), ENT_QUOTES );
+			$avatar = new wAvatar( $imageUser->getId(), 'ml' );
 
 			$voteClassTop = new VoteStars( $featured_image['page_id'] );
 			$countTop = $voteClassTop->count();
@@ -337,8 +342,8 @@ class ImageRating extends SpecialPage {
 
 						<div class=\"featured-image-submitted-main\">
 							<p>" . $this->msg( 'imagerating-submitted-by' )->plain() . "</p>
-							<p><a href=\"{$user_title->getFullURL()}\">{$avatar->getAvatarURL()}
-							{$featured_image['user_name']}</a></p>
+							<p><a href=\"{$userPageURL}\">{$avatar->getAvatarURL()}
+							{$safeUserName}</a></p>
 						</div>
 
 						<div class=\"image-rating-bar-main\">"
