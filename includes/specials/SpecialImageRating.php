@@ -330,7 +330,7 @@ class ImageRating extends SpecialPage {
 			$safeUserName = htmlspecialchars( $imageUser->getName(), ENT_QUOTES );
 			$avatar = new wAvatar( $imageUser->getId(), 'ml' );
 
-			$voteClassTop = new VoteStars( $featured_image['page_id'] );
+			$voteClassTop = new VoteStars( $featured_image['page_id'], $user );
 			$countTop = $voteClassTop->count();
 
 			$output .= '<div class="featured-image">
@@ -407,7 +407,7 @@ class ImageRating extends SpecialPage {
 					$thumbnail = $thumb_image->toHtml();
 				}
 
-				$voteClass = new VoteStars( $image_id );
+				$voteClass = new VoteStars( $image_id, $user );
 				$count = $voteClass->count();
 
 				if ( $x !== $perPage ) {

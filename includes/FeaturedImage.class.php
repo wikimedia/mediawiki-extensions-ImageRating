@@ -112,7 +112,7 @@ class FeaturedImage {
 		'@phan-var array{image_name:string,image_url:string,page_id:int,thumbnail:string,actor:int} $featured_image';
 		// @codingStandardsIgnoreEnd
 
-		$voteClassTop = new VoteStars( $featured_image['page_id'] );
+		$voteClassTop = new VoteStars( $featured_image['page_id'], $parser->getUser() );
 		$countTop = $voteClassTop->count();
 
 		$user = User::newFromActorId( $featured_image['actor'] );
