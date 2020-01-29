@@ -23,7 +23,7 @@ class ApiImageRating extends ApiBase {
 
 		$pageId = $params['pageId'];
 		// Ensure that the pageId parameter is present and that it really is numeric
-		if ( !$pageId || $pageId === null || !is_numeric( $pageId ) ) {
+		if ( !$pageId || !is_numeric( $pageId ) ) {
 			$this->dieWithError( [ 'apierror-missingparam', 'pageId' ], 'missingparam' );
 		}
 
