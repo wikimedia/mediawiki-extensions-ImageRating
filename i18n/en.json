@@ -14,7 +14,7 @@
 	"imagerating-add-button": "add",
 	"imagerating-add-categories-title": "add categories (comma separated)",
 	"imagerating-category": "$1 Images",
-	"imagerating-community-score": "community score: <b>$1</b> ({{PLURAL:$2|one rating|$2 ratings}})",
+	"imagerating-community-score": "community score: '''$1''' ({{PLURAL:$2|one rating|$2 ratings}})",
 	"imagerating-desc": "Allows users to [[Special:ImageRating|categorize and rate images]]",
 	"imagerating-edit-summary": "add category",
 	"imagerating-empty": "Nothing to do here.",
