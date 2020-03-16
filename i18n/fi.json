@@ -7,7 +7,7 @@
 	"imagerating-add-button": "lisää",
 	"imagerating-add-categories-title": "lisää luokkia (erottele pilkuin)",
 	"imagerating-category": "Kuvat {{GRAMMAR:elative|$1}}",
-	"imagerating-community-score": "yhteisön antama pistemäärä: <b>$1</b> ({{PLURAL:$2|yksi arvio|$2 arvioa}})",
+	"imagerating-community-score": "yhteisön antama pistemäärä: '''$1''' ({{PLURAL:$2|yksi arvio|$2 arvioa}})",
 	"imagerating-desc": "Mahdollistaa [[Special:ImageRating|kuvien luokittelun ja arvostelemisen]]",
 	"imagerating-edit-summary": "luokka lisätty",
 	"imagerating-featured-heading": "Suositeltu kuva",

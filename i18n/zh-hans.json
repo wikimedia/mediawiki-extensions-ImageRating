@@ -12,7 +12,7 @@
 	"imagerating-add-button": "添加",
 	"imagerating-add-categories-title": "添加分类（逗号分隔）",
 	"imagerating-category": "$1张图片",
-	"imagerating-community-score": "社群分数：<b>$1</b>（{{PLURAL:$2|$2个评级}}）",
+	"imagerating-community-score": "社群分数：'''$1'''（{{PLURAL:$2|$2个评级}}）",
 	"imagerating-desc": "允许用户[[Special:ImageRating|分类并评级图片]]",
 	"imagerating-edit-summary": "添加分类",
 	"imagerating-empty": "这里没有要做的事。",

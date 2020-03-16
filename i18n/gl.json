@@ -7,7 +7,7 @@
 	"imagerating-add-button": "engadir",
 	"imagerating-add-categories-title": "engadir categorías (separadas por comas)",
 	"imagerating-category": "Imaxes de $1",
-	"imagerating-community-score": "clasificación da comunidade: <b>$1</b> ({{PLURAL:$2|unha clasificación|$2 clasificacións}})",
+	"imagerating-community-score": "clasificación da comunidade: '''$1''' ({{PLURAL:$2|unha clasificación|$2 clasificacións}})",
 	"imagerating-desc": "Permite que os usuarios [[Special:ImageRating|categoricen e clasifiquen as imaxes]]",
 	"imagerating-edit-summary": "engadir categoría",
 	"imagerating-empty": "Non hai nada que facer aquí.",

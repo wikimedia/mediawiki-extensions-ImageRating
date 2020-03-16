@@ -13,7 +13,7 @@
 	"imagerating-add-button": "προσθέστε",
 	"imagerating-add-categories-title": "προσθέσετε κατηγορίες (χωρισμένες με κόμμα)",
 	"imagerating-category": "$1 εικόνες",
-	"imagerating-community-score": "βαθμολογία κοινότητας: <b>$1</b> ({{PLURAL:$2|μία αξιολόγηση|$2 αξιολογήσεις}})",
+	"imagerating-community-score": "βαθμολογία κοινότητας: '''$1''' ({{PLURAL:$2|μία αξιολόγηση|$2 αξιολογήσεις}})",
 	"imagerating-desc": "Επιτρέπει στους χρήστες να [[Special:ImageRating|categorize and rate images]]",
 	"imagerating-edit-summary": "προσθέσετε κατηγορία",
 	"imagerating-empty": "Δεν υπάρχει τίποτα εδώ να κάνεις",

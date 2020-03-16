@@ -12,7 +12,7 @@
 	"imagerating-add-button": "додати",
 	"imagerating-add-categories-title": "додати категорії (через кому)",
 	"imagerating-category": "$1: зображення",
-	"imagerating-community-score": "оцінка спільноти: <b>$1</b> ({{PLURAL:$2|$2 оцінка|$2 оцінки|$2 оцінок}})",
+	"imagerating-community-score": "оцінка спільноти: '''$1''' ({{PLURAL:$2|$2 оцінка|$2 оцінки|$2 оцінок}})",
 	"imagerating-desc": "Дає користувачам змогу [[Special:ImageRating|категоризувати й оцінювати зображення]]",
 	"imagerating-edit-summary": "додати категорію",
 	"imagerating-empty": "Тут нічого робити.",

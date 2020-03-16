@@ -17,7 +17,7 @@
 	"imagerating-add-button": "ajouter",
 	"imagerating-add-categories-title": "ajouter des catégories (séparées par des virgules)",
 	"imagerating-category": "Images de $1",
-	"imagerating-community-score": "note de la communauté : <b>$1</b> ({{PLURAL:$2|une note|$2 notes}})",
+	"imagerating-community-score": "note de la communauté : '''$1''' ({{PLURAL:$2|une note|$2 notes}})",
 	"imagerating-desc": "Autorise les utilisateurs à [[Special:ImageRating|catégoriser et noter les images]]",
 	"imagerating-edit-summary": "ajouter une catégorie",
 	"imagerating-empty": "Rien à faire ici.",

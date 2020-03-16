@@ -12,7 +12,7 @@
 	"imagerating-add-button": "додај",
 	"imagerating-add-categories-title": "додај категории (одделени со запирки)",
 	"imagerating-category": "Слики од $1",
-	"imagerating-community-score": "мислење на заедницата: <b>$1</b> ({{PLURAL:$2|една оцена|$2 оцени}})",
+	"imagerating-community-score": "мислење на заедницата: '''$1''' ({{PLURAL:$2|една оцена|$2 оцени}})",
 	"imagerating-desc": "Им овозможува на корисниците да [[Special:ImageRating|категоризираат и оценуваат слики]]",
 	"imagerating-edit-summary": "додај категорија",
 	"imagerating-empty": "Тука нема што да се прави.",

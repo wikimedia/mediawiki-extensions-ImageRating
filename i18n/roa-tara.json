@@ -12,7 +12,7 @@
 	"imagerating-add-button": "aggiunge",
 	"imagerating-add-categories-title": "Aggiunge le categorije (separate da le virgole)",
 	"imagerating-category": "$1 Immaggine",
-	"imagerating-community-score": "pundegge d'a comunitate: <b>$1</b> ({{PLURAL:$2|'nu|$2}} vote)",
+	"imagerating-community-score": "pundegge d'a comunitate: '''$1''' ({{PLURAL:$2|'nu|$2}} vote)",
 	"imagerating-desc": "Abbilite le utinde a [[Special:ImageRating|categorizzà e vutà le immaggine]]",
 	"imagerating-edit-summary": "aggiunge 'na categorije",
 	"imagerating-empty": "Ninde da fà aqquà.",

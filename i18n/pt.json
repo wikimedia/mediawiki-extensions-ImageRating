@@ -12,7 +12,7 @@
 	"imagerating-add-button": "adicionar",
 	"imagerating-add-categories-title": "adicionar categorias (separadas por vírgulas)",
 	"imagerating-category": "Imagens de $1",
-	"imagerating-community-score": "classificação da comunidade: <b>$1</b> ({{PLURAL:$2|uma classificação|$2 classificações}})",
+	"imagerating-community-score": "classificação da comunidade: '''$1''' ({{PLURAL:$2|uma classificação|$2 classificações}})",
 	"imagerating-desc": "Permite que os utilizadores [[Special:ImageRating|categorizem e classifiquem imagens]]",
 	"imagerating-edit-summary": "adicionar categoria",
 	"imagerating-empty": "Nada para fazer aqui.",

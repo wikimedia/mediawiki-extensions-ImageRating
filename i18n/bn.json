@@ -9,7 +9,7 @@
 	"imagerating-add-button": "যোগ করুন",
 	"imagerating-add-categories-title": "বিষয়শ্রেণী যোগ করুন (কমা দিয়ে পৃথক করুন)",
 	"imagerating-category": "$1 চিত্র",
-	"imagerating-community-score": "সম্প্রদায়ের স্কোর: <b>$1</b> ({{PLURAL:$2|একটি মূল্যায়ন|$2টি মূল্যায়ন}})",
+	"imagerating-community-score": "সম্প্রদায়ের স্কোর: '''$1''' ({{PLURAL:$2|একটি মূল্যায়ন|$2টি মূল্যায়ন}})",
 	"imagerating-desc": "ব্যবহারকারীদের [[Special:ImageRating|বিষয়শ্রেণীকরণ ও চিত্র মূল্যায়ন]] করতে দেয়",
 	"imagerating-edit-summary": "বিষয়শ্রেণী যোগ করুন",
 	"imagerating-empty": "এখানে কিছু করার মত নেই।",

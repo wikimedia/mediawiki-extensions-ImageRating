@@ -12,7 +12,7 @@
 	"imagerating-add-button": "إضافة",
 	"imagerating-add-categories-title": "إضافة تصنيفات (مفصولة بفواصل)",
 	"imagerating-category": "صور $1",
-	"imagerating-community-score": "نتيجة المجتمع: <b>$1</b> ({{PLURAL:$2|تقييم واحد|$2 تقييمات}})",
+	"imagerating-community-score": "نتيجة المجتمع: '''$1''' ({{PLURAL:$2|تقييم واحد|$2 تقييمات}})",
 	"imagerating-desc": "يسمح للمستخدمين [[Special:ImageRating|بتصنيف الصور وتقييمها]]",
 	"imagerating-edit-summary": "أضف تصنيفا",
 	"imagerating-empty": "لا شيء لتفعله هنا.",

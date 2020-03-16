@@ -10,7 +10,7 @@
 	"imagerating-add-button": "hinzufügen",
 	"imagerating-add-categories-title": "Kategorien hinzufügen (durch Kommas getrennt)",
 	"imagerating-category": "$1 Bilder",
-	"imagerating-community-score": "Score der Gemeinschaft: <b>$1</b> ({{PLURAL:$2|eine Bewertung|$2 Bewertungen}})",
+	"imagerating-community-score": "Score der Gemeinschaft: '''$1''' ({{PLURAL:$2|eine Bewertung|$2 Bewertungen}})",
 	"imagerating-desc": "Erlaubt Benutzern die [[Special:ImageRating|Kategorisierung und Bewertung von Bildern]]",
 	"imagerating-edit-summary": "Kategorie hinzufügen",
 	"imagerating-empty": "Hier gibt es nichts zu tun.",

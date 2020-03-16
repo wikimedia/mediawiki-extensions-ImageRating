@@ -12,7 +12,7 @@
 	"imagerating-add-button": "legg til",
 	"imagerating-add-categories-title": "legg til kategorier (kommaseparert)",
 	"imagerating-category": "$1-bilder",
-	"imagerating-community-score": "felleskapspoeng: <b>$1</b> ({{PLURAL:$2|én vurdering|$2 vurderinger}})",
+	"imagerating-community-score": "felleskapspoeng: '''$1''' ({{PLURAL:$2|én vurdering|$2 vurderinger}})",
 	"imagerating-desc": "Lar brukere [[Special:ImageRating|kategorisere og vurdere bilder]]",
 	"imagerating-edit-summary": "legg til kategori",
 	"imagerating-empty": "Ingenting å gjøre her.",

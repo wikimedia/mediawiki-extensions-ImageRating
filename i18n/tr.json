@@ -12,7 +12,7 @@
 	"imagerating-add-button": "ekle",
 	"imagerating-add-categories-title": "kategori ekle (virgülle ayrılmış olarak)",
 	"imagerating-category": "$1 Resimleri",
-	"imagerating-community-score": "topluluk puanı: <b>$1</b> ({{PLURAL:$2|bir değerlendirme|$2 değerlendirme}})",
+	"imagerating-community-score": "topluluk puanı: '''$1''' ({{PLURAL:$2|bir değerlendirme|$2 değerlendirme}})",
 	"imagerating-desc": "Kullanıcıların  [[Special:ImageRating|resimleri sınıflandırmasına ve derecelendirmesine]] izin verir",
 	"imagerating-edit-summary": "kategori ekle",
 	"imagerating-empty": "Burada yapacak bir şey yok.",

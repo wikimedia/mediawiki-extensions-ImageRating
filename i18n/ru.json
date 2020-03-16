@@ -14,7 +14,7 @@
 	"imagerating-add-button": "добавить",
 	"imagerating-add-categories-title": "добавить категории (через запятую)",
 	"imagerating-category": "Изображения из $1",
-	"imagerating-community-score": "мнение сообщества: <b>$1</b> ({{PLURAL:$2|одна оценка|$2 оценки|$2 оценок}})",
+	"imagerating-community-score": "мнение сообщества: '''$1''' ({{PLURAL:$2|одна оценка|$2 оценки|$2 оценок}})",
 	"imagerating-desc": "Позволяет пользователям [[Special:ImageRating|категоризовать и оценивать изображения]]",
 	"imagerating-edit-summary": "добавить категорию",
 	"imagerating-empty": "Здесь нечего делать.",
