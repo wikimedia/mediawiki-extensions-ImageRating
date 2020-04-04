@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class FeaturedImage {
 
 	/**
@@ -81,7 +83,13 @@ class FeaturedImage {
 				$row = $dbr->fetchObject( $res_top );
 
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
-				$render_top_image = wfFindFile( $row->page_title );
+				if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+					// MediaWiki 1.34+
+					$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()
+						->findFile( $row->page_title );
+				} else {
+					$render_top_image = wfFindFile( $row->page_title );
+				}
 				if ( is_object( $render_top_image ) ) {
 					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,

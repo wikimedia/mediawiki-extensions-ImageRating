@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * ImageRating extension - allows categorizing and rating images via a new
  * special page.
@@ -299,7 +302,13 @@ class ImageRating extends SpecialPage {
 				$row = $dbr->fetchObject( $res_top );
 
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
-				$render_top_image = wfFindFile( $row->page_title );
+				if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+					// MediaWiki 1.34+
+					$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()
+						->findFile( $row->page_title );
+				} else {
+					$render_top_image = wfFindFile( $row->page_title );
+				}
 				if ( is_object( $render_top_image ) ) {
 					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,
@@ -388,13 +397,19 @@ class ImageRating extends SpecialPage {
 			$output .= $this->msg( 'imagerating-empty' )->parse();
 			$renderPagination = false;
 		} else {
+			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+				// MediaWiki 1.34+
+				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+			} else {
+				$repoGroup = RepoGroup::singleton();
+			}
 			$renderPagination = true;
 			foreach ( $imageList as $image ) {
 				$image_path = $image['page_title'];
 				$image_id = $image['page_id'];
 				$vote_avg = $image['vote_avg'];
 
-				$render_image = wfFindFile( $image_path );
+				$render_image = $repoGroup->findFile( $image_path );
 				$thumb_image = false;
 				if ( is_object( $render_image ) ) {
 					$thumb_image = $render_image->transform( [
