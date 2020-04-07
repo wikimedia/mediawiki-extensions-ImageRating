@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64",
-			"Danielbeerbonn"
+			"Danielbeerbonn",
+			"Metalhead64"
 		]
 	},
 	"apihelp-imagerating-param-categories": "URL-kodierte, durch Kommata getrennte Liste (Zeichenfolge) der Kategorien, die zur Seite hinzugefügt werden sollen.",
