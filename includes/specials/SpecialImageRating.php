@@ -52,8 +52,6 @@ class ImageRating extends SpecialPage {
 	 * @param mixed|null $par Parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgMemc;
-
 		$lang = $this->getLanguage();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -261,11 +259,12 @@ class ImageRating extends SpecialPage {
 
 		$output .= '<div class="image-ratings">';
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		/*
-		// set up memcached
+		// set up cache
 		$width = 250;
-		$key = $wgMemc->makeKey( 'image', 'featured', "category:{$category}:width:{$width}" );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'image', 'featured', "category:{$category}:width:{$width}" );
+		$data = $cache->get( $key );
 		$cache_expires = ( 60 * 30 );
 
 		// no cache, load from the database
@@ -302,13 +301,7 @@ class ImageRating extends SpecialPage {
 				$row = $dbr->fetchObject( $res_top );
 
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
-				if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-					// MediaWiki 1.34+
-					$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()
-						->findFile( $row->page_title );
-				} else {
-					$render_top_image = wfFindFile( $row->page_title );
-				}
+				$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
 					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,
@@ -323,7 +316,7 @@ class ImageRating extends SpecialPage {
 					$featured_image['vote_avg'] = $lang->formatNum( $row->vote_avg );
 				}
 			}
-			$wgMemc->set( $key, $featured_image, $cache_expires );
+			$cache->set( $key, $featured_image, $cache_expires );
 		} else {
 			wfDebugLog( 'ImageRating', 'Loading featured image data from cache' );
 			$featured_image = $data;
@@ -369,8 +362,8 @@ class ImageRating extends SpecialPage {
 
 		$output .= '<h2>' . $this->msg( 'imagerating-ratetitle' )->escaped() . '</h2>';
 
-		$key = $wgMemc->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}", 'v2' );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'image', 'list', "type:{$type}:category:{$category}:per:{$perPage}", 'v2' );
+		$data = $cache->get( $key );
 		if ( $data && $page == 0 ) {
 			$imageList = $data;
 			wfDebugLog( 'ImageRating', 'Cache hit for image rating list' );
@@ -386,7 +379,7 @@ class ImageRating extends SpecialPage {
 			}
 			// Cache the first page for a minute in memcached
 			if ( $page == 1 ) {
-				$wgMemc->set( $key, $imageList, 60 );
+				$cache->set( $key, $imageList, 60 );
 			}
 		}
 
