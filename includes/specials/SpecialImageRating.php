@@ -65,9 +65,7 @@ class ImageRating extends SpecialPage {
 		}
 
 		// Show a message if the database is in read-only mode
-		if ( wfReadOnly() ) {
-			throw new ReadOnlyError;
-		}
+		$this->checkReadOnly();
 
 		// Show a message if the user is blocked
 		if ( $user->getBlock() ) {
