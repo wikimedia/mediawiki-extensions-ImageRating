@@ -26,8 +26,6 @@ class FeaturedImage {
 	 * @return string HTML
 	 */
 	public static function renderFeaturedImage( $input, $args, Parser $parser ) {
-		global $wgMemc;
-
 		// Add CSS & JS -- the JS is needed if allowing voting inline
 		if ( $parser->getUser()->isAllowed( 'voteny' ) ) {
 			$parser->getOutput()->addModules( 'ext.voteNY.scripts' );
@@ -43,9 +41,11 @@ class FeaturedImage {
 		}
 		$width = intval( $width );
 
-		// Set up memcached
-		$key = $wgMemc->makeKey( 'image', 'featured', $width );
-		$data = $wgMemc->get( $key );
+		// Set up cache
+		$services = MediaWikiServices::getInstance();
+		$cache = $services->getMainWANObjectCache();
+		$key = $cache->makeKey( 'image', 'featured', $width );
+		$data = $cache->get( $key );
 		$cache_expires = ( 60 * 30 );
 
 		// No cache, load from the database
@@ -83,13 +83,7 @@ class FeaturedImage {
 				$row = $dbr->fetchObject( $res_top );
 
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
-				if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-					// MediaWiki 1.34+
-					$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()
-						->findFile( $row->page_title );
-				} else {
-					$render_top_image = wfFindFile( $row->page_title );
-				}
+				$render_top_image = $services->getRepoGroup()->findFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
 					$thumb_top_image = $render_top_image->transform( [
 						'width' => $width,
@@ -104,7 +98,7 @@ class FeaturedImage {
 				}
 			}
 
-			$wgMemc->set( $key, $featured_image, $cache_expires );
+			$cache->set( $key, $featured_image, $cache_expires );
 		} else {
 			wfDebugLog( 'FeaturedImage', 'Loading featured image data from cache' );
 			$featured_image = $data;
