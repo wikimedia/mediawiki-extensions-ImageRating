@@ -124,7 +124,6 @@ class FeaturedImage {
 
 		$avatar = new wAvatar( $user->getId(), 'ml' );
 
-		$safeImageURL = htmlspecialchars( $featured_image['image_url'] );
 		$safeUserURL = htmlspecialchars( $user->getUserPage()->getFullURL() );
 		$safeUserName = htmlspecialchars( $user->getName() );
 
@@ -135,7 +134,7 @@ class FeaturedImage {
 			$img = $featured_image['thumbnail'];
 		} else {
 			// Normal case, which we should be hitting 99.9% of the time
-			$img = "<a href=\"{$safeImageURL}\">{$featured_image['thumbnail']}</a>";
+			$img = "<a href=\"{$featured_image['image_url']}\">{$featured_image['thumbnail']}</a>";
 		}
 
 		$output = "<div class=\"featured-image-main\">
@@ -144,7 +143,7 @@ class FeaturedImage {
 				</div>
 				<div class=\"featured-image-user-main\">
 					<div class=\"featured-image-submitted-main\">
-						<p>" . wfMessage( 'imagerating-submitted-by' )->plain() . "</p>
+						<p>" . wfMessage( 'imagerating-submitted-by' )->escaped() . "</p>
 						<p><a href=\"{$safeUserURL}\">{$avatar->getAvatarURL()}
 						{$safeUserName}</a></p>
 					</div>

@@ -334,7 +334,7 @@ class ImageRating extends SpecialPage {
 			$countTop = $voteClassTop->count();
 
 			$output .= '<div class="featured-image">
-				<h2>' . $this->msg( 'imagerating-featured-heading' )->plain() . "</h2>
+				<h2>' . $this->msg( 'imagerating-featured-heading' )->escaped() . "</h2>
 					<div class=\"featured-image-container\">
 						<a href=\"{$featured_image['image_url']}\">{$featured_image['thumbnail']}</a>
 					</div>
@@ -451,7 +451,7 @@ class ImageRating extends SpecialPage {
 				$category_x = 1;
 
 				foreach ( $res_category as $row_category ) {
-					$image_category = str_replace( '_', ' ', $row_category->cl_to );
+					$image_category = htmlspecialchars( str_replace( '_', ' ', $row_category->cl_to ) );
 					$category_id = "category-button-{$image_id}-{$category_x}";
 
 					$catURL = htmlspecialchars(
