@@ -397,7 +397,7 @@ class ImageRating extends SpecialPage {
 			$renderPagination = true;
 			foreach ( $imageList as $image ) {
 				$image_path = $image['page_title'];
-				$image_id = $image['page_id'];
+				$image_id = (int)$image['page_id'];
 				$vote_avg = $image['vote_avg'];
 
 				$render_image = $repoGroup->findFile( $image_path );
