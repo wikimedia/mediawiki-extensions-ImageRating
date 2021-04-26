@@ -388,12 +388,7 @@ class ImageRating extends SpecialPage {
 			$output .= $this->msg( 'imagerating-empty' )->parse();
 			$renderPagination = false;
 		} else {
-			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-				// MediaWiki 1.34+
-				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
-			} else {
-				$repoGroup = RepoGroup::singleton();
-			}
+			$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
 			$renderPagination = true;
 			foreach ( $imageList as $image ) {
 				$image_path = $image['page_title'];
@@ -489,6 +484,17 @@ class ImageRating extends SpecialPage {
 
 		$output .= '</div>
 		<div class="visualClear"></div>';
+
+		// Maybe _don't_ render the pagination links after all...
+		// $total is indeed the amount of _all_ NS_FILE pages, but the special page by default
+		// shows only newest images, which I guess is $dbr->numRows( $res ) as opposed to anything else.
+		// So adjust $total accordingly if numRows() returns a number smaller than $total (which it
+		// probably does!) and also decide again if we should (not) bother rendering the pagination
+		// links.
+		if ( $renderPagination && $total > $dbr->numRows( $res ) ) {
+			$total = $dbr->numRows( $res );
+			$renderPagination = ( $total > $perPage );
+		}
 
 		// Build the pagination links
 		if ( $renderPagination ) {
