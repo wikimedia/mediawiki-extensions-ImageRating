@@ -16,6 +16,8 @@
 			"minus-x fix .",
 			"phpcbf"
 		],
-		"phan": "phan -d . --long-progress-bar"
+		"phan": "phan -d . --long-progress-bar",
+		"seccheck": "seccheck-mwext",
+		"seccheck-fast": "seccheck-fast-mwext"
 	}
 }
