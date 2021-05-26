@@ -149,7 +149,7 @@ class FeaturedImage {
 					<div class=\"image-rating-bar-main\">" .
 						$voteClassTop->displayStars(
 							$featured_image['page_id'],
-							$voteClassTop->getAverageVote(),
+							(int)$voteClassTop->getAverageVote(),
 							0
 						) .
 						"<div class=\"image-rating-score-main\" id=\"rating_{$featured_image['page_id']}\">" .
