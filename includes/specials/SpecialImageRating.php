@@ -66,8 +66,9 @@ class ImageRating extends SpecialPage {
 		$this->checkReadOnly();
 
 		// Show a message if the user is blocked
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title etc. stuff
