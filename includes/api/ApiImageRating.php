@@ -43,7 +43,6 @@ class ApiImageRating extends ApiBase {
 
 		// Top level
 		$this->getResult()->addValue( null, $this->getModuleName(),
-			// @phan-suppress-next-line PhanTypeMismatchArgument T240141
 			[ 'result' => self::addImageCategory( $pageId, $params['categories'] ) ]
 		);
 
