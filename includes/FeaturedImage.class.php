@@ -26,8 +26,16 @@ class FeaturedImage {
 	 * @return string HTML
 	 */
 	public static function renderFeaturedImage( $input, $args, Parser $parser ) {
+		$services = MediaWikiServices::getInstance();
+		if ( method_exists( $parser, 'getUserIdentity' ) ) {
+			// MW 1.36+
+			$user = $services->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
+		} else {
+			// @phan-suppress-next-line PhanUndeclaredMethod
+			$user = $parser->getUser();
+		}
 		// Add CSS & JS -- the JS is needed if allowing voting inline
-		if ( $parser->getUser()->isAllowed( 'voteny' ) ) {
+		if ( $user->isAllowed( 'voteny' ) ) {
 			$parser->getOutput()->addModules( 'ext.voteNY.scripts' );
 		}
 		$parser->getOutput()->addModuleStyles( [ 'ext.imagerating.css', 'ext.voteNY.styles' ] );
@@ -42,7 +50,6 @@ class FeaturedImage {
 		$width = intval( $width );
 
 		// Set up cache
-		$services = MediaWikiServices::getInstance();
 		$cache = $services->getMainWANObjectCache();
 		$key = $cache->makeKey( 'image', 'featured', $width );
 		$data = $cache->get( $key );
@@ -112,7 +119,7 @@ class FeaturedImage {
 		}
 		'@phan-var array{image_name:string,image_url:string,page_id:int,thumbnail:string,actor:int} $featured_image';
 
-		$voteClassTop = new VoteStars( $featured_image['page_id'], $parser->getUser() );
+		$voteClassTop = new VoteStars( $featured_image['page_id'], $user );
 		$countTop = $voteClassTop->count();
 
 		$user = User::newFromActorId( $featured_image['actor'] );
