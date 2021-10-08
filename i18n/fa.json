@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeeputer"
+		]
+	},
+	"imagerating-edit-summary": "افزودن رده",
+	"imagerating-featured-heading": "تصویر برگزیده",
+	"imagerating-popular-heading": "تصویر محبوب",
+	"imagerating-popular-heading-param": "تصاویر $1 محبوب",
+	"imagerating-new-heading-param": "تصاویر $1 تازه",
+	"imagerating-best-heading-param": "بهترین تصاویر $1",
+	"imagerating-new-heading": "تصاویر تازه",
+	"imagerating-best-heading": "بهترین تصاویر",
+	"imagerating-menu-title": "منو",
+	"imagerating-submitted-by": "ثبت‌شده توسط",
+	"imagerating-ratetitle": "امتیازدهی و رده‌بندی تصاویر",
+	"imagerating-categorytitle": "رده‌ها",
+	"imagerating-upload-images": "بارگذاری تصاویر",
+	"imagerating-prev-link": "قبلی",
+	"imagerating-next-link": "بعدی"
+}
