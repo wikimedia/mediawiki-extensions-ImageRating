@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Les Meloures"
 		]
 	},
-	"imagerating-add-button": "dobäisetzen",
-	"imagerating-add-categories-title": "Kategorien dobäisetzen (mat Kommae getrennt)",
+	"imagerating-add-button": "derbäisetzen",
+	"imagerating-add-categories-title": "Kategorien derbäisetzen (mat Kommae getrennt)",
 	"imagerating-category": "Biller zum Thema $1",
 	"imagerating-desc": "Erlaabt et Benotzer fir [[Special:ImageRating|Biller ze kategoriséieren an ze bewäerten]]",
-	"imagerating-edit-summary": "Kategorie dobäisetzen",
+	"imagerating-edit-summary": "Kategorie derbäisetzen",
 	"imagerating-empty": "Hei gëtt et näischt ze maachen.",
 	"imagerating-featured-heading": "Interessant Bild",
 	"imagerating-popular-heading": "Beléift Biller",

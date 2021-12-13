@@ -10,6 +10,7 @@
 	"imagerating-community-score": "yhteisön antama pistemäärä: '''$1''' ({{PLURAL:$2|yksi arvio|$2 arvioa}})",
 	"imagerating-desc": "Mahdollistaa [[Special:ImageRating|kuvien luokittelun ja arvostelemisen]]",
 	"imagerating-edit-summary": "luokka lisätty",
+	"imagerating-empty": "Täällä ei ole mitään tehtävää.",
 	"imagerating-featured-heading": "Suositeltu kuva",
 	"imagerating-popular-heading": "Suositut kuvat",
 	"imagerating-popular-heading-param": "Suositut kuvat {{GRAMMAR:elative|$1}}",

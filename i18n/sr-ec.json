@@ -2,9 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Acamicamacaraca",
-			"BadDog"
+			"BadDog",
+			"Kizule"
 		]
 	},
+	"imagerating-popular-heading": "Популарне слике",
+	"imagerating-new-heading": "Нове слике",
+	"imagerating-best-heading": "Најбоље слике",
+	"imagerating-menu-title": "Мени",
 	"imagerating-categorytitle": "Категорије",
 	"action-rateimage": "категоризујете и оцењујете слике"
 }

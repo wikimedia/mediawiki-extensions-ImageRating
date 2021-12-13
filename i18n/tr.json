@@ -1,19 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"MuratTheTurkish"
 		]
 	},
-	"apihelp-imagerating-description": "ResimDeğerlendirme API modülü -- bir sayfanın ID'si verildiğinde bir sayfaya kategori eklemeye izin verir",
-	"apihelp-imagerating-summary": "ResimDeğerlendirme API modülü -- bir sayfanın ID'si verildiğinde bir sayfaya kategori eklemeye izin verir",
+	"apihelp-imagerating-description": "ImageRating API modülü -- bir sayfa kimliği verildiğinde bir sayfaya kategori eklemeye izin verir",
+	"apihelp-imagerating-summary": "ImageRating API modülü -- bir sayfa kimliği verildiğinde bir sayfaya kategori eklemeye izin verir",
 	"apihelp-imagerating-param-categories": "URL olarak kodlanmış, sayfaya eklenecek kategorilerin virgülle ayrılmış listesi (dize)",
 	"apihelp-imagerating-param-pageId": "Düzenlenecek sayfanın iç tanıtıcısı",
-	"apihelp-imagerating-example-1": "Iç ID'si 66 olan sayfaya \"Sevimli kediler\", \"Lolcats\" ve \"İnternet meme'leri\" kategorilerini ekler.",
+	"apihelp-imagerating-example-1": "Dahili kimliği 66 olan sayfaya \"Cute cats\", \"Lolcats\" ve \"Internet memes\" kategorilerini ekler.",
 	"imagerating-add-button": "ekle",
 	"imagerating-add-categories-title": "kategori ekle (virgülle ayrılmış olarak)",
 	"imagerating-category": "$1 Resimleri",
 	"imagerating-community-score": "topluluk puanı: '''$1''' ({{PLURAL:$2|bir değerlendirme|$2 değerlendirme}})",
-	"imagerating-desc": "Kullanıcıların  [[Special:ImageRating|resimleri sınıflandırmasına ve derecelendirmesine]] izin verir",
+	"imagerating-desc": "Kullanıcıların [[Special:ImageRating|resimleri sınıflandırmasına ve derecelendirmesine]] izin verir",
 	"imagerating-edit-summary": "kategori ekle",
 	"imagerating-empty": "Burada yapacak bir şey yok.",
 	"imagerating-featured-heading": "Seçkin Resimler",
