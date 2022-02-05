@@ -131,7 +131,7 @@ class ImageRating extends SpecialPage {
 					] + $options,
 					$joinConds
 				);
-				$res_count = $dbr->select(
+				$row_count = $dbr->selectRow(
 					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'COUNT(*) AS total_ratings' ],
 					[ 'page_namespace' => NS_FILE ] + $where,
@@ -139,7 +139,6 @@ class ImageRating extends SpecialPage {
 					$options,
 					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
-				$row_count = $dbr->fetchObject( $res_count );
 				$total = $row_count->total_ratings;
 				if ( isset( $category ) && $category ) {
 					$out->setPageTitle( $this->msg( 'imagerating-best-heading-param', $category ) );
@@ -165,7 +164,7 @@ class ImageRating extends SpecialPage {
 					] + $options,
 					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
-				$res_count = $dbr->select(
+				$row_count = $dbr->selectRow(
 					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'COUNT(*) AS total_ratings' ],
 					[ 'page_namespace' => NS_FILE ] + $where,
@@ -175,7 +174,6 @@ class ImageRating extends SpecialPage {
 						'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ]
 					] + $joinConds
 				);
-				$row_count = $dbr->fetchObject( $res_count );
 				$total = $row_count->total_ratings;
 				if ( isset( $category ) && $category ) {
 					$out->setPageTitle( $this->msg( 'imagerating-popular-heading-param', $category ) );
@@ -274,7 +272,7 @@ class ImageRating extends SpecialPage {
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
 			$dbr = wfGetDB( DB_REPLICA );
-			$res_top = $dbr->select(
+			$row = $dbr->selectRow(
 				array_merge( [ 'Vote', 'image', 'page' ], $tables ),
 				[
 					'page_id', 'page_title', 'img_actor',
@@ -296,9 +294,7 @@ class ImageRating extends SpecialPage {
 				$joinConds
 			);
 
-			if ( $dbr->numRows( $res_top ) > 0 ) {
-				$row = $dbr->fetchObject( $res_top );
-
+			if ( $row ) {
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
 				$render_top_image = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
@@ -439,7 +435,7 @@ class ImageRating extends SpecialPage {
 					[ 'cl_from' => $image_id ],
 					__METHOD__
 				);
-				$category_total = $dbr->numRows( $res_category );
+				$category_total = $res_category->numRows();
 				$output .= "<div id=\"image-categories-container-{$image_id}\" class=\"image-categories-container\">
 					<h2>" . $this->msg( 'imagerating-categorytitle' )->escaped() . '</h2>';
 
@@ -488,12 +484,12 @@ class ImageRating extends SpecialPage {
 
 		// Maybe _don't_ render the pagination links after all...
 		// $total is indeed the amount of _all_ NS_FILE pages, but the special page by default
-		// shows only newest images, which I guess is $dbr->numRows( $res ) as opposed to anything else.
+		// shows only newest images, which I guess is $res->numRows() as opposed to anything else.
 		// So adjust $total accordingly if numRows() returns a number smaller than $total (which it
 		// probably does!) and also decide again if we should (not) bother rendering the pagination
 		// links.
-		if ( $renderPagination && $total > $dbr->numRows( $res ) ) {
-			$total = $dbr->numRows( $res );
+		if ( $renderPagination && $total > $res->numRows() ) {
+			$total = $res->numRows();
 			$renderPagination = ( $total > $perPage );
 		}
 
