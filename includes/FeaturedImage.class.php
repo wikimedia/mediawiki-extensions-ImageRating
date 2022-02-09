@@ -36,7 +36,7 @@ class FeaturedImage {
 		}
 		// Add CSS & JS -- the JS is needed if allowing voting inline
 		if ( $user->isAllowed( 'voteny' ) ) {
-			$parser->getOutput()->addModules( 'ext.voteNY.scripts' );
+			$parser->getOutput()->addModules( [ 'ext.voteNY.scripts' ] );
 		}
 		$parser->getOutput()->addModuleStyles( [ 'ext.imagerating.css', 'ext.voteNY.styles' ] );
 
