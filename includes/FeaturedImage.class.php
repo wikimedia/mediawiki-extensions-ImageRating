@@ -64,7 +64,7 @@ class FeaturedImage {
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
 			$dbr = wfGetDB( DB_PRIMARY );
-			$res_top = $dbr->select(
+			$row = $dbr->selectRow(
 				[ 'page', 'image', 'Vote' ],
 				[
 					'page_id', 'page_title', 'img_actor',
@@ -79,16 +79,12 @@ class FeaturedImage {
 				__METHOD__,
 				[
 					'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
-					'LIMIT' => 1,
-					'OFFSET' => 0
 				]
 			);
 
 			$featured_image = [];
 
-			if ( $dbr->numRows( $res_top ) > 0 ) {
-				$row = $dbr->fetchObject( $res_top );
-
+			if ( $row ) {
 				$image_title = Title::makeTitle( NS_FILE, $row->page_title );
 				$render_top_image = $services->getRepoGroup()->findFile( $row->page_title );
 				if ( is_object( $render_top_image ) ) {
