@@ -1,8 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Veeven"
+			"Veeven",
+			"Chaduvari"
 		]
 	},
-	"imagerating-category": "$1 బొమ్మలు"
+	"imagerating-add-button": "చేర్చు",
+	"imagerating-add-categories-title": "వర్గాలను చేర్చండి (కామాతో విడదీస్తూ)",
+	"imagerating-category": "$1 బొమ్మలు",
+	"imagerating-community-score": "సాముదాయిక స్కోరు: '''$1''' ({{PLURAL:$2|ఒక రేటింగు|$2 రేటింగులు}})",
+	"imagerating-desc": "[[Special:ImageRating|బొమ్మలను వర్గీకరించేందుకూ, మూల్యాంకన చేసేందుకూ]] వాడుకరులకు వీలు కలిగిస్తుంది",
+	"imagerating-edit-summary": "వర్గాన్ని చేర్చడం",
+	"imagerating-empty": "ఇక్కడ చెయ్యడానికేమీ లేదు.",
+	"imagerating-featured-heading": "విశేషమైన బొమ్మ",
+	"imagerating-popular-heading": "ప్రాచుర్యమైన బొమ్మలు",
+	"imagerating-popular-heading-param": "ప్రాచుర్యమైన $1 బొమ్మలు",
+	"imagerating-new-heading-param": "కొత్త $1 బొమ్మలు",
+	"imagerating-best-heading-param": "అత్యుత్తమమైన $1 బొమ్మలు",
+	"imagerating-new-heading": "కొత్త బొమ్మలు",
+	"imagerating-best-heading": "అత్యుత్తమమైన బొమ్మలు",
+	"imagerating-menu-title": "మెనూ",
+	"imagerating-submitted-by": "సమర్పించినది",
+	"imagerating-ratetitle": "బొమ్మలను మూల్యాంకన చేసి, వర్గీకరించండి",
+	"imagerating-categorytitle": "వర్గాలు",
+	"imagerating-upload-images": "బొమ్మలను ఎక్కించండి",
+	"imagerating-prev-link": "గత",
+	"imagerating-next-link": "తరువాతి",
+	"action-rateimage": "బొమ్మలను వర్గీకరించి, మూల్యాంకన చేసే",
+	"right-rateimage": "బొమ్మలను వర్గీకరించడం, మూల్యాంకన చెయ్యడం"
 }
