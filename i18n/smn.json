@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Yupik"
 		]
 	},
 	"imagerating-add-button": "Lasseet",
 	"imagerating-menu-title": "Valjiittâh",
-	"imagerating-categorytitle": "Luokah"
+	"imagerating-categorytitle": "Luokah",
+	"imagerating-next-link": "čuávuvâš"
 }
