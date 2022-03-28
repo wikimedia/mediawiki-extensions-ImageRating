@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-imagerating-description": "Modulo API ImageRating: permitte adder categorias a un pagina quando es date un identificator de pagina",
+	"apihelp-imagerating-summary": "Modulo API ImageRating: permitte adder categorias a un pagina quando es date un identificator de pagina",
+	"apihelp-imagerating-param-categories": "Lista (catena) de categorias a adder al pagina, codificate in formato URL e separate per commas",
+	"apihelp-imagerating-param-pageId": "Identificator interne del pagina a modificar",
+	"apihelp-imagerating-example-1": "Adde le categorias \"Cute cats\", \"Lolcats\" and \"Internet memes\" al pagina que ha le ID interne 66.",
+	"imagerating-add-button": "adder",
+	"imagerating-add-categories-title": "adder categorias (separate per commas)",
+	"imagerating-category": "Imagines de $1",
+	"imagerating-community-score": "classification del communitate: '''$1''' ({{PLURAL:$2|un evalutation|$2 evalutationes}})",
+	"imagerating-desc": "Permitte que usatores [[Special:ImageRating|categorisa e evaluta imagines]]",
+	"imagerating-edit-summary": "adder categoria",
+	"imagerating-empty": "Nihil a facer hic.",
+	"imagerating-featured-heading": "Imagine eminente",
+	"imagerating-popular-heading": "Imagines popular",
+	"imagerating-popular-heading-param": "Imagines popular de $1",
+	"imagerating-new-heading-param": "Nove imagines de $1",
+	"imagerating-best-heading-param": "Le melior imagines de $1",
+	"imagerating-new-heading": "Nove imagines",
+	"imagerating-best-heading": "Le melior imagines",
+	"imagerating-menu-title": "Menu",
+	"imagerating-submitted-by": "Submittite per",
+	"imagerating-ratetitle": "Evalutar e categorisar imagines",
+	"imagerating-categorytitle": "Categorias",
+	"imagerating-upload-images": "Incargar imagines",
+	"imagerating-prev-link": "prec",
+	"imagerating-next-link": "seq",
+	"action-rateimage": "categorisar e evalutar imagines",
+	"right-rateimage": "Categorisar e evalutar imagines"
+}
