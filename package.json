@@ -1,4 +1,5 @@
 {
+	"name": "ImageRating",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
