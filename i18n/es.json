@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"DiegoAmbrocio"
 		]
 	},
 	"imagerating-add-button": "añadir",
@@ -11,12 +12,18 @@
 	"imagerating-empty": "No hay nada que hacer aquí.",
 	"imagerating-featured-heading": "Imagen en destaque",
 	"imagerating-popular-heading": "Imágenes populares",
+	"imagerating-popular-heading-param": "Imágenes populares de $1",
+	"imagerating-new-heading-param": "Nuevas imágenes de $1",
+	"imagerating-best-heading-param": "Las mejores imágenes de $1",
 	"imagerating-new-heading": "Imágenes nuevas",
 	"imagerating-best-heading": "Mejores imágenes",
 	"imagerating-menu-title": "Menú",
 	"imagerating-submitted-by": "Enviada por",
+	"imagerating-ratetitle": "Valorar y clasificar las imágenes",
 	"imagerating-categorytitle": "Categorías",
 	"imagerating-upload-images": "Cargar imágenes",
 	"imagerating-prev-link": "ant.",
-	"imagerating-next-link": "siguiente"
+	"imagerating-next-link": "siguiente",
+	"action-rateimage": "clasificar y valorar las imágenes",
+	"right-rateimage": "Clasificar y valorar las imágenes"
 }
