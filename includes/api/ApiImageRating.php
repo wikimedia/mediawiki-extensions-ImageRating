@@ -43,7 +43,7 @@ class ApiImageRating extends ApiBase {
 
 		// Top level
 		$this->getResult()->addValue( null, $this->getModuleName(),
-			[ 'result' => self::addImageCategory( $pageId, $params['categories'] ) ]
+			[ 'result' => $this->addImageCategory( $pageId, $params['categories'] ) ]
 		);
 
 		return true;
@@ -56,7 +56,7 @@ class ApiImageRating extends ApiBase {
 	 * @param string $categories URL-encoded categories, each category separated by a comma
 	 * @return string 'ok' if everything went well, 'busy' if the article has been edited in the last 2 seconds and we didn't edit it
 	 */
-	public static function addImageCategory( $pageId, $categories ) {
+	public function addImageCategory( $pageId, $categories ) {
 		$categories = urldecode( $categories );
 
 		// Construct page title object
@@ -79,7 +79,7 @@ class ApiImageRating extends ApiBase {
 		foreach ( $categoriesArray as $category ) {
 			$category = trim( $category );
 			$namespace = $contLang->getNsText( NS_CATEGORY );
-			$ctg = wfMessage( 'imagerating-category', $category )->inContentLanguage()->parse();
+			$ctg = $this->msg( 'imagerating-category', $category )->inContentLanguage()->parse();
 			$tag = "[[{$namespace}:{$ctg}]]";
 			if ( strpos( $pageText, $tag ) === false ) {
 				$categoryText .= "\n{$tag}";
@@ -89,7 +89,13 @@ class ApiImageRating extends ApiBase {
 
 		// Make page edit
 		$content = ContentHandler::makeContent( $newText, $imagePage );
-		$wp->doEditContent( $content, wfMessage( 'imagerating-edit-summary' )->inContentLanguage()->text() );
+		$summary = $this->msg( 'imagerating-edit-summary' )->inContentLanguage()->text();
+		if ( method_exists( $wp, 'doUserEditContent' ) ) {
+			// MW 1.36+
+			$wp->doUserEditContent( $content, $this->getUser(), $summary );
+		} else {
+			$wp->doEditContent( $content, $summary );
+		}
 
 		return 'ok';
 	}
