@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * ImageRating API module
  *
@@ -61,7 +64,12 @@ class ApiImageRating extends ApiBase {
 
 		// Construct page title object
 		$imagePage = Title::newFromID( $pageId );
-		$wp = WikiPage::factory( $imagePage );
+		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+			// MW 1.36+
+			$wp = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $imagePage );
+		} else {
+			$wp = WikiPage::factory( $imagePage );
+		}
 
 		// Check if it's been edited in last 2 seconds: want to delay the edit
 		$timeSinceEdited = (int)wfTimestamp( TS_MW, 0 ) - (int)$wp->getTimestamp();
@@ -94,6 +102,7 @@ class ApiImageRating extends ApiBase {
 			// MW 1.36+
 			$wp->doUserEditContent( $content, $this->getUser(), $summary );
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredMethod
 			$wp->doEditContent( $content, $summary );
 		}
 
