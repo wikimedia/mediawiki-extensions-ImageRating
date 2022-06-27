@@ -4,6 +4,9 @@
 			"Jeeputer"
 		]
 	},
+	"imagerating-add-button": "افزودن",
+	"imagerating-add-categories-title": "افزودن رده‌ها (با ویرگول جداشده)",
+	"imagerating-category": "$1 تصویر",
 	"imagerating-edit-summary": "افزودن رده",
 	"imagerating-featured-heading": "تصویر برگزیده",
 	"imagerating-popular-heading": "تصویر محبوب",
