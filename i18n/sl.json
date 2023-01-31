@@ -4,9 +4,32 @@
 			"Eleassar"
 		]
 	},
+	"apihelp-imagerating-description": "Modul API-ja ImageRating – omogoča dodajanje kategorij na stran ob predloženem ID-ju strani",
+	"apihelp-imagerating-summary": "Modul API-ja ImageRating – omogoča dodajanje kategorij na stran ob predloženem ID-ju strani",
+	"apihelp-imagerating-param-categories": "URL-kodiran, z vejicami ločen seznam (niz) kategorij, ki naj se dodajo na stran",
+	"apihelp-imagerating-param-pageId": "Notranji identifikator strani za urejanje",
+	"apihelp-imagerating-example-1": "Doda kategorije »Ljubke mucke«, »Lolcats« in \"Internetni memi« na stran z notranjim ID-jem 66.",
 	"imagerating-add-button": "dodaj",
+	"imagerating-add-categories-title": "dodaj kategorije (ločene z vejico)",
 	"imagerating-category": "Slike $1",
+	"imagerating-community-score": "ocena skupnosti: '''$1''' ({{PLURAL:$2|ena ocena|$2 oceni|$2 ocene|$2 ocen}})",
+	"imagerating-desc": "Omogoča uporabnikom, da [[Special:ImageRating|kategorizirajo in ocenjujejo slike]]",
 	"imagerating-edit-summary": "dodaj kategorijo",
+	"imagerating-empty": "Tu ni ničesar za storiti.",
 	"imagerating-featured-heading": "Izbrana slika",
-	"imagerating-categorytitle": "Kategorije"
+	"imagerating-popular-heading": "Priljubljene slike",
+	"imagerating-popular-heading-param": "Priljubljene slike v $1",
+	"imagerating-new-heading-param": "Nove slike v $1",
+	"imagerating-best-heading-param": "Najboljše slike v $1",
+	"imagerating-new-heading": "Nove slike",
+	"imagerating-best-heading": "Najboljše slike",
+	"imagerating-menu-title": "Meni",
+	"imagerating-submitted-by": "Naložil_a",
+	"imagerating-ratetitle": "Ocenjevanje in kategoriziranje slik",
+	"imagerating-categorytitle": "Kategorije",
+	"imagerating-upload-images": "Naložite slike",
+	"imagerating-prev-link": "prej",
+	"imagerating-next-link": "nasl",
+	"action-rateimage": "kategoriziranje in ocenjevanje slik",
+	"right-rateimage": "Kategoriziranje in ocenjevanje slik"
 }
