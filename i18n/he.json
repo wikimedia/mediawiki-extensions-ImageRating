@@ -1,12 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"שוקו מוקה"
 		]
 	},
 	"imagerating-add-button": "הוספה",
+	"imagerating-popular-heading": "תמונות פופולריות",
+	"imagerating-new-heading": "תמונות חדשות",
+	"imagerating-best-heading": "התמונות הטובות ביותר",
 	"imagerating-menu-title": "תפריט",
 	"imagerating-submitted-by": "נשלח על‏־ידי",
 	"imagerating-categorytitle": "קטגוריות",
-	"imagerating-upload-images": "העלאת תמונות"
+	"imagerating-upload-images": "העלאת תמונות",
+	"imagerating-prev-link": "הקודם",
+	"imagerating-next-link": "הבא"
 }
