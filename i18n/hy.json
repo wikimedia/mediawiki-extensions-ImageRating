@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
 	"imagerating-add-button": "ավելացնել",
+	"imagerating-menu-title": "Ընտրացանկ",
 	"imagerating-categorytitle": "Կատեգորիաներ"
 }
