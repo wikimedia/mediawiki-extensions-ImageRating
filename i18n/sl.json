@@ -6,7 +6,7 @@
 	},
 	"apihelp-imagerating-description": "Modul API-ja ImageRating – omogoča dodajanje kategorij na stran ob predloženem ID-ju strani",
 	"apihelp-imagerating-summary": "Modul API-ja ImageRating – omogoča dodajanje kategorij na stran ob predloženem ID-ju strani",
-	"apihelp-imagerating-param-categories": "URL-kodiran, z vejicami ločen seznam (niz) kategorij, ki naj se dodajo na stran",
+	"apihelp-imagerating-param-categories": "Seznam (niz) URL-kodiranih, z vejicami ločenih kategorij, ki naj se dodajo strani",
 	"apihelp-imagerating-param-pageId": "Notranji identifikator strani za urejanje",
 	"apihelp-imagerating-example-1": "Doda kategorije »Ljubke mucke«, »Lolcats« in \"Internetni memi« na stran z notranjim ID-jem 66.",
 	"imagerating-add-button": "dodaj",
