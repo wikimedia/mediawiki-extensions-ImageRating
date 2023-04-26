@@ -1,8 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
-			"Manvydasz"
+			"Manvydasz",
+			"Nokeoo"
 		]
 	},
-	"imagerating-categorytitle": "Kategorijos"
+	"imagerating-add-button": "pridėti",
+	"imagerating-add-categories-title": "pridėti kategorijas (atskirti kableliais)",
+	"imagerating-category": "$1 paveikslėliai",
+	"imagerating-desc": "Leidžia naudotojams [[Special:ImageRating|kategorizuoti ir vertinti paveiksėlius]]",
+	"imagerating-edit-summary": "pridėti kategoriją",
+	"imagerating-empty": "Čia nieko nėra.",
+	"imagerating-featured-heading": "Rinktinis paveikslėlis",
+	"imagerating-popular-heading": "Populiarūs paveikslėliai",
+	"imagerating-popular-heading-param": "Populiarūs $1 paveikslėliai",
+	"imagerating-new-heading-param": "Nauji $1 paveikslėliai",
+	"imagerating-best-heading-param": "Geriausi $1 paveikslėliai",
+	"imagerating-new-heading": "Nauji paveikslėliai",
+	"imagerating-best-heading": "Geriausi paveikslėliai",
+	"imagerating-menu-title": "Meniu",
+	"imagerating-submitted-by": "Pateikė",
+	"imagerating-ratetitle": "Įvertinkite ir kategorizuokite paveikslėlius",
+	"imagerating-categorytitle": "Kategorijos",
+	"imagerating-upload-images": "Įkelti paveikslėlius",
+	"imagerating-prev-link": "ankstesnis",
+	"imagerating-next-link": "kitas",
+	"action-rateimage": "kategorizuoti ir vertinti paveikslėlius",
+	"right-rateimage": "Kategorizuoti ir vertinti paveikslėlius"
 }
