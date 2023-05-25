@@ -5,9 +5,13 @@
 			"Nokeoo"
 		]
 	},
+	"apihelp-imagerating-description": "ImageRating“API modulis – leidžia pridėti kategorijas prie puslapio, kai pateikiamas puslapio ID",
+	"apihelp-imagerating-summary": "ImageRating“API modulis – leidžia pridėti kategorijas prie puslapio, kai pateikiamas puslapio ID",
+	"apihelp-imagerating-param-pageId": "Redaguotino puslapio vidinis identifikatorius",
 	"imagerating-add-button": "pridėti",
 	"imagerating-add-categories-title": "pridėti kategorijas (atskirti kableliais)",
 	"imagerating-category": "$1 paveikslėliai",
+	"imagerating-community-score": "bendruomenės vertinimas: '''$1''' ( {{PLURAL:$2|vienas įvertinimas|$2 įvertinimai}})",
 	"imagerating-desc": "Leidžia naudotojams [[Special:ImageRating|kategorizuoti ir vertinti paveiksėlius]]",
 	"imagerating-edit-summary": "pridėti kategoriją",
 	"imagerating-empty": "Čia nieko nėra.",
