@@ -5,14 +5,32 @@
 			"שוקו מוקה"
 		]
 	},
+	"apihelp-imagerating-description": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
+	"apihelp-imagerating-summary": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
+	"apihelp-imagerating-param-categories": "רשימה (מחרוזת) של קטגוריות ב־URL-encoded, מופרדת בפסיקים להוספה לדף",
+	"apihelp-imagerating-param-pageId": "מזהה פנימי של הדף שיש לערוך",
+	"apihelp-imagerating-example-1": "הוספת הקטגוריות <span dir=\"ltr\">Cute cats</span>, <span dir=\"ltr\">Lolcats</span>, ו־<span dir=\"ltr\">Internet memes</span> לדף בעל המזהה הפנימי 66.",
 	"imagerating-add-button": "הוספה",
+	"imagerating-add-categories-title": "הוסף קטגוריות (מופרדות בפסיק)",
+	"imagerating-category": "תמונות $1",
+	"imagerating-community-score": "דירוג הקהילה: '''$1''' ({{PLURAL:$2|דירוג אחד|$2 דירוגים}})",
+	"imagerating-desc": "מאפשרת למשתמשים [[Special:ImageRating|לסווג ולדרג תמונות]]",
+	"imagerating-edit-summary": "הוספת קטגוריה",
+	"imagerating-empty": "אין מה לעשות כאן.",
+	"imagerating-featured-heading": "תמונה מומלצת",
 	"imagerating-popular-heading": "תמונות פופולריות",
+	"imagerating-popular-heading-param": "תמונות פופולריות של $1",
+	"imagerating-new-heading-param": "תמונות חדשות של $1",
+	"imagerating-best-heading-param": "התמונות הטובות ביותר של $1",
 	"imagerating-new-heading": "תמונות חדשות",
 	"imagerating-best-heading": "התמונות הטובות ביותר",
 	"imagerating-menu-title": "תפריט",
 	"imagerating-submitted-by": "נשלח על‏־ידי",
+	"imagerating-ratetitle": "דירוג וסיווג תמונות",
 	"imagerating-categorytitle": "קטגוריות",
 	"imagerating-upload-images": "העלאת תמונות",
 	"imagerating-prev-link": "הקודם",
-	"imagerating-next-link": "הבא"
+	"imagerating-next-link": "הבא",
+	"action-rateimage": "לסווג ולדרג תמונות",
+	"right-rateimage": "סיווג ודירוג תמונות"
 }
