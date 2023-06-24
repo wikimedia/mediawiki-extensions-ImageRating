@@ -6,7 +6,6 @@
 			"Jack Phoenix"
 		]
 	},
-	"apihelp-imagerating-description": "ImageRating API module -- allows adding categories to a page when given a page ID",
 	"apihelp-imagerating-summary": "ImageRating API module -- allows adding categories to a page when given a page ID",
 	"apihelp-imagerating-param-categories": "URL-encoded, comma-separated list (string) of categories to add to the page",
 	"apihelp-imagerating-param-pageId": "Internal identifier of the page to edit",
