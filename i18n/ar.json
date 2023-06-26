@@ -4,7 +4,6 @@
 			"ديفيد"
 		]
 	},
-	"apihelp-imagerating-description": "وحدة API تقييم الصور: تسمح بإضافة تصنيفات إلى صفحة عند إعطاء معرف الصفحة",
 	"apihelp-imagerating-summary": "وحدة API تقييم الصور: تسمح بإضافة تصنيفات إلى صفحة عند إعطاء معرف الصفحة",
 	"apihelp-imagerating-param-categories": "ترميز مسارات، قائمة مفصولة بفواصل (سلسلة) بتصنيفات لإضافتها إلى الصفحة",
 	"apihelp-imagerating-param-pageId": "معرف داخلي للصفحة لتحريرها",

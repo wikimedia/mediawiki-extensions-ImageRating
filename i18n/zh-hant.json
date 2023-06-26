@@ -6,7 +6,6 @@
 			"Winston Sung"
 		]
 	},
-	"apihelp-imagerating-description": "ImageRating API 模組 -- 允許添加分類至給予頁面 ID 的頁面裡",
 	"apihelp-imagerating-summary": "ImageRating API 模組 -- 允許添加分類至給予頁面 ID 的頁面裡",
 	"apihelp-imagerating-param-categories": "要添加至頁面的以 URL 編碼，逗號分隔的分類清單（字串）",
 	"apihelp-imagerating-param-pageId": "要編輯頁面的內部識別碼",

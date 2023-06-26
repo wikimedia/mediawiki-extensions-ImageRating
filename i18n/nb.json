@@ -4,7 +4,6 @@
 			"Jon Harald Søby"
 		]
 	},
-	"apihelp-imagerating-description": "API-modul for ImageRating – gjør det mulig å legge til kategorier til en side med en gitt side-ID",
 	"apihelp-imagerating-summary": "API-modul for ImageRating – gjør det mulig å legge til kategorier til en side med en gitt side-ID",
 	"apihelp-imagerating-param-categories": "URL-kodet, kommaseparert liste (streng) av kategorier som skal legges til siden",
 	"apihelp-imagerating-param-pageId": "Intern identifikator for siden som skal redigeres",

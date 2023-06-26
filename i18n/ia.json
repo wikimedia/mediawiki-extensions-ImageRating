@@ -4,7 +4,6 @@
 			"McDutchie"
 		]
 	},
-	"apihelp-imagerating-description": "Modulo API ImageRating: permitte adder categorias a un pagina quando es date un identificator de pagina",
 	"apihelp-imagerating-summary": "Modulo API ImageRating: permitte adder categorias a un pagina quando es date un identificator de pagina",
 	"apihelp-imagerating-param-categories": "Lista (catena) de categorias a adder al pagina, codificate in formato URL e separate per commas",
 	"apihelp-imagerating-param-pageId": "Identificator interne del pagina a modificar",

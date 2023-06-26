@@ -5,7 +5,6 @@
 			"שוקו מוקה"
 		]
 	},
-	"apihelp-imagerating-description": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
 	"apihelp-imagerating-summary": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
 	"apihelp-imagerating-param-categories": "רשימה (מחרוזת) של קטגוריות ב־URL-encoded, מופרדת בפסיקים להוספה לדף",
 	"apihelp-imagerating-param-pageId": "מזהה פנימי של הדף שיש לערוך",

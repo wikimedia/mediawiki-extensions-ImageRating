@@ -5,7 +5,6 @@
 			"Nokeoo"
 		]
 	},
-	"apihelp-imagerating-description": "ImageRating“API modulis – leidžia pridėti kategorijas prie puslapio, kai pateikiamas puslapio ID",
 	"apihelp-imagerating-summary": "ImageRating“API modulis – leidžia pridėti kategorijas prie puslapio, kai pateikiamas puslapio ID",
 	"apihelp-imagerating-param-pageId": "Redaguotino puslapio vidinis identifikatorius",
 	"imagerating-add-button": "pridėti",

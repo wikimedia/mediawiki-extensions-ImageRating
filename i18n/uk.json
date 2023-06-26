@@ -4,7 +4,6 @@
 			"Piramidion"
 		]
 	},
-	"apihelp-imagerating-description": "Модуль API «ImageRating» — дає змогу додавати категорії до сторінки, коли вказано її ідентифікатор",
 	"apihelp-imagerating-summary": "Модуль API «ImageRating» — дає змогу додавати категорії до сторінки, коли вказано її ідентифікатор",
 	"apihelp-imagerating-param-categories": "URL-кодований список категорій (у формі рядка тексту, з розділенням через кому) для додавання до сторінки",
 	"apihelp-imagerating-param-pageId": "Внутрішній ідентифікатор сторінки, яку треба відредагувати",

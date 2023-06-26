@@ -4,7 +4,6 @@
 			"Joetaras"
 		]
 	},
-	"apihelp-imagerating-description": "Module API ImageRating -- permette de aggiungere categorije a 'na pàgene quanne jè date 'nu ID de pàgene",
 	"apihelp-imagerating-summary": "Module API ImageRating -- permette de aggiungere categorije a 'na pàgene quanne jè date 'nu ID de pàgene",
 	"apihelp-imagerating-param-categories": "URl codifecate, elenghe (stringhe) separate da 'a virgole de categorije da aggiungere a 'a pàgene",
 	"apihelp-imagerating-param-pageId": "Idendificatore inderne d'a pàgene da cangià",

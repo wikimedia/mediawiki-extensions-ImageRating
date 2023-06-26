@@ -9,7 +9,6 @@
 			"Wladek92"
 		]
 	},
-	"apihelp-imagerating-description": "Module d’API ImageRating — permet d’ajouter des catégories à une page ayant l’identifiant donné",
 	"apihelp-imagerating-summary": "Module d’API ImageRating — permet d’ajouter des catégories à une page ayant l’identifiant donné",
 	"apihelp-imagerating-param-categories": "Liste des catégories (chaîne) à ajouter à la page, séparées par des virgules et encodées au format URL",
 	"apihelp-imagerating-param-pageId": "Identificateur interne de la page à modifier",

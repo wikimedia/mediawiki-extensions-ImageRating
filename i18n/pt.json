@@ -4,7 +4,6 @@
 			"Hamilton Abreu"
 		]
 	},
-	"apihelp-imagerating-description": "Módulo ImageRating (classificação de imagens) da API -- permite adicionar categorias a uma página dado um identificador de página",
 	"apihelp-imagerating-summary": "Módulo ImageRating (classificação de imagens) da API -- permite adicionar categorias a uma página dado um identificador de página",
 	"apihelp-imagerating-param-categories": "Lista (texto) de categorias para adicionar à página, separadas por vírgulas, codificada para uso nos URL",
 	"apihelp-imagerating-param-pageId": "identificador interno da página a ser editada",

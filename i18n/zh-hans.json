@@ -4,7 +4,6 @@
 			"Liuxinyu970226"
 		]
 	},
-	"apihelp-imagerating-description": "ImageRating API模块——允许在提供页面ID的情况下添加分类至页面",
 	"apihelp-imagerating-summary": "ImageRating API模块——允许在提供页面ID的情况下添加分类至页面",
 	"apihelp-imagerating-param-categories": "要添加到页面的URL编码，逗号分隔的分类列表（字符串）",
 	"apihelp-imagerating-param-pageId": "要编辑页面的内部标识符",

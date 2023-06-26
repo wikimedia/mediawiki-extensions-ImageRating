@@ -6,7 +6,6 @@
 			"Nikosgranturismogt"
 		]
 	},
-	"apihelp-imagerating-description": "Μονάδα API του ImageRating-επιτρέπει την προσθήκη κατηγοριών σε μια σελίδα όταν έχει δοθεί ένα αναγνωριστικό σελίδας",
 	"apihelp-imagerating-summary": "Μονάδα ΑΡΙ ImageRating-επιτρέπει την προσθήκη κατηγοριών σε μια σελίδα όταν παρασχεθεί ID σελίδας",
 	"apihelp-imagerating-param-categories": "URL κωδικοποιημένος, λίστα χωρισμένη με κόμμα (σειρά)κατηγοριών για να προσθέσετε στην σελίδα",
 	"apihelp-imagerating-param-pageId": "Εσωτερικός δείκτης αναγνώρισης της σελίδας προς έκδοση",

@@ -5,7 +5,6 @@
 			"MuratTheTurkish"
 		]
 	},
-	"apihelp-imagerating-description": "ImageRating API modülü -- bir sayfa kimliği verildiğinde bir sayfaya kategori eklemeye izin verir",
 	"apihelp-imagerating-summary": "ImageRating API modülü -- bir sayfa kimliği verildiğinde bir sayfaya kategori eklemeye izin verir",
 	"apihelp-imagerating-param-categories": "URL olarak kodlanmış, sayfaya eklenecek kategorilerin virgülle ayrılmış listesi (dize)",
 	"apihelp-imagerating-param-pageId": "Düzenlenecek sayfanın iç tanıtıcısı",
