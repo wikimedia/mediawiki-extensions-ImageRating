@@ -6,7 +6,7 @@
 		]
 	},
 	"apihelp-imagerating-description": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
-	"apihelp-imagerating-summary": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה עמוד",
+	"apihelp-imagerating-summary": "מודול API של ImageRating – מאפשר הוספת קטגוריות לדף כאשר ניתן מזהה דף",
 	"apihelp-imagerating-param-categories": "רשימה (מחרוזת) של קטגוריות ב־URL-encoded, מופרדת בפסיקים להוספה לדף",
 	"apihelp-imagerating-param-pageId": "מזהה פנימי של הדף שיש לערוך",
 	"apihelp-imagerating-example-1": "הוספת הקטגוריות <span dir=\"ltr\">Cute cats</span>, <span dir=\"ltr\">Lolcats</span>, ו־<span dir=\"ltr\">Internet memes</span> לדף בעל המזהה הפנימי 66.",
