@@ -4,7 +4,9 @@
 			"Piano1forte2"
 		]
 	},
+	"apihelp-imagerating-example-1": "Adds the categories 'Cute cats', 'Lolcats' and 'Internet memes' to the page that has the internal ID 66.",
 	"imagerating-desc": "Allows users to [[Special:ImageRating|categorise and rate images]]",
 	"imagerating-ratetitle": "Rate and Categorise Images",
-	"action-rateimage": "categorise and rate images"
+	"action-rateimage": "categorise and rate images",
+	"right-rateimage": "Categorise and rate images"
 }
