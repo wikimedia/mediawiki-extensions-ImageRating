@@ -6,5 +6,6 @@
 	},
 	"imagerating-desc": "Allows users to [[Special:ImageRating|categorise and rate images]]",
 	"imagerating-ratetitle": "Rate and Categorise Images",
-	"action-rateimage": "categorise and rate images"
+	"action-rateimage": "categorise and rate images",
+	"right-rateimage": "Categorise and rate images"
 }
