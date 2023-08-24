@@ -68,6 +68,7 @@ class ApiImageRating extends ApiBase {
 			// MW 1.36+
 			$wp = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $imagePage );
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredStaticMethod
 			$wp = WikiPage::factory( $imagePage );
 		}
 
