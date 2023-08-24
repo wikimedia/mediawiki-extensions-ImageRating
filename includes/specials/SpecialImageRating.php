@@ -450,9 +450,9 @@ class ImageRating extends SpecialPage {
 						Title::makeTitle( NS_CATEGORY, $row_category->cl_to )->getFullURL(),
 						ENT_QUOTES
 					);
-					$output .= "<div class=\"category-button\" id=\"{$category_id}\" onclick=\"window.location='" . $catURL . "'\">
+					$output .= "<a class=\"category-button\" id=\"{$category_id}\" href=\"{$catURL}\">
 						{$image_category}
-					</div>";
+					</a>";
 
 					if (
 						$category_x == $category_total ||
