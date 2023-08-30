@@ -84,6 +84,7 @@ class ApiImageRating extends ApiBase {
 		// Append new categories
 		$categoriesArray = explode( ',', $categories );
 		$categoryText = '';
+		$linkedCategoriesForEditSummary = [];
 		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
 		foreach ( $categoriesArray as $category ) {
 			$category = trim( $category );
@@ -92,13 +93,19 @@ class ApiImageRating extends ApiBase {
 			$tag = "[[{$namespace}:{$ctg}]]";
 			if ( strpos( $pageText, $tag ) === false ) {
 				$categoryText .= "\n{$tag}";
+				$linkedCategoriesForEditSummary[] = $tag;
 			}
 		}
 		$newText = $pageText . $categoryText;
 
 		// Make page edit
 		$content = ContentHandler::makeContent( $newText, $imagePage );
-		$summary = $this->msg( 'imagerating-edit-summary' )->inContentLanguage()->text();
+		$summary = $this->msg(
+			'imagerating-edit-summary',
+			count( $categoriesArray ),
+			$contLang->commaList( $linkedCategoriesForEditSummary )
+		)->inContentLanguage()->text();
+
 		if ( method_exists( $wp, 'doUserEditContent' ) ) {
 			// MW 1.36+
 			$wp->doUserEditContent( $content, $this->getUser(), $summary );

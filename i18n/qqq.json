@@ -14,7 +14,7 @@
 	"imagerating-category": "A category name\n{{Identical|Image}}",
 	"imagerating-community-score": "A score message",
 	"imagerating-desc": "{{desc|name=ImageRating|url=https://www.mediawiki.org/wiki/Extension:ImageRating}}",
-	"imagerating-edit-summary": "An edit summary",
+	"imagerating-edit-summary": "An edit summary for categorization edits made via the Special:ImageRating page.\nParameters:\n* $1 is the amount of categories added\n* $2 is a comma-separated list of categories added by the user to the given image; they are formatted using the {{msg-mw|imagerating-category}} message so they will show up in recent changes as \"added categories: [[Category:Foo Images]], [[Category:Bar Images]]\" if the site's language is English and the user added the categories <code>Foo</code> and <code>Bar</code> to an image, for example",
 	"imagerating-empty": "A hint message for no result",
 	"imagerating-featured-heading": "A header message",
 	"imagerating-popular-heading": "A page title",

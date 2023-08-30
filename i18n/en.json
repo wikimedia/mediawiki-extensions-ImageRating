@@ -15,7 +15,7 @@
 	"imagerating-category": "$1 Images",
 	"imagerating-community-score": "community score: '''$1''' ({{PLURAL:$2|one rating|$2 ratings}})",
 	"imagerating-desc": "Allows users to [[Special:ImageRating|categorize and rate images]]",
-	"imagerating-edit-summary": "add category",
+	"imagerating-edit-summary": "{{PLURAL:$1|add category: $2|add categories: $2}}",
 	"imagerating-empty": "Nothing to do here.",
 	"imagerating-featured-heading": "Featured Image",
 	"imagerating-popular-heading": "Popular Images",
