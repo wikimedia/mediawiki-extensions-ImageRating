@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Ата"
 		]
 	},
 	"apihelp-imagerating-summary": "Модуль API «ImageRating» — дає змогу додавати категорії до сторінки, коли вказано її ідентифікатор",
@@ -13,7 +14,7 @@
 	"imagerating-category": "$1: зображення",
 	"imagerating-community-score": "оцінка спільноти: '''$1''' ({{PLURAL:$2|$2 оцінка|$2 оцінки|$2 оцінок}})",
 	"imagerating-desc": "Дає користувачам змогу [[Special:ImageRating|категоризувати й оцінювати зображення]]",
-	"imagerating-edit-summary": "додати категорію",
+	"imagerating-edit-summary": "{{PLURAL:$1|додати категорію: $2|додати категорії: $2}}",
 	"imagerating-empty": "Тут нічого робити.",
 	"imagerating-featured-heading": "Вибране зображення",
 	"imagerating-popular-heading": "Популярні зображення",

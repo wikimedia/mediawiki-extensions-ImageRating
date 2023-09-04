@@ -13,7 +13,7 @@
 	"imagerating-category": "Slike $1",
 	"imagerating-community-score": "ocena skupnosti: '''$1''' ({{PLURAL:$2|ena ocena|$2 oceni|$2 ocene|$2 ocen}})",
 	"imagerating-desc": "Omogoča uporabnikom, da [[Special:ImageRating|kategorizirajo in ocenjujejo slike]]",
-	"imagerating-edit-summary": "dodaj kategorijo",
+	"imagerating-edit-summary": "{{PLURAL:$1|dodaj kategorijo: $2|dodaj kategorije: $2}}",
 	"imagerating-empty": "Tu ni ničesar za storiti.",
 	"imagerating-featured-heading": "Izbrana slika",
 	"imagerating-popular-heading": "Priljubljene slike",

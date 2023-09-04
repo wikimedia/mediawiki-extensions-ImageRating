@@ -5,14 +5,16 @@
 			"Metalhead64"
 		]
 	},
+	"apihelp-imagerating-summary": "ImageRating-API-Modul – ermöglicht das Hinzufügen von Kategorien zu einer Seite, wenn eine Seiten-ID angegeben wird",
 	"apihelp-imagerating-param-categories": "URL-kodierte, durch Kommata getrennte Liste (Zeichenfolge) der Kategorien, die zur Seite hinzugefügt werden sollen.",
 	"apihelp-imagerating-param-pageId": "Interner Identifikator der zu bearbeitenden Seite",
+	"apihelp-imagerating-example-1": "Fügt der Seite mit der internen ID 66 die Kategorien „Süße Katzen“, „Lolcats“ und „Internet-Memes“ hinzu.",
 	"imagerating-add-button": "hinzufügen",
 	"imagerating-add-categories-title": "Kategorien hinzufügen (durch Kommas getrennt)",
 	"imagerating-category": "$1 Bilder",
 	"imagerating-community-score": "Score der Gemeinschaft: '''$1''' ({{PLURAL:$2|eine Bewertung|$2 Bewertungen}})",
 	"imagerating-desc": "Erlaubt Benutzern die [[Special:ImageRating|Kategorisierung und Bewertung von Bildern]]",
-	"imagerating-edit-summary": "Kategorie hinzufügen",
+	"imagerating-edit-summary": "{{PLURAL:$1|Kategorie hinzufügen: $2|Kategorien hinzufügen: $2}}",
 	"imagerating-empty": "Hier gibt es nichts zu tun.",
 	"imagerating-featured-heading": "Vorgestelltes Bild",
 	"imagerating-popular-heading": "Beliebte Bilder",

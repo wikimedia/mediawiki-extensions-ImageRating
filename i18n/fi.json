@@ -9,7 +9,7 @@
 	"imagerating-category": "Kuvat {{GRAMMAR:elative|$1}}",
 	"imagerating-community-score": "yhteisön antama pistemäärä: '''$1''' ({{PLURAL:$2|yksi arvio|$2 arvioa}})",
 	"imagerating-desc": "Mahdollistaa [[Special:ImageRating|kuvien luokittelun ja arvostelemisen]]",
-	"imagerating-edit-summary": "luokka lisätty",
+	"imagerating-edit-summary": "{{PLURAL:$1|luokka lisätty: $2|luokkia lisätty: $2}}",
 	"imagerating-empty": "Täällä ei ole mitään tehtävää.",
 	"imagerating-featured-heading": "Suositeltu kuva",
 	"imagerating-popular-heading": "Suositut kuvat",

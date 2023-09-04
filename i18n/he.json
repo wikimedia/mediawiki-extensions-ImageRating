@@ -14,7 +14,7 @@
 	"imagerating-category": "תמונות $1",
 	"imagerating-community-score": "דירוג הקהילה: '''$1''' ({{PLURAL:$2|דירוג אחד|$2 דירוגים}})",
 	"imagerating-desc": "מאפשרת למשתמשים [[Special:ImageRating|לסווג ולדרג תמונות]]",
-	"imagerating-edit-summary": "הוספת קטגוריה",
+	"imagerating-edit-summary": "הוספת {{PLURAL:$1|קטגוריה|קטגוריות}}: $2",
 	"imagerating-empty": "אין מה לעשות כאן.",
 	"imagerating-featured-heading": "תמונה מומלצת",
 	"imagerating-popular-heading": "תמונות פופולריות",

@@ -3,9 +3,11 @@
 		"authors": [
 			"Acamicamacaraca",
 			"BadDog",
-			"Kizule"
+			"Kizule",
+			"Milicevic01"
 		]
 	},
+	"imagerating-edit-summary": "{{PLURAL:$1|додај категорију: $2|додај категорије: $2}}",
 	"imagerating-popular-heading": "Популарне слике",
 	"imagerating-new-heading": "Нове слике",
 	"imagerating-best-heading": "Најбоље слике",

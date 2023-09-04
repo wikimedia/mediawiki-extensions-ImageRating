@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"Liuxinyu970226"
 		]
 	},
@@ -13,7 +14,7 @@
 	"imagerating-category": "$1张图片",
 	"imagerating-community-score": "社群分数：'''$1'''（{{PLURAL:$2|$2个评级}}）",
 	"imagerating-desc": "允许用户[[Special:ImageRating|分类并评级图片]]",
-	"imagerating-edit-summary": "添加分类",
+	"imagerating-edit-summary": "{{PLURAL:$1|添加分类：$2}}",
 	"imagerating-empty": "这里没有要做的事。",
 	"imagerating-featured-heading": "特色图片",
 	"imagerating-popular-heading": "受欢迎的图片",

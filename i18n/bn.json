@@ -11,7 +11,7 @@
 	"imagerating-category": "$1 চিত্র",
 	"imagerating-community-score": "সম্প্রদায়ের স্কোর: '''$1''' ({{PLURAL:$2|একটি মূল্যায়ন|$2টি মূল্যায়ন}})",
 	"imagerating-desc": "ব্যবহারকারীদের [[Special:ImageRating|বিষয়শ্রেণীকরণ ও চিত্র মূল্যায়ন]] করতে দেয়",
-	"imagerating-edit-summary": "বিষয়শ্রেণী যোগ করুন",
+	"imagerating-edit-summary": "{{PLURAL:$1|বিষয়শ্রেণী যোগ: $2}}",
 	"imagerating-empty": "এখানে কিছু করার মত নেই।",
 	"imagerating-featured-heading": "নির্বাচিত চিত্র",
 	"imagerating-popular-heading": "জনপ্রিয় চিত্র",

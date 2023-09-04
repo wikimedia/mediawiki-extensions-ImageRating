@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Beta16"
 		]
 	},
 	"imagerating-add-button": "aggiungi",
+	"imagerating-edit-summary": "{{PLURAL:$1|categoria aggiunta: $2|categorie aggiunte: $2}}",
 	"imagerating-menu-title": "Menu",
 	"imagerating-categorytitle": "Categorie"
 }

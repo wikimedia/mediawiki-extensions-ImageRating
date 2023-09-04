@@ -13,7 +13,7 @@
 	"imagerating-category": "Imagines de $1",
 	"imagerating-community-score": "classification del communitate: '''$1''' ({{PLURAL:$2|un evalutation|$2 evalutationes}})",
 	"imagerating-desc": "Permitte que usatores [[Special:ImageRating|categorisa e evaluta imagines]]",
-	"imagerating-edit-summary": "adder categoria",
+	"imagerating-edit-summary": "adder categoria{{PLURAL:$1||s}}: $2",
 	"imagerating-empty": "Nihil a facer hic.",
 	"imagerating-featured-heading": "Imagine eminente",
 	"imagerating-popular-heading": "Imagines popular",
