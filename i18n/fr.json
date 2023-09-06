@@ -18,7 +18,7 @@
 	"imagerating-category": "Images de $1",
 	"imagerating-community-score": "cote de la communauté : '''$1''' ({{PLURAL:$2|une évaluation|$2 évaluations}})",
 	"imagerating-desc": "Autorise les utilisateurs à [[Special:ImageRating|catégoriser et noter les images]]",
-	"imagerating-edit-summary": "ajouter une catégorie",
+	"imagerating-edit-summary": "ajouter {{PLURAL:$1|une catégorie|des catégories}} : $2",
 	"imagerating-empty": "Rien à faire ici.",
 	"imagerating-featured-heading": "Image remarquable",
 	"imagerating-popular-heading": "Images populaires",
