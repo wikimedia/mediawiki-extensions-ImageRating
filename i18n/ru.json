@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
+			"Okras",
 			"Vlad5250",
 			"Wirbel78"
 		]
@@ -15,7 +16,7 @@
 	"imagerating-category": "Изображения из $1",
 	"imagerating-community-score": "мнение сообщества: '''$1''' ({{PLURAL:$2|одна оценка|$2 оценки|$2 оценок}})",
 	"imagerating-desc": "Позволяет пользователям [[Special:ImageRating|категоризовать и оценивать изображения]]",
-	"imagerating-edit-summary": "добавить категорию",
+	"imagerating-edit-summary": "{{PLURAL:$1|добавить категорию: $2|добавить категории: $2}}",
 	"imagerating-empty": "Здесь нечего делать.",
 	"imagerating-featured-heading": "Избранное изображение",
 	"imagerating-popular-heading": "Популярные изображения",
