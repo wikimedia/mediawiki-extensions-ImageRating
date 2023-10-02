@@ -424,7 +424,10 @@ class ImageRating extends SpecialPage {
 					<div class="image-rating-bar">' .
 						$voteClass->displayStars( $image_id, (int)$vote_avg, 0 ) .
 						"<div class=\"image-rating-score\" id=\"rating_{$image_id}\">" .
-							$this->msg( 'imagerating-community-score', $lang->formatNum( $vote_avg ), $count )->parse() .
+							// number_format( ..., 2 ) is internally consistent w/ VoteNY's
+							// Vote#getAverageVote; we don't want to display something like
+							// 3.3333333333333 when 3.33 will do just fine
+							$this->msg( 'imagerating-community-score' )->numParams( number_format( $vote_avg, 2 ), $count )->parse() .
 						'</div>
 					</div>
 				</div>';
