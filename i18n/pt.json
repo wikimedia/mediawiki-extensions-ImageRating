@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Jack Phoenix"
 		]
 	},
 	"apihelp-imagerating-summary": "Módulo ImageRating (classificação de imagens) da API -- permite adicionar categorias a uma página dado um identificador de página",
@@ -13,7 +14,7 @@
 	"imagerating-category": "Imagens de $1",
 	"imagerating-community-score": "classificação da comunidade: '''$1''' ({{PLURAL:$2|uma classificação|$2 classificações}})",
 	"imagerating-desc": "Permite que os utilizadores [[Special:ImageRating|categorizem e classifiquem imagens]]",
-	"imagerating-edit-summary": "adicionar categoria",
+	"imagerating-edit-summary": "{{PLURAL:$1|adicionar categoria: $2|adicionar categorias: $2}}",
 	"imagerating-empty": "Nada para fazer aqui.",
 	"imagerating-featured-heading": "Imagem em destaque",
 	"imagerating-popular-heading": "Imagens populares",
