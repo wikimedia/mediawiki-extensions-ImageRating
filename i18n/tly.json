@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriot Kor"
+			"Patriot Kor",
+			"Гусейн"
 		]
 	},
 	"imagerating-add-button": "əlovə",
-	"imagerating-edit-summary": "kateqoriyə əlovə bıkə"
+	"imagerating-edit-summary": "\n{{PLURAL:$1|kategorijə əlovə kərde: $2|kategorijə əlovə kərde: $2}}"
 }
