@@ -2,14 +2,35 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"Romaine"
+			"Romaine",
+			"McDutchie"
 		]
 	},
+	"apihelp-imagerating-summary": "API-module voor ImageRating; maakt het mogelijk aan de hand van een pagina-ID categorieën aan een pagina toe te voegen",
+	"apihelp-imagerating-param-categories": "URL-gecodeerde, door komma's gescheiden lijst (tekenreeks) met categorieën die aan de pagina moeten worden toegevoegd",
+	"apihelp-imagerating-param-pageId": "Interne identificator van de te bewerken pagina",
+	"apihelp-imagerating-example-1": "Voegt de categorieën “Cute cats”, “Lolcats” en “Internet memes” toe aan de pagina met de interne ID 66.",
+	"imagerating-add-button": "toevoegen",
+	"imagerating-add-categories-title": "categorieën toevoegen (door komma’s gescheiden)",
 	"imagerating-category": "$1 afbeeldingen",
+	"imagerating-community-score": "communityscore: '''$1''' ({{PLURAL:$2|één beoordeling|$2 beoordelingen}})",
+	"imagerating-desc": "Hiermee kunnen gebruikers [[Special:ImageRating|afbeeldingen categoriseren en beoordelen]]",
 	"imagerating-edit-summary": "categorie toevoegen",
+	"imagerating-empty": "Er is hier niets te doen.",
+	"imagerating-featured-heading": "Uitgelichte afbeelding",
+	"imagerating-popular-heading": "Populaire afbeeldingen",
+	"imagerating-popular-heading-param": "Populaire afbeeldingen van $1",
+	"imagerating-new-heading-param": "Nieuwe afbeeldingen van $1",
+	"imagerating-best-heading-param": "Beste afbeeldingen van $1",
+	"imagerating-new-heading": "Nieuwe afbeeldingen",
+	"imagerating-best-heading": "Beste afbeeldingen",
 	"imagerating-menu-title": "Menu",
+	"imagerating-submitted-by": "Ingezonden door",
+	"imagerating-ratetitle": "Afbeeldingen beoordelen en categoriseren",
 	"imagerating-categorytitle": "Categorieën",
 	"imagerating-upload-images": "Geüploade afbeeldingen",
 	"imagerating-prev-link": "vorige",
-	"imagerating-next-link": "volgende"
+	"imagerating-next-link": "volgende",
+	"action-rateimage": "afbeeldingen te categoriseren en te beoordelen",
+	"right-rateimage": "Afbeeldingen categoriseren en beoordelen"
 }
