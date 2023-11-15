@@ -15,7 +15,7 @@
 	"imagerating-category": "$1 圖片",
 	"imagerating-community-score": "社群積分：'''$1''' ({{PLURAL:$2|1 個評比|$2 個評比}})",
 	"imagerating-desc": "允許使用者來[[Special:ImageRating|分類並評比圖片]]",
-	"imagerating-edit-summary": "添加分類",
+	"imagerating-edit-summary": "{{PLURAL:$1|新增分類：$2}}",
 	"imagerating-empty": "沒有結果。",
 	"imagerating-featured-heading": "特色圖片",
 	"imagerating-popular-heading": "熱門圖片",
