@@ -6,5 +6,5 @@
 		]
 	},
 	"imagerating-add-button": "əlovə",
-	"imagerating-edit-summary": "\n{{PLURAL:$1|kategorijə əlovə kərde: $2|kategorijə əlovə kərde: $2}}"
+	"imagerating-edit-summary": "{{PLURAL:$1|kategorijə əlovə kərde: $2|kategorijon əlovə kərde: $2}}"
 }
