@@ -107,7 +107,7 @@ class FeaturedImage {
 			$featured_image = $data;
 		}
 
-		if ( empty( $featured_image ) ) {
+		if ( !$featured_image ) {
 			// It can happen...better to return at this point and generate no
 			// HTML here rather than to generate a gazillion notices about
 			// undefined indexes and output HTML which is meaningless

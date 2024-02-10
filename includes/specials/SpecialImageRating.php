@@ -378,7 +378,7 @@ class ImageRating extends SpecialPage {
 			}
 		}
 
-		if ( empty( $imageList ) ) {
+		if ( !$imageList ) {
 			// Nothing to do? This is totally possible if no images have the vote
 			// tag on them, such as when we're dealing with a brand new or an inactive
 			// wiki...display a call to action message in such cases.
