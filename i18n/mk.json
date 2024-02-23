@@ -13,7 +13,7 @@
 	"imagerating-category": "Слики од $1",
 	"imagerating-community-score": "мислење на заедницата: '''$1''' ({{PLURAL:$2|една оцена|$2 оцени}})",
 	"imagerating-desc": "Им овозможува на корисниците да [[Special:ImageRating|категоризираат и оценуваат слики]]",
-	"imagerating-edit-summary": "додај категорија",
+	"imagerating-edit-summary": "{{PLURAL:$1|додај категорија: $2|додај категории: $2}}",
 	"imagerating-empty": "Тука нема што да се прави.",
 	"imagerating-featured-heading": "Избрана слика",
 	"imagerating-popular-heading": "Популарни слики",
