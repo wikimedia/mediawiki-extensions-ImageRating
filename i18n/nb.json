@@ -13,7 +13,7 @@
 	"imagerating-category": "$1-bilder",
 	"imagerating-community-score": "felleskapspoeng: '''$1''' ({{PLURAL:$2|én vurdering|$2 vurderinger}})",
 	"imagerating-desc": "Lar brukere [[Special:ImageRating|kategorisere og vurdere bilder]]",
-	"imagerating-edit-summary": "legg til kategori",
+	"imagerating-edit-summary": "legg til {{PLURAL:$1|kategori|kategorier}}: $2",
 	"imagerating-empty": "Ingenting å gjøre her.",
 	"imagerating-featured-heading": "Utvalgt bilde",
 	"imagerating-popular-heading": "Populære bilder",
