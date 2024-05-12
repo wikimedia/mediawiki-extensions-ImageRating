@@ -11,7 +11,7 @@
 	"apihelp-imagerating-param-pageId": "Internal identifier of the page to edit",
 	"apihelp-imagerating-example-1": "Adds the categories \"Cute cats\", \"Lolcats\" and \"Internet memes\" to the page that has the internal ID 66.",
 	"imagerating-add-button": "add",
-	"imagerating-add-categories-title": "add categories (comma separated)",
+	"imagerating-add-categories-title": "add categories (comma-separated)",
 	"imagerating-category": "$1 Images",
 	"imagerating-community-score": "community score: '''$1''' ({{PLURAL:$2|one rating|$2 ratings}})",
 	"imagerating-desc": "Allows users to [[Special:ImageRating|categorize and rate images]]",
