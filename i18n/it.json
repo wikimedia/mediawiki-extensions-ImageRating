@@ -6,6 +6,7 @@
 		]
 	},
 	"imagerating-add-button": "aggiungi",
+	"imagerating-add-categories-title": "aggiungi categorie (separate da virgole)",
 	"imagerating-edit-summary": "{{PLURAL:$1|categoria aggiunta: $2|categorie aggiunte: $2}}",
 	"imagerating-menu-title": "Menu",
 	"imagerating-categorytitle": "Categorie"
