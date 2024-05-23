@@ -5,7 +5,7 @@
 		]
 	},
 	"imagerating-add-button": "lââʹzzet",
-	"imagerating-edit-summary": "kategoria lââʹzztum",
+	"imagerating-edit-summary": "{{PLURAL:$1|kategoria lââʹzztum: $2}}",
 	"imagerating-new-heading": "Ođđ kaart da snimldõõǥǥ",
 	"imagerating-menu-title": "Vaʹlljõk",
 	"imagerating-ratetitle": "Ärvstõõl da kategorisââʹst kaartid",
