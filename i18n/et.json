@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Jack Phoenix"
 		]
 	},
+	"imagerating-add-button": "lisa",
 	"imagerating-categorytitle": "Kategooriad"
 }
