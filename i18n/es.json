@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"DiegoAmbrocio",
-			"Fitoschido"
+			"Fitoschido",
+			"Jack Phoenix"
 		]
 	},
 	"imagerating-add-button": "añadir",
 	"imagerating-add-categories-title": "añadir categorías (separadas por comas)",
 	"imagerating-category": "Imágenes de $1",
-	"imagerating-edit-summary": "añadir categoría",
+	"imagerating-edit-summary": "{{PLURAL:$1|añadir categoría: $2|añadir categorías: $2}}",
 	"imagerating-empty": "No hay nada que hacer aquí.",
 	"imagerating-featured-heading": "Imagen en destaque",
 	"imagerating-popular-heading": "Imágenes populares",

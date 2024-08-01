@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Jack Phoenix"
 		]
 	},
 	"apihelp-imagerating-summary": "ImageRating API-modul -- gör det möjligt att lägga till kategorier på en sida med ett sid-ID",
@@ -13,7 +14,7 @@
 	"imagerating-category": "$1 bilder",
 	"imagerating-community-score": "gemenskapspoäng: '''$1''' ({{PLURAL:$2|ett betyg|$2 betyg}})",
 	"imagerating-desc": "Låter användare [[Special:ImageRating|kategorisera och betygsätta bilder]]",
-	"imagerating-edit-summary": "lägg till kategori",
+	"imagerating-edit-summary": "lägg till {{PLURAL:$1|kategori|kategorier}}: $2",
 	"imagerating-empty": "Ingenting att göra här.",
 	"imagerating-featured-heading": "Utvald bild",
 	"imagerating-popular-heading": "Populära bilder",
