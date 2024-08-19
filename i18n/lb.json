@@ -2,20 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"imagerating-add-button": "derbäisetzen",
 	"imagerating-add-categories-title": "Kategorien derbäisetzen (mat Kommae getrennt)",
-	"imagerating-category": "Biller zum Thema $1",
+	"imagerating-category": "$1 Biller",
 	"imagerating-desc": "Erlaabt et Benotzer fir [[Special:ImageRating|Biller ze kategoriséieren an ze bewäerten]]",
 	"imagerating-edit-summary": "Kategorie derbäisetzen",
 	"imagerating-empty": "Hei gëtt et näischt ze maachen.",
 	"imagerating-featured-heading": "Interessant Bild",
 	"imagerating-popular-heading": "Beléift Biller",
 	"imagerating-popular-heading-param": "Beléift $1 Biller",
-	"imagerating-new-heading-param": "Nei Biller zum Thema $1",
-	"imagerating-best-heading-param": "Déi bescht Biller zum Thema $1",
+	"imagerating-new-heading-param": "Nei $1 Biller",
+	"imagerating-best-heading-param": "Déi bescht $1 Biller",
 	"imagerating-new-heading": "Nei Biller",
 	"imagerating-best-heading": "Bescht Biller",
 	"imagerating-menu-title": "Menü",
