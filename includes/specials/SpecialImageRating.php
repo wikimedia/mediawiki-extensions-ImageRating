@@ -105,7 +105,7 @@ class ImageRating extends SpecialPage {
 		$options['OFFSET'] = $offset;
 
 		// Database calls
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		if ( $category ) {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
@@ -271,7 +271,7 @@ class ImageRating extends SpecialPage {
 			// Only check images that are less than 30 days old
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$row = $dbr->selectRow(
 				array_merge( [ 'Vote', 'image', 'page' ], $tables ),
 				[

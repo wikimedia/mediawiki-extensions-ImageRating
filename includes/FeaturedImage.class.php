@@ -63,7 +63,7 @@ class FeaturedImage {
 			// @todo This should be configurable, I think. --ashley, 15 January 2017
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
-			$dbr = wfGetDB( DB_PRIMARY );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$row = $dbr->selectRow(
 				[ 'page', 'image', 'Vote' ],
 				[
