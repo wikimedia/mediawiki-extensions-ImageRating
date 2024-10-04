@@ -459,7 +459,7 @@ class ImageRating extends SpecialPage {
 
 					if (
 						$category_x == $category_total ||
-						$category_x != 1 && $category_x % $per_row == 0
+						( $category_x != 1 && $category_x % $per_row == 0 )
 					) {
 						$output .= '<div class="visualClear"></div>';
 					}
