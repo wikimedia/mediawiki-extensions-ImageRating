@@ -107,7 +107,7 @@ class ImageRating extends SpecialPage {
 		// Database calls
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
-		if ( $category ) {
+		if ( $category !== null ) {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
 			$ctgKey = $lang->uc( $ctgTitle->getDBkey() );
 			$tables[] = 'categorylinks';
@@ -140,7 +140,7 @@ class ImageRating extends SpecialPage {
 					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
 				$total = $row_count->total_ratings;
-				if ( isset( $category ) && $category ) {
+				if ( $category !== null ) {
 					$out->setPageTitle( $this->msg( 'imagerating-best-heading-param', $category ) );
 				} else {
 					$out->setPageTitle( $this->msg( 'imagerating-best-heading' ) );
@@ -175,7 +175,7 @@ class ImageRating extends SpecialPage {
 					] + $joinConds
 				);
 				$total = $row_count->total_ratings;
-				if ( isset( $category ) && $category ) {
+				if ( $category !== null ) {
 					$out->setPageTitle( $this->msg( 'imagerating-popular-heading-param', $category ) );
 				} else {
 					$out->setPageTitle( $this->msg( 'imagerating-popular-heading' ) );
@@ -202,7 +202,7 @@ class ImageRating extends SpecialPage {
 					] + $joinConds
 				);
 				$total = SiteStats::images();
-				if ( isset( $category ) && $category ) {
+				if ( $category !== null ) {
 					$out->setPageTitle( $this->msg( 'imagerating-new-heading-param', $category ) );
 				} else {
 					$out->setPageTitle( $this->msg( 'imagerating-new-heading' ) );
@@ -216,7 +216,7 @@ class ImageRating extends SpecialPage {
 		$pageTitle = $this->getPageTitle();
 
 		// Build navigation
-		if ( isset( $category ) && $category ) {
+		if ( $category !== null ) {
 			$menu = [
 				$this->msg( 'imagerating-new-heading-param', $category )->parse() => 'new',
 				$this->msg( 'imagerating-popular-heading-param', $category )->parse() => 'popular',
@@ -239,7 +239,7 @@ class ImageRating extends SpecialPage {
 					$pageTitle,
 					new HtmlArmor( $title ),
 					[],
-					[ 'type' => $qs ] + ( ( $category ) ? [ 'category' => $category ] : [] )
+					[ 'type' => $qs ] + ( ( $category !== null ) ? [ 'category' => $category ] : [] )
 				) . '<p>';
 			} else {
 				$output .= "<p><b>{$title}</b></p>";
