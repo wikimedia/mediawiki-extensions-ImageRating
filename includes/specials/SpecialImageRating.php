@@ -32,10 +32,10 @@ class ImageRating extends SpecialPage {
 	 * Returns the name that goes in the \<h1\> in the special page itself, and
 	 * also the name that will be listed in Special:SpecialPages
 	 *
-	 * @return string
+	 * @return Message
 	 */
 	public function getDescription() {
-		return $this->msg( 'imagerating-ratetitle' )->plain();
+		return $this->msg( 'imagerating-ratetitle' );
 	}
 
 	/**
