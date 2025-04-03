@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bgo eiu"
+			"Bgo eiu",
+			"Cabal"
 		]
 	},
+	"imagerating-popular-heading": "ਮਸ਼ਹੂਰ ਤਸਵੀਰਾਂ",
+	"imagerating-popular-heading-param": "ਮਸ਼ਹੂਰ $1 ਤਸਵੀਰਾਂ",
 	"imagerating-categorytitle": "ਸ਼੍ਰੇਣੀਆਂ"
 }
