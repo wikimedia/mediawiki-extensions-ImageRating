@@ -1,6 +1,6 @@
 {
 	"name": "ImageRating",
-	"version": "2.5.0",
+	"version": "2.6.0",
 	"author": [
 		"Aaron Wright",
 		"David Pean",
@@ -11,7 +11,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.39.4"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"MessagesDirs": {
 		"ImageRating": [

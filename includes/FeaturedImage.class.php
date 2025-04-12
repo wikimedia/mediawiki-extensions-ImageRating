@@ -28,13 +28,8 @@ class FeaturedImage {
 	 */
 	public static function renderFeaturedImage( $input, $args, Parser $parser ) {
 		$services = MediaWikiServices::getInstance();
-		if ( method_exists( $parser, 'getUserIdentity' ) ) {
-			// MW 1.36+
-			$user = $services->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredMethod
-			$user = $parser->getUser();
-		}
+		$user = $services->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
+
 		// Add CSS & JS -- the JS is needed if allowing voting inline
 		if ( $user->isAllowed( 'voteny' ) ) {
 			$parser->getOutput()->addModules( [ 'ext.voteNY.scripts' ] );
@@ -64,7 +59,7 @@ class FeaturedImage {
 			// @todo This should be configurable, I think. --ashley, 15 January 2017
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbr = $services->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$row = $dbr->selectRow(
 				[ 'page', 'image', 'Vote' ],
 				[

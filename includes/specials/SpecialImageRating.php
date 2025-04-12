@@ -1,6 +1,8 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SiteStats\SiteStats;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 
 /**
@@ -106,7 +108,8 @@ class ImageRating extends SpecialPage {
 		$options['OFFSET'] = $offset;
 
 		// Database calls
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$services = MediaWikiServices::getInstance();
+		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		if ( $category !== null ) {
 			$ctgTitle = Title::newFromText( $this->msg( 'imagerating-category', trim( $category ) )->inContentLanguage()->parse() );
@@ -142,9 +145,9 @@ class ImageRating extends SpecialPage {
 				);
 				$total = $row_count->total_ratings;
 				if ( $category !== null ) {
-					$out->setPageTitle( $this->msg( 'imagerating-best-heading-param', $category ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-best-heading-param', $category ) );
 				} else {
-					$out->setPageTitle( $this->msg( 'imagerating-best-heading' ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-best-heading' ) );
 				}
 				break;
 
@@ -177,9 +180,9 @@ class ImageRating extends SpecialPage {
 				);
 				$total = $row_count->total_ratings;
 				if ( $category !== null ) {
-					$out->setPageTitle( $this->msg( 'imagerating-popular-heading-param', $category ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-popular-heading-param', $category ) );
 				} else {
-					$out->setPageTitle( $this->msg( 'imagerating-popular-heading' ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-popular-heading' ) );
 				}
 				break;
 
@@ -204,9 +207,9 @@ class ImageRating extends SpecialPage {
 				);
 				$total = SiteStats::images();
 				if ( $category !== null ) {
-					$out->setPageTitle( $this->msg( 'imagerating-new-heading-param', $category ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-new-heading-param', $category ) );
 				} else {
-					$out->setPageTitle( $this->msg( 'imagerating-new-heading' ) );
+					$out->setPageTitleMsg( $this->msg( 'imagerating-new-heading' ) );
 				}
 				break;
 		}
@@ -257,7 +260,7 @@ class ImageRating extends SpecialPage {
 
 		$output .= '<div class="image-ratings">';
 
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$cache = $services->getMainWANObjectCache();
 		/*
 		// set up cache
 		$width = 250;
@@ -272,7 +275,7 @@ class ImageRating extends SpecialPage {
 			// Only check images that are less than 30 days old
 			$time = wfTimestamp( TS_MW, time() - ( 60 * 60 * 24 * 30 ) );
 
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+			$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$row = $dbr->selectRow(
 				array_merge( [ 'Vote', 'image', 'page' ], $tables ),
 				[
@@ -386,7 +389,7 @@ class ImageRating extends SpecialPage {
 			$output .= $this->msg( 'imagerating-empty' )->parse();
 			$renderPagination = false;
 		} else {
-			$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+			$repoGroup = $services->getRepoGroup();
 			$renderPagination = true;
 			foreach ( $imageList as $image ) {
 				$image_path = $image['page_title'];

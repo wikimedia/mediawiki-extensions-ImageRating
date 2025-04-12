@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * ImageRating API module
@@ -10,7 +11,7 @@ use MediaWiki\Title\Title;
  * @ingroup API
  * @see https://www.mediawiki.org/wiki/API:Extensions#ApiSampleApiExtension.php
  */
-class ApiImageRating extends ApiBase {
+class ApiImageRating extends MediaWiki\Api\ApiBase {
 
 	/**
 	 * @inheritDoc
@@ -58,20 +59,16 @@ class ApiImageRating extends ApiBase {
 	 *
 	 * @param int $pageId Internal identifier of the page that we're editing
 	 * @param string $categories URL-encoded categories, each category separated by a comma
-	 * @return string 'ok' if everything went well, 'busy' if the article has been edited in the last 2 seconds and we didn't edit it
+	 * @return string 'ok' if everything went well, 'busy' if the article has been edited in the last 2 seconds and
+	 *   we didn't edit it; 'error' if getting the page content text failed for whatever reason(s)
 	 */
 	public function addImageCategory( $pageId, $categories ) {
 		$categories = urldecode( $categories );
 
 		// Construct page title object
 		$imagePage = Title::newFromID( $pageId );
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$wp = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $imagePage );
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredStaticMethod
-			$wp = WikiPage::factory( $imagePage );
-		}
+		$services = MediaWikiServices::getInstance();
+		$wp = $services->getWikiPageFactory()->newFromTitle( $imagePage );
 
 		// Check if it's been edited in last 2 seconds: want to delay the edit
 		$timeSinceEdited = (int)wfTimestamp( TS_MW, 0 ) - (int)$wp->getTimestamp();
@@ -80,13 +77,18 @@ class ApiImageRating extends ApiBase {
 		}
 
 		// Get current page text
-		$pageText = ContentHandler::getContentText( $wp->getContent() );
+		$currentContent = $wp->getContent();
+		if ( $currentContent !== null && $currentContent instanceof TextContent ) {
+			$pageText = $currentContent->getText();
+		} else {
+			return 'error';
+		}
 
 		// Append new categories
 		$categoriesArray = explode( ',', $categories );
 		$categoryText = '';
 		$linkedCategoriesForEditSummary = [];
-		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
+		$contLang = $services->getContentLanguage();
 		foreach ( $categoriesArray as $category ) {
 			$category = trim( $category );
 			$namespace = $contLang->getNsText( NS_CATEGORY );
@@ -107,13 +109,7 @@ class ApiImageRating extends ApiBase {
 			$contLang->commaList( $linkedCategoriesForEditSummary )
 		)->inContentLanguage()->text();
 
-		if ( method_exists( $wp, 'doUserEditContent' ) ) {
-			// MW 1.36+
-			$wp->doUserEditContent( $content, $this->getUser(), $summary );
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredMethod
-			$wp->doEditContent( $content, $summary );
-		}
+		$wp->doUserEditContent( $content, $this->getUser(), $summary );
 
 		return 'ok';
 	}
@@ -132,12 +128,12 @@ class ApiImageRating extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'pageId' => [
-				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'categories' => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			]
 		];
 	}
