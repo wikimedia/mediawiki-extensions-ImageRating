@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": []
 	},
+	"imagerating-edit-summary": "{{PLURAL:$1|dodaj kategoriju: $2|dodaj kategorije: $2}}",
 	"imagerating-popular-heading": "Popularne slike",
 	"imagerating-new-heading": "Nove slike",
 	"imagerating-best-heading": "Najbolje slike",
