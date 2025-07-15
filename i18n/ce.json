@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"imagerating-add-button": "тӀетоха",
+	"imagerating-category": "Суьрташ $1 чуьра",
+	"imagerating-empty": "Кхузахь дан хӀума дац.",
+	"imagerating-featured-heading": "Хаьржина сурт",
+	"imagerating-popular-heading": "ГӀарадевлла суьрташ",
+	"imagerating-popular-heading-param": "$1 гӀарадевлла суьрташ",
+	"imagerating-new-heading-param": "$1 керла суьрташ",
+	"imagerating-best-heading-param": "$1 дика суьрташ",
+	"imagerating-new-heading": "Керла суьрташ",
+	"imagerating-best-heading": "Дика суьрташ",
+	"imagerating-menu-title": "Меню",
+	"imagerating-submitted-by": "ТӀетоьхна декъашхочо",
+	"imagerating-categorytitle": "Категореш",
+	"imagerating-upload-images": "Сурт чудаккха",
+	"imagerating-prev-link": "хьалх.",
+	"imagerating-next-link": "рогӀера"
+}
