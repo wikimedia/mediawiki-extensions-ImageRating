@@ -36,7 +36,7 @@ window.ImageRating = {
 						.attr( 'id', 'new-' + ImageRating.category_counter )
 						.addClass( 'category-button' )
 						.hide()
-						.html( mw.msg( 'imagerating-category', category ) );
+						.text( mw.msg( 'imagerating-category', category ) );
 					$el.insertBefore( '#image-categories-container-end-' + page );
 
 					// Allow clicking of new button to go to category page
