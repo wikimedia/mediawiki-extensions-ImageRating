@@ -1,30 +1,35 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Toliño"
 		]
 	},
+	"apihelp-imagerating-summary": "Módulo da API de ImageRating: permite engadir categorías a unha páxina cando se lle proporciona un identificador de páxina.",
+	"apihelp-imagerating-param-categories": "Lista (cadea) de categorías separadas por comas e codificadas en formato de URL para engadir á páxina",
+	"apihelp-imagerating-param-pageId": "Identificador interno da páxina a editar",
+	"apihelp-imagerating-example-1": "Engade as categorías «Cute cats», «Lolcats» e «Internet memes» á páxina que ten o identificador interno 66.",
 	"imagerating-add-button": "engadir",
 	"imagerating-add-categories-title": "engadir categorías (separadas por comas)",
-	"imagerating-category": "Imaxes de $1",
-	"imagerating-community-score": "clasificación da comunidade: '''$1''' ({{PLURAL:$2|unha clasificación|$2 clasificacións}})",
-	"imagerating-desc": "Permite que os usuarios [[Special:ImageRating|categoricen e clasifiquen as imaxes]]",
-	"imagerating-edit-summary": "engadir categoría",
+	"imagerating-category": "Imaxes de «$1»",
+	"imagerating-community-score": "puntuación da comunidade: '''$1''' ({{PLURAL:$2|unha valoración|$2 valoracións}})",
+	"imagerating-desc": "Permite aos usuarios [[Special:ImageRating|categorizar e valorar as imaxes]]",
+	"imagerating-edit-summary": "{{PLURAL:$1|adición dunha categoría|adición de varias categorías}}: $2",
 	"imagerating-empty": "Non hai nada que facer aquí.",
 	"imagerating-featured-heading": "Imaxe destacada",
 	"imagerating-popular-heading": "Imaxes populares",
-	"imagerating-popular-heading-param": "Imaxes populares de $1",
-	"imagerating-new-heading-param": "Imaxes novas de $1",
-	"imagerating-best-heading-param": "Mellores imaxes de $1",
-	"imagerating-new-heading": "Novas imaxes",
+	"imagerating-popular-heading-param": "Imaxes populares de «$1»",
+	"imagerating-new-heading-param": "Imaxes novas de «$1»",
+	"imagerating-best-heading-param": "Mellores imaxes de «$1»",
+	"imagerating-new-heading": "Imaxes novas",
 	"imagerating-best-heading": "Mellores imaxes",
 	"imagerating-menu-title": "Menú",
 	"imagerating-submitted-by": "Enviada por",
-	"imagerating-ratetitle": "Clasificar e categorizar imaxes",
+	"imagerating-ratetitle": "Valorar e categorizar imaxes",
 	"imagerating-categorytitle": "Categorías",
 	"imagerating-upload-images": "Subir imaxes",
 	"imagerating-prev-link": "ant",
 	"imagerating-next-link": "seg",
-	"action-rateimage": "categorizar e clasificar imaxes",
-	"right-rateimage": "Categorizar e clasificar imaxes"
+	"action-rateimage": "categorizar e valorar imaxes",
+	"right-rateimage": "Categorizar e valorar imaxes"
 }
