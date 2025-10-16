@@ -126,14 +126,15 @@ class ImageRating extends SpecialPage {
 					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
-						"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
+						'COUNT(vote_id) AS vote_count',
 					],
-					[ 'page_namespace' => NS_FILE, 'page_id = vote_page_id' ] + $where,
+					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
 					[
+						'GROUP BY' => 'page_id, page_title',
 						'ORDER BY' => 'vote_avg DESC, vote_count DESC'
 					] + $options,
-					$joinConds
+					[ 'Vote' => [ 'INNER JOIN', 'page_id = vote_page_id' ] ] + $joinConds
 				);
 				$row_count = $dbr->selectRow(
 					array_merge( [ 'page', 'Vote' ], $tables ),
@@ -157,11 +158,12 @@ class ImageRating extends SpecialPage {
 					[
 						'page_id', 'page_title',
 						'AVG(vote_value) AS vote_avg',
-						"(SELECT COUNT(*) FROM {$dbr->tableName( 'Vote' )} WHERE vote_page_id = page_id) AS vote_count",
+						'COUNT(vote_id) AS vote_count',
 					],
 					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
 					[
+						'GROUP BY' => 'page_id, page_title',
 						'ORDER BY' => 'page_id DESC, vote_avg DESC, vote_count DESC',
 						// the HAVING condition can't be in the WHERE clause
 						'HAVING' => 'vote_count > 1'
