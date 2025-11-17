@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
-			"MuratTheTurkish"
+			"MuratTheTurkish",
+			"SaldırganSincap"
 		]
 	},
 	"apihelp-imagerating-summary": "ImageRating API modülü -- bir sayfa kimliği verildiğinde bir sayfaya kategori eklemeye izin verir",
@@ -14,7 +15,7 @@
 	"imagerating-category": "$1 Resimleri",
 	"imagerating-community-score": "topluluk puanı: '''$1''' ({{PLURAL:$2|bir değerlendirme|$2 değerlendirme}})",
 	"imagerating-desc": "Kullanıcıların [[Special:ImageRating|resimleri sınıflandırmasına ve derecelendirmesine]] izin verir",
-	"imagerating-edit-summary": "kategori ekle",
+	"imagerating-edit-summary": "{{PLURAL:$1|kategori ekle: $2}}",
 	"imagerating-empty": "Burada yapacak bir şey yok.",
 	"imagerating-featured-heading": "Seçkin Resimler",
 	"imagerating-popular-heading": "Popüler Resimler",
