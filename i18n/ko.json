@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"YeBoy371"
 		]
 	},
 	"imagerating-add-button": "추가",
 	"imagerating-add-categories-title": "분류 추가 (쉼표로 구분)",
 	"imagerating-category": "$1 그림",
-	"imagerating-edit-summary": "분류 추가",
+	"imagerating-edit-summary": "{{PLURAL:$1|분류 추가: $2}}",
 	"imagerating-empty": "여기서는 할 일이 없습니다.",
 	"imagerating-new-heading-param": "새 이미지 $1",
 	"imagerating-best-heading-param": "최고의 이미지 $1개",
