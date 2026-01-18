@@ -193,7 +193,7 @@ class ImageRating extends SpecialPage {
 				$res = $dbr->select(
 					array_merge( [ 'page', 'Vote' ], $tables ),
 					[ 'page_id', 'page_title', 'COUNT(vote_value)', 'AVG(vote_value) AS vote_avg' ],
-					[ 'page_namespace' => NS_FILE, 'vote_page_id = page_id' ] + $where,
+					[ 'page_namespace' => NS_FILE ] + $where,
 					__METHOD__,
 					[
 						/*
