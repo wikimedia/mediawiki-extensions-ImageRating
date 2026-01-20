@@ -5,7 +5,11 @@
 			"Cabal"
 		]
 	},
+	"imagerating-add-button": "ਜੋੜੋ",
 	"imagerating-popular-heading": "ਮਸ਼ਹੂਰ ਤਸਵੀਰਾਂ",
 	"imagerating-popular-heading-param": "ਮਸ਼ਹੂਰ $1 ਤਸਵੀਰਾਂ",
-	"imagerating-categorytitle": "ਸ਼੍ਰੇਣੀਆਂ"
+	"imagerating-submitted-by": "ਵੱਲੋਂ ਪੇਸ਼ ਕੀਤਾ",
+	"imagerating-categorytitle": "ਸ਼੍ਰੇਣੀਆਂ",
+	"imagerating-prev-link": "ਪਿਛਲਾ",
+	"imagerating-next-link": "ਅਗਲਾ"
 }
