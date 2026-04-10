@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"apihelp-imagerating-summary": "د انځورډلبندي API چلنوال -- کله چې د مخ پېژند ورکړل شي؛ نو مخ ته د وېشنيزې ورگډولو اجازه ورکوي",
+	"apihelp-imagerating-param-categories": "د وېبتړ کوډ شوې، کامې سره جلاشوی د وېشنيزو لړليک (لړۍ) چې مخ ته ورگډېږي",
+	"apihelp-imagerating-param-pageId": "سمون لپاره د مخ دننه‌نی پېژندونکی",
+	"apihelp-imagerating-example-1": "هغه مخ ته چې دننه‌نی پېژند يې ۶۶ وي \"ښکلې پيشوگانې\"، \"خنداوړ پيشوگانې\" او \"اينټرنېټي پېښنښې\" وېشنيزو ته ورگډوي.",
+	"imagerating-add-button": "ورگډول",
+	"imagerating-add-categories-title": "وېشنيزې ورگډول (کامې سره جلاشوي)",
+	"imagerating-category": "$1 انځورونه",
+	"imagerating-community-score": "د ټولنې نومرې: {{PLURAL:$2|يوه ډلبندي|$2 ډلبندي}}",
+	"imagerating-desc": "کارنانو ته اجازه ورکوي چې [[Special:ImageRating|انځورونه ډلبندي او وېشنيزو ته ورگډ کړي]]",
+	"imagerating-edit-summary": "{{PLURAL:$1|وېشنيزه ورگډول: $2|وېشنيزې ورگډول: $2}}",
+	"imagerating-empty": "دلته د کولو لپاره هېڅ نشته.",
+	"imagerating-featured-heading": "ټاکلی انځور",
+	"imagerating-popular-heading": "نامتو انځورونه",
+	"imagerating-popular-heading-param": "$1 نامتو انځورونه",
+	"imagerating-new-heading-param": "$1 نوي انځورونه",
+	"imagerating-best-heading-param": "$1 غوره انځورونه",
+	"imagerating-new-heading": "نوي انځورونه",
+	"imagerating-best-heading": "غوره انځورونه",
+	"imagerating-menu-title": "غوره‌نۍ",
+	"imagerating-submitted-by": "سپاروونکی",
+	"imagerating-ratetitle": "انځورونه  ډلبندي او وېشنيزو ته ورگډ کړئ",
+	"imagerating-categorytitle": "وېشنيزې",
+	"imagerating-upload-images": "انځور راپورته‌کول",
+	"imagerating-prev-link": "مخکېنی",
+	"imagerating-next-link": "راتلونکی",
+	"action-rateimage": "انځورونه ډلبندي او وېشنيزو ته ورگډ کړئ",
+	"right-rateimage": "انځورونه ډلبندي او وېشنيزو ته ورگډ کړئ"
+}
