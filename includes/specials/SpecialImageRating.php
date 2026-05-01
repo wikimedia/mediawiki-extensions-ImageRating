@@ -19,7 +19,12 @@ class ImageRating extends SpecialPage {
 	 * Constructor -- set up the new, restricted special page
 	 */
 	public function __construct() {
-		parent::__construct( 'ImageRating', 'rateimage' );
+		parent::__construct( 'ImageRating' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'rateimage';
 	}
 
 	/**
