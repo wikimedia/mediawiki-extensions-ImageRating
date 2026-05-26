@@ -6,7 +6,7 @@
 		]
 	},
 	"imagerating-add-button": "Lasseet",
-	"imagerating-edit-summary": "luokka lasettum",
+	"imagerating-edit-summary": "{{PLURAL:$1|luokka lasettum: $2|luoka lasettum : $2| luokkad lasettum : $2}}",
 	"imagerating-menu-title": "Valjiittâh",
 	"imagerating-categorytitle": "Luokah",
 	"imagerating-next-link": "čuávuvâš"
