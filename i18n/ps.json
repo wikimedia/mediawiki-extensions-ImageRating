@@ -11,7 +11,7 @@
 	"imagerating-add-button": "ورگډول",
 	"imagerating-add-categories-title": "وېشنيزې ورگډول (کامې سره جلاشوي)",
 	"imagerating-category": "$1 انځورونه",
-	"imagerating-community-score": "د ټولنې نومرې: ({{PLURAL:$2|يوه ډلبندي|$2 ډلبندي}})",
+	"imagerating-community-score": "د ټولنې نومره: '''$1''' ({{PLURAL:$2|يوه ډلبندي|$2 ډلبندي}})",
 	"imagerating-desc": "کارنانو ته اجازه ورکوي چې [[Special:ImageRating|انځورونه ډلبندي او وېشنيزو ته ورگډ کړي]]",
 	"imagerating-edit-summary": "{{PLURAL:$1|وېشنيزه ورگډول: $2|وېشنيزې ورگډول: $2}}",
 	"imagerating-empty": "دلته د کولو لپاره هېڅ نشته.",
