@@ -4,5 +4,31 @@
 			"AhmedG612"
 		]
 	},
-	"imagerating-add-button": "Ku dar"
+	"apihelp-imagerating-summary": "Module-ka API-ga ImageRating — wuxuu oggolaanayaa in qaybo lagu daro bog marka la siiyo aqoonsiga bogga",
+	"apihelp-imagerating-param-categories": "Liis (xarig) qaybo ah oo URL ahaan loo calaamadeeyey, hakadna lagu kala saaray, kuwaas oo lagu darayo bogga",
+	"apihelp-imagerating-param-pageId": "Aqoonsiga gudaha ee bogga la tafatirayo",
+	"apihelp-imagerating-example-1": "Wuxuu bogga leh aqoonsiga gudaha 66 ku darayaa qaybaha \"Bisado qurux badan\", \"Lolcats\" iyo \"Meme-yada internetka\".",
+	"imagerating-add-button": "Ku dar",
+	"imagerating-add-categories-title": "Ku dar qaybaha (hakad lagu kala saaray)",
+	"imagerating-category": "$1 Sawirro",
+	"imagerating-community-score": "Dhibcaha bulshada: '''$1''' ({{PLURAL:$2|hal qiimayn|$2 qiimayn}})",
+	"imagerating-desc": "Waxay u oggolaanaysaa isticmaalayaasha inay [[Special:ImageRating|qaybiyaan oo qiimeeyaan sawirrada]]",
+	"imagerating-edit-summary": "{{PLURAL:$1|ku dar qaybta: $2|ku dar qaybaha: $2}}",
+	"imagerating-empty": "Halkan wax la qabanayo ma jiraan.",
+	"imagerating-featured-heading": "Sawirka la xushay",
+	"imagerating-popular-heading": "Sawirrada caanka ah",
+	"imagerating-popular-heading-param": "Sawirrada $1 ee caanka ah",
+	"imagerating-new-heading-param": "Sawirrada $1 ee cusub",
+	"imagerating-best-heading-param": "Sawirrada $1 ee ugu fiican",
+	"imagerating-new-heading": "Sawirro Cusub",
+	"imagerating-best-heading": "Sawirrada ugu fiican",
+	"imagerating-menu-title": "Liiska",
+	"imagerating-submitted-by": "Waxaa soo gudbiyay",
+	"imagerating-ratetitle": "Qiimee oo u kala saar sawirrada",
+	"imagerating-categorytitle": "Qaybaha",
+	"imagerating-upload-images": "Soo geli Sawirro",
+	"imagerating-prev-link": "hore",
+	"imagerating-next-link": "xiga",
+	"action-rateimage": "U kala saar oo qiimee sawirrada",
+	"right-rateimage": "U kala saar oo qiimee sawirrada"
 }
